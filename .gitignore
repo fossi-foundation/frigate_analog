@@ -1,0 +1,6 @@
+/.idea/
+/precheck_results/
+*/tmp
+*/*/tmp
+xschemtop/
+runs/

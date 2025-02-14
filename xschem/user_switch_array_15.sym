@@ -1,0 +1,158 @@
+v {xschem version=3.4.5 file_version=1.2}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+T {@symname} -108 -6 0 0 0.3 0.3 {}
+T {@name} 135 -352 0 0 0.2 0.2 {}
+L 4 -130 -340 130 -340 {}
+L 4 -130 340 130 340 {}
+L 4 -130 -340 -130 340 {}
+L 4 130 -340 130 340 {}
+B 5 -152.5 -332.5 -147.5 -327.5 {name=user_to_comp_n[1:0] dir=in}
+L 4 -150 -330 -130 -330 {}
+T {user_to_comp_n[1:0]} -125 -334 0 0 0.2 0.2 {}
+B 5 -152.5 -312.5 -147.5 -307.5 {name=user_to_comp_p[1:0] dir=in}
+L 4 -150 -310 -130 -310 {}
+T {user_to_comp_p[1:0]} -125 -314 0 0 0.2 0.2 {}
+B 5 147.5 -332.5 152.5 -327.5 {name=vdda0 dir=inout}
+L 7 130 -330 150 -330 {}
+T {vdda0} 125 -334 0 1 0.2 0.2 {}
+B 5 -152.5 -292.5 -147.5 -287.5 {name=user_to_ulpcomp_n[1:0] dir=in}
+L 4 -150 -290 -130 -290 {}
+T {user_to_ulpcomp_n[1:0]} -125 -294 0 0 0.2 0.2 {}
+B 5 147.5 -312.5 152.5 -307.5 {name=vssa0 dir=inout}
+L 7 130 -310 150 -310 {}
+T {vssa0} 125 -314 0 1 0.2 0.2 {}
+B 5 147.5 -292.5 152.5 -287.5 {name=vccd0 dir=inout}
+L 7 130 -290 150 -290 {}
+T {vccd0} 125 -294 0 1 0.2 0.2 {}
+B 5 -152.5 -272.5 -147.5 -267.5 {name=user_to_ulpcomp_p[1:0] dir=in}
+L 4 -150 -270 -130 -270 {}
+T {user_to_ulpcomp_p[1:0]} -125 -274 0 0 0.2 0.2 {}
+B 5 147.5 -272.5 152.5 -267.5 {name=vssd0 dir=inout}
+L 7 130 -270 150 -270 {}
+T {vssd0} 125 -274 0 1 0.2 0.2 {}
+B 5 -152.5 -252.5 -147.5 -247.5 {name=user_to_adc0[1:0] dir=in}
+L 4 -150 -250 -130 -250 {}
+T {user_to_adc0[1:0]} -125 -254 0 0 0.2 0.2 {}
+B 5 -152.5 -232.5 -147.5 -227.5 {name=user_to_adc1[1:0] dir=in}
+L 4 -150 -230 -130 -230 {}
+T {user_to_adc1[1:0]} -125 -234 0 0 0.2 0.2 {}
+B 5 -152.5 -212.5 -147.5 -207.5 {name=vbgtc_to_user dir=in}
+L 4 -150 -210 -130 -210 {}
+T {vbgtc_to_user} -125 -214 0 0 0.2 0.2 {}
+B 5 147.5 -252.5 152.5 -247.5 {name=user_comp_n dir=inout}
+L 7 130 -250 150 -250 {}
+T {user_comp_n} 125 -254 0 1 0.2 0.2 {}
+B 5 147.5 -232.5 152.5 -227.5 {name=comp_n dir=inout}
+L 7 130 -230 150 -230 {}
+T {comp_n} 125 -234 0 1 0.2 0.2 {}
+B 5 147.5 -212.5 152.5 -207.5 {name=user_vbgtc dir=inout}
+L 7 130 -210 150 -210 {}
+T {user_vbgtc} 125 -214 0 1 0.2 0.2 {}
+B 5 147.5 -192.5 152.5 -187.5 {name=vbgtc dir=inout}
+L 7 130 -190 150 -190 {}
+T {vbgtc} 125 -194 0 1 0.2 0.2 {}
+B 5 -152.5 -192.5 -147.5 -187.5 {name=vbgsc_to_user dir=in}
+L 4 -150 -190 -130 -190 {}
+T {vbgsc_to_user} -125 -194 0 0 0.2 0.2 {}
+B 5 147.5 -172.5 152.5 -167.5 {name=user_comp_p dir=inout}
+L 7 130 -170 150 -170 {}
+T {user_comp_p} 125 -174 0 1 0.2 0.2 {}
+B 5 147.5 -152.5 152.5 -147.5 {name=comp_p dir=inout}
+L 7 130 -150 150 -150 {}
+T {comp_p} 125 -154 0 1 0.2 0.2 {}
+B 5 147.5 -132.5 152.5 -127.5 {name=user_vbgsc dir=inout}
+L 7 130 -130 150 -130 {}
+T {user_vbgsc} 125 -134 0 1 0.2 0.2 {}
+B 5 147.5 -112.5 152.5 -107.5 {name=vbgsc dir=inout}
+L 7 130 -110 150 -110 {}
+T {vbgsc} 125 -114 0 1 0.2 0.2 {}
+B 5 -152.5 -172.5 -147.5 -167.5 {name=dac0_to_user dir=in}
+L 4 -150 -170 -130 -170 {}
+T {dac0_to_user} -125 -174 0 0 0.2 0.2 {}
+B 5 147.5 -92.5 152.5 -87.5 {name=user_ulpcomp_n dir=inout}
+L 7 130 -90 150 -90 {}
+T {user_ulpcomp_n} 125 -94 0 1 0.2 0.2 {}
+B 5 147.5 -72.5 152.5 -67.5 {name=ulpcomp_n dir=inout}
+L 7 130 -70 150 -70 {}
+T {ulpcomp_n} 125 -74 0 1 0.2 0.2 {}
+B 5 147.5 -52.5 152.5 -47.5 {name=user_dac0 dir=inout}
+L 7 130 -50 150 -50 {}
+T {user_dac0} 125 -54 0 1 0.2 0.2 {}
+B 5 147.5 -32.5 152.5 -27.5 {name=dac0 dir=inout}
+L 7 130 -30 150 -30 {}
+T {dac0} 125 -34 0 1 0.2 0.2 {}
+B 5 -152.5 -152.5 -147.5 -147.5 {name=dac1_to_user dir=in}
+L 4 -150 -150 -130 -150 {}
+T {dac1_to_user} -125 -154 0 0 0.2 0.2 {}
+B 5 147.5 -12.5 152.5 -7.5 {name=user_ulpcomp_p dir=inout}
+L 7 130 -10 150 -10 {}
+T {user_ulpcomp_p} 125 -14 0 1 0.2 0.2 {}
+B 5 147.5 7.5 152.5 12.5 {name=ulpcomp_p dir=inout}
+L 7 130 10 150 10 {}
+T {ulpcomp_p} 125 6 0 1 0.2 0.2 {}
+B 5 147.5 27.5 152.5 32.5 {name=user_dac1 dir=inout}
+L 7 130 30 150 30 {}
+T {user_dac1} 125 26 0 1 0.2 0.2 {}
+B 5 147.5 47.5 152.5 52.5 {name=dac1 dir=inout}
+L 7 130 50 150 50 {}
+T {dac1} 125 46 0 1 0.2 0.2 {}
+B 5 -152.5 -132.5 -147.5 -127.5 {name=tempsense_to_user dir=in}
+L 4 -150 -130 -130 -130 {}
+T {tempsense_to_user} -125 -134 0 0 0.2 0.2 {}
+B 5 147.5 67.5 152.5 72.5 {name=user_adc0 dir=inout}
+L 7 130 70 150 70 {}
+T {user_adc0} 125 66 0 1 0.2 0.2 {}
+B 5 147.5 87.5 152.5 92.5 {name=adc0 dir=inout}
+L 7 130 90 150 90 {}
+T {adc0} 125 86 0 1 0.2 0.2 {}
+B 5 147.5 107.5 152.5 112.5 {name=user_tempsense dir=inout}
+L 7 130 110 150 110 {}
+T {user_tempsense} 125 106 0 1 0.2 0.2 {}
+B 5 147.5 127.5 152.5 132.5 {name=tempsense dir=inout}
+L 7 130 130 150 130 {}
+T {tempsense} 125 126 0 1 0.2 0.2 {}
+B 5 -152.5 -112.5 -147.5 -107.5 {name=right_vref_to_user dir=in}
+L 4 -150 -110 -130 -110 {}
+T {right_vref_to_user} -125 -114 0 0 0.2 0.2 {}
+B 5 147.5 147.5 152.5 152.5 {name=user_adc1 dir=inout}
+L 7 130 150 150 150 {}
+T {user_adc1} 125 146 0 1 0.2 0.2 {}
+B 5 147.5 167.5 152.5 172.5 {name=adc1 dir=inout}
+L 7 130 170 150 170 {}
+T {adc1} 125 166 0 1 0.2 0.2 {}
+B 5 147.5 187.5 152.5 192.5 {name=user_right_vref dir=inout}
+L 7 130 190 150 190 {}
+T {user_right_vref} 125 186 0 1 0.2 0.2 {}
+B 5 147.5 207.5 152.5 212.5 {name=right_vref dir=inout}
+L 7 130 210 150 210 {}
+T {right_vref} 125 206 0 1 0.2 0.2 {}
+B 5 -152.5 -92.5 -147.5 -87.5 {name=left_vref_to_user dir=in}
+L 4 -150 -90 -130 -90 {}
+T {left_vref_to_user} -125 -94 0 0 0.2 0.2 {}
+B 5 147.5 227.5 152.5 232.5 {name=user_left_vref dir=inout}
+L 7 130 230 150 230 {}
+T {user_left_vref} 125 226 0 1 0.2 0.2 {}
+B 5 147.5 247.5 152.5 252.5 {name=left_vref dir=inout}
+L 7 130 250 150 250 {}
+T {left_vref} 125 246 0 1 0.2 0.2 {}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=vinref_to_user dir=in}
+L 4 -150 -70 -130 -70 {}
+T {vinref_to_user} -125 -74 0 0 0.2 0.2 {}
+B 5 147.5 267.5 152.5 272.5 {name=user_vinref dir=inout}
+L 7 130 270 150 270 {}
+T {user_vinref} 125 266 0 1 0.2 0.2 {}
+B 5 147.5 287.5 152.5 292.5 {name=vinref dir=inout}
+L 7 130 290 150 290 {}
+T {vinref} 125 286 0 1 0.2 0.2 {}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=voutref_to_user dir=in}
+L 4 -150 -50 -130 -50 {}
+T {voutref_to_user} -125 -54 0 0 0.2 0.2 {}
+B 5 147.5 307.5 152.5 312.5 {name=user_voutref dir=inout}
+L 7 130 310 150 310 {}
+T {user_voutref} 125 306 0 1 0.2 0.2 {}
+B 5 147.5 327.5 152.5 332.5 {name=voutref dir=inout}
+L 7 130 330 150 330 {}
+T {voutref} 125 326 0 1 0.2 0.2 {}

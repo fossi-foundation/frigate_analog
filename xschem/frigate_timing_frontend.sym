@@ -1,0 +1,82 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -130 130 -130 {}
+L 4 -130 130 130 130 {}
+L 4 -130 -130 -130 130 {}
+L 4 130 -130 130 130 {}
+L 4 -150 -120 -130 -120 {}
+L 4 130 -40 150 -40 {}
+L 4 -150 -100 -130 -100 {}
+L 4 130 -20 150 -20 {}
+L 4 -150 -80 -130 -80 {}
+L 4 130 0 150 0 {}
+L 4 -150 -60 -130 -60 {}
+L 4 -150 -40 -130 -40 {}
+L 4 -150 -20 -130 -20 {}
+L 4 130 20 150 20 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 20 -130 20 {}
+L 4 -150 40 -130 40 {}
+L 4 130 80 150 80 {}
+L 7 130 -120 150 -120 {}
+L 7 130 -100 150 -100 {}
+L 7 130 -80 150 -80 {}
+L 7 130 -60 150 -60 {}
+L 7 130 40 150 40 {}
+L 7 130 60 150 60 {}
+L 7 130 100 150 100 {}
+L 7 130 120 150 120 {}
+B 5 147.5 -122.5 152.5 -117.5 {name=vdda3 dir=inout}
+B 5 147.5 -102.5 152.5 -97.5 {name=vssa3 dir=inout}
+B 5 147.5 -82.5 152.5 -77.5 {name=vccd0 dir=inout}
+B 5 147.5 -62.5 152.5 -57.5 {name=vssd0 dir=inout}
+B 5 -152.5 -122.5 -147.5 -117.5 {name=resetb_in_h dir=in}
+B 5 147.5 -42.5 152.5 -37.5 {name=resetb_out_l dir=out}
+B 5 -152.5 -102.5 -147.5 -97.5 {name=rc_osc_16M_ena dir=in}
+B 5 147.5 -22.5 152.5 -17.5 {name=rc_osc_16M_dout dir=out}
+B 5 -152.5 -82.5 -147.5 -77.5 {name=rc_osc_500k_ena dir=in}
+B 5 147.5 -2.5 152.5 2.5 {name=rc_osc_500k_dout dir=out}
+B 5 -152.5 -62.5 -147.5 -57.5 {name=lsxo_ena dir=in}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=lsxo_standby dir=in}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=lsxo_ibias dir=in}
+B 5 147.5 17.5 152.5 22.5 {name=lsxo_dout dir=out}
+B 5 147.5 37.5 152.5 42.5 {name=lsxo_xin dir=inout}
+B 5 147.5 57.5 152.5 62.5 {name=lsxo_xout dir=inout}
+B 5 -152.5 -2.5 -147.5 2.5 {name=hsxo_ena dir=in}
+B 5 -152.5 17.5 -147.5 22.5 {name=hsxo_standby dir=in}
+B 5 -152.5 37.5 -147.5 42.5 {name=hsxo_ibias dir=in}
+B 5 147.5 77.5 152.5 82.5 {name=hsxo_dout dir=out}
+B 5 147.5 97.5 152.5 102.5 {name=hsxo_xin dir=inout}
+B 5 147.5 117.5 152.5 122.5 {name=hsxo_xout dir=inout}
+T {@symname} -127 74 0 0 0.3 0.3 {}
+T {@name} 135 -142 0 0 0.2 0.2 {}
+T {vdda3} 125 -124 0 1 0.2 0.2 {}
+T {vssa3} 125 -104 0 1 0.2 0.2 {}
+T {vccd0} 125 -84 0 1 0.2 0.2 {}
+T {vssd0} 125 -64 0 1 0.2 0.2 {}
+T {resetb_in_h} -125 -124 0 0 0.2 0.2 {}
+T {resetb_out_l} 125 -44 0 1 0.2 0.2 {}
+T {rc_osc_16M_ena} -125 -104 0 0 0.2 0.2 {}
+T {rc_osc_16M_dout} 125 -24 0 1 0.2 0.2 {}
+T {rc_osc_500k_ena} -125 -84 0 0 0.2 0.2 {}
+T {rc_osc_500k_dout} 125 -4 0 1 0.2 0.2 {}
+T {lsxo_ena} -125 -64 0 0 0.2 0.2 {}
+T {lsxo_standby} -125 -44 0 0 0.2 0.2 {}
+T {lsxo_ibias} -125 -24 0 0 0.2 0.2 {}
+T {lsxo_dout} 125 16 0 1 0.2 0.2 {}
+T {lsxo_xin} 125 36 0 1 0.2 0.2 {}
+T {lsxo_xout} 125 56 0 1 0.2 0.2 {}
+T {hsxo_ena} -125 -4 0 0 0.2 0.2 {}
+T {hsxo_standby} -125 16 0 0 0.2 0.2 {}
+T {hsxo_ibias} -125 36 0 0 0.2 0.2 {}
+T {hsxo_dout} 125 76 0 1 0.2 0.2 {}
+T {hsxo_xin} 125 96 0 1 0.2 0.2 {}
+T {hsxo_xout} 125 116 0 1 0.2 0.2 {}

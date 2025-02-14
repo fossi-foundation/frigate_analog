@@ -1,0 +1,28 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1716564976
+<< checkpaint >>
+rect 47182 26789 85356 26941
+rect 47144 26671 85432 26789
+rect -1176 -3372 85470 26671
+rect 86586 -1056 117745 23050
+use sky130_be_ip__lsxo  sky130_be_ip__lsxo_0 ../dependencies/sky130_be_ip__lsxo/mag
+timestamp 1714591373
+transform 1 0 -1252 0 1 24278
+box 1476 -23704 25570 -812
+use sky130_ef_ip__rc_osc_16M  sky130_ef_ip__rc_osc_16M_0 ../dependencies/sky130_ef_ip__rc_osc_16M/mag
+timestamp 1716066989
+transform 0 -1 35464 1 0 574
+box 0 700 10977 10024
+use sky130_ef_ip__rc_osc_500k  sky130_ef_ip__rc_osc_500k_0 ../dependencies/sky130_ef_ip__rc_osc_500k/mag
+timestamp 1699547976
+transform 0 -1 46844 1 0 498
+box 0 0 12242 10724
+use sky130_ht_ip__hsxo_cpz1  sky130_ht_ip__hsxo_cpz1_0 ../dependencies/sky130_ht_ip__hsxo_cpz1/mag
+timestamp 1714659811
+transform 1 0 51566 0 1 7780
+box -3162 -7320 32492 17749
+<< properties >>
+string FIXED_BBOX 0 0 84186 25676
+<< end >>

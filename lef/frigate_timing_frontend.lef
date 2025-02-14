@@ -1,0 +1,250 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO frigate_timing_frontend
+  CLASS BLOCK ;
+  FOREIGN frigate_timing_frontend ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 420.930 BY 128.380 ;
+  PIN lsxo_xin
+    ANTENNAGATEAREA 40.202499 ;
+    ANTENNADIFFAREA 0.405000 ;
+    PORT
+      LAYER met2 ;
+        RECT 45.000 0.000 46.500 2.000 ;
+    END
+  END lsxo_xin
+  PIN lsxo_xout
+    ANTENNAGATEAREA 16.202499 ;
+    ANTENNADIFFAREA 20.125000 ;
+    PORT
+      LAYER met2 ;
+        RECT 155.000 0.000 156.500 2.000 ;
+    END
+  END lsxo_xout
+  PIN hsxo_xin
+    ANTENNAGATEAREA 18.202499 ;
+    ANTENNADIFFAREA 113.155396 ;
+    PORT
+      LAYER met2 ;
+        RECT 265.000 0.000 266.500 2.580 ;
+    END
+  END hsxo_xin
+  PIN hsxo_xout
+    ANTENNADIFFAREA 157.759995 ;
+    PORT
+      LAYER met2 ;
+        RECT 375.000 0.000 376.500 2.580 ;
+    END
+  END hsxo_xout
+  PIN rc_osc_16M_ena
+    ANTENNAGATEAREA 0.985500 ;
+    ANTENNADIFFAREA 0.202500 ;
+    PORT
+      LAYER met2 ;
+        RECT 162.000 70.910 162.140 128.000 ;
+    END
+  END rc_osc_16M_ena
+  PIN rc_osc_500k_ena
+    ANTENNAGATEAREA 1.060500 ;
+    ANTENNADIFFAREA 0.202500 ;
+    PORT
+      LAYER met2 ;
+        RECT 164.240 75.380 164.380 128.000 ;
+    END
+  END rc_osc_500k_ena
+  PIN lsxo_ena
+    ANTENNAGATEAREA 0.399000 ;
+    ANTENNADIFFAREA 0.202500 ;
+    PORT
+      LAYER met2 ;
+        RECT 166.480 120.295 166.620 128.000 ;
+    END
+  END lsxo_ena
+  PIN lsxo_standby
+    ANTENNAGATEAREA 0.399000 ;
+    ANTENNADIFFAREA 0.202500 ;
+    PORT
+      LAYER met2 ;
+        RECT 168.720 119.250 168.860 128.000 ;
+    END
+  END lsxo_standby
+  PIN hsxo_ena
+    ANTENNAGATEAREA 0.800000 ;
+    PORT
+      LAYER met2 ;
+        RECT 170.960 120.300 171.100 128.000 ;
+    END
+  END hsxo_ena
+  PIN hsxo_standby
+    ANTENNAGATEAREA 10.400000 ;
+    PORT
+      LAYER met2 ;
+        RECT 173.200 119.680 173.340 128.000 ;
+    END
+  END hsxo_standby
+  PIN rc_osc_16M_dout
+    ANTENNADIFFAREA 0.731800 ;
+    PORT
+      LAYER met2 ;
+        RECT 175.440 70.330 175.580 128.000 ;
+    END
+  END rc_osc_16M_dout
+  PIN rc_osc_500k_dout
+    ANTENNADIFFAREA 0.556800 ;
+    PORT
+      LAYER met2 ;
+        RECT 177.680 76.835 177.820 128.000 ;
+    END
+  END rc_osc_500k_dout
+  PIN lsxo_dout
+    ANTENNADIFFAREA 1.377500 ;
+    PORT
+      LAYER met2 ;
+        RECT 179.920 118.150 180.060 128.000 ;
+    END
+  END lsxo_dout
+  PIN hsxo_dout
+    ANTENNAGATEAREA 0.500000 ;
+    ANTENNADIFFAREA 7.020000 ;
+    PORT
+      LAYER met2 ;
+        RECT 182.160 125.025 182.300 128.000 ;
+    END
+  END hsxo_dout
+  PIN lsxo_ibias
+    ANTENNADIFFAREA 5.887000 ;
+    PORT
+      LAYER met5 ;
+        RECT 407.025 0.000 421.000 1.600 ;
+    END
+  END lsxo_ibias
+  PIN hsxo_ibias
+    ANTENNADIFFAREA 5.800000 ;
+    PORT
+      LAYER met5 ;
+        RECT 407.065 6.400 421.000 8.000 ;
+    END
+  END hsxo_ibias
+  PIN AVSS
+    ANTENNADIFFAREA 289.515991 ;
+    PORT
+      LAYER met5 ;
+        RECT 416.830 39.065 420.930 49.065 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 0.005 39.065 4.230 49.065 ;
+    END
+  END AVSS
+  PIN AVDD
+    ANTENNAGATEAREA 9.000000 ;
+    ANTENNADIFFAREA 480.273987 ;
+    PORT
+      LAYER met5 ;
+        RECT 416.830 19.065 420.930 29.065 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 0.005 19.065 3.260 29.065 ;
+    END
+  END AVDD
+  PIN DVDD
+    ANTENNADIFFAREA 90.964645 ;
+    PORT
+      LAYER met5 ;
+        RECT 416.830 89.065 420.690 99.065 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 0.005 89.065 32.025 99.065 ;
+    END
+  END DVDD
+  PIN DVSS
+    ANTENNAGATEAREA 12.000000 ;
+    ANTENNADIFFAREA 2169.554688 ;
+    PORT
+      LAYER met5 ;
+        RECT 416.840 109.065 420.690 119.065 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 0.005 109.065 48.960 119.065 ;
+    END
+  END DVSS
+  PIN resetb_in_h
+    ANTENNAGATEAREA 1.027200 ;
+    ANTENNADIFFAREA 0.607200 ;
+    PORT
+      LAYER met2 ;
+        RECT 157.520 112.770 157.660 128.000 ;
+    END
+  END resetb_in_h
+  PIN resetb_out_l
+    ANTENNADIFFAREA 0.492900 ;
+    PORT
+      LAYER met2 ;
+        RECT 159.760 97.090 159.900 128.000 ;
+    END
+  END resetb_out_l
+  OBS
+      LAYER nwell ;
+        RECT 7.120 2.870 404.725 117.320 ;
+      LAYER li1 ;
+        RECT 7.300 3.050 416.805 117.140 ;
+      LAYER met1 ;
+        RECT 7.120 1.315 416.880 126.625 ;
+      LAYER met2 ;
+        RECT 4.095 112.490 157.240 126.640 ;
+        RECT 157.940 112.490 159.480 126.640 ;
+        RECT 4.095 96.810 159.480 112.490 ;
+        RECT 160.180 96.810 161.720 126.640 ;
+        RECT 4.095 70.630 161.720 96.810 ;
+        RECT 162.420 75.100 163.960 126.640 ;
+        RECT 164.660 120.015 166.200 126.640 ;
+        RECT 166.900 120.015 168.440 126.640 ;
+        RECT 164.660 118.970 168.440 120.015 ;
+        RECT 169.140 120.020 170.680 126.640 ;
+        RECT 171.380 120.020 172.920 126.640 ;
+        RECT 169.140 119.400 172.920 120.020 ;
+        RECT 173.620 119.400 175.160 126.640 ;
+        RECT 169.140 118.970 175.160 119.400 ;
+        RECT 164.660 75.100 175.160 118.970 ;
+        RECT 162.420 70.630 175.160 75.100 ;
+        RECT 4.095 70.050 175.160 70.630 ;
+        RECT 175.860 76.555 177.400 126.640 ;
+        RECT 178.100 117.870 179.640 126.640 ;
+        RECT 180.340 124.745 181.880 126.640 ;
+        RECT 182.580 124.745 416.885 126.640 ;
+        RECT 180.340 117.870 416.885 124.745 ;
+        RECT 178.100 76.555 416.885 117.870 ;
+        RECT 175.860 70.050 416.885 76.555 ;
+        RECT 4.095 2.860 416.885 70.050 ;
+        RECT 4.095 2.280 264.720 2.860 ;
+        RECT 4.095 0.980 44.720 2.280 ;
+        RECT 46.780 0.980 154.720 2.280 ;
+        RECT 156.780 0.980 264.720 2.280 ;
+        RECT 266.780 0.980 374.720 2.860 ;
+        RECT 376.780 0.980 416.885 2.860 ;
+      LAYER met3 ;
+        RECT 0.475 1.320 416.960 127.415 ;
+      LAYER met4 ;
+        RECT 0.490 0.015 416.960 120.385 ;
+      LAYER met5 ;
+        RECT 50.560 107.465 415.240 119.065 ;
+        RECT 3.260 100.665 416.950 107.465 ;
+        RECT 33.625 87.465 415.230 100.665 ;
+        RECT 3.260 50.665 416.950 87.465 ;
+        RECT 5.830 37.465 415.230 50.665 ;
+        RECT 3.260 30.665 416.950 37.465 ;
+        RECT 4.860 17.465 415.230 30.665 ;
+        RECT 3.260 9.600 416.950 17.465 ;
+        RECT 3.260 4.800 405.465 9.600 ;
+        RECT 3.260 3.200 416.950 4.800 ;
+        RECT 3.260 0.000 405.425 3.200 ;
+        RECT 403.305 -0.105 407.145 0.000 ;
+  END
+END frigate_timing_frontend
+END LIBRARY
+

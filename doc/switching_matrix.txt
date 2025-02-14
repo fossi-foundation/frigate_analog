@@ -1,0 +1,354 @@
+Description of the switching matrix connections in Frigate
+-----------------------------------------------------------------
+Updated with additional blocks and block digital I/O
+Updated with signal names as they apper in the layout and verilog
+Updated (Feb. 3, 2025) with recent corrections and a new row/
+column cross-reference nomenclature in the frigate_analog
+document.
+-----------------------------------------------------------------
+Total number of switches:  228
+Total number of register bits:  313
+Total number of registers: 30
+
+* = break-before-make ground isolation switch (2 pins)
+Total number of ground isolation switches: 94
+Total number of simple switches: 134
+
+NOTE:  An attempt has been made to normalize all signal names to match in all
+views.  However, where old names appear, use the following mapping:
+
+canonical name		original name		description
+----------------------------------------------------------------------------------
+ulpcomp			comparator 1		Ultra-low-power comparator
+comp			comparator 0		Precision comparator
+right_instramp		preamp 1		Instrumentation amplifier
+right_opamp_2		amp 3			High gain-bandwidth amplifier*
+right_opamp_1		amp 2			High gain-bandwidth amplifier
+left_opamp_1		amp 1			High gain-bandwidth amplifier
+left_opamp_2		amp 0			High gain-bandwidth amplifier
+left_instramp		preamp 0		Instrumentation amplifier
+right_rheostat_2	rheostat 3		8-bit programmable rheostat
+right_rheostat_1	rheostat 2		8-bit programmable rheostat
+left_rheostat_1		rheostat 1		8-bit programmable rheostat
+left_rheostat_2		rheostat 0		8-bit programmable rheostat
+ADC 1			adc 0			12-bit SAR ADC
+ADC 2			adc 1			12-bit SAR ADC
+DAC 1			dac 0			8-bit RDAC
+DAC 2			dac 1			8-bit RDAC
+
+----------------------------------------------------------------------------------
+(NOTE:  Previously, "opamp_1" was called "hgbw_opamp" (high gain-bandwidth) and
+"opamp_2" was called "lp_opamp" (low-power).  The layout is (and has been for
+some time) two high gain-bandwidth op amps.
+
+----------------------------------------------------------------------------------
+Other naming conventions:  Canonical input names for differential inputs
+are "_n" and "_p".  Sometimes "-" and "+" are used.  When these are used,
+the signal is assumed to be an analog block input and may not have "in" in
+the name.  Likewise, if the block name appears without a "_n" or "_p"
+suffix, the signal is assumed to be an output and may not have "out" in the
+name.  Digital signals to and from the analog blocks are not represented, so
+in this list "adc" always refers to the ADC (analog) input and "dac" always
+refers to the DAC (analog) output.
+----------------------------------------------------------------------------------
+In the list below, "Location" references the figure in document frigate_analog
+(.ps, .pdf).  As of Feb. 3, 2025, the figure is overlaid with a row/column grid,
+with horizontal lines numbered 1 to 37 down the left side and with vertical lines
+lettered A to Z, &, #, AA to ZZ, &&, and ## across the top.  "Location" consists
+of a letter/symbol and a number and refers to the switch located at that grid
+position in the figure.
+
+					Register name,bit	Location Signal name
+-------------------------------------------------------------------------------
+A. Test points (4)			reg_ana_test
+    ibias (test) : gpio1_2			1,0	*	GG-51	ibias_test_to_gpio1_2
+    vbg (test)   : gpio1_1			3,2	*	KK-39	vbg_test_to_gpio1_1
+
+B. iDAC	(4)				reg_ana_idac
+    iDAC out : gpio1_3				1,0	*	FF-52	idac_to_gpio1_3
+    iDAC out : gpio1_2				3,2	*	FF-51	idac_to_gpio1_2
+
+C. ADC and DAC reference voltages (8)	reg_ana_ref
+    ADC refH : gpio6_6				1,0	*	HH-1	adc_refh_to_gpio6_6
+    DAC refH : gpio1_1				3,2	*	KK-37	dac_refh_to_gpio1_1
+    ADC refL : gpio6_7				5,4	*	JJ-1	adc_refl_to_gpio6_7
+    DAC refL : gpio1_0				7,6	*	LL-37	dac_refl_to_gpio1_0
+
+D. Right opamp 2 output (18)		reg_ana_amp3_out
+    right amp 2 out : ulp comp in+		1,0	*	C-4	right_opamp_2_to_ulpcomp_p
+    right amp 2 out : prec comp in+		3,2	*	C-6	right_opamp_2_to_comp_p
+    right amp 2 out : ADC 1 in			5,4	*	C-8	right_opamp_2_to_adc0
+    right amp 2 out : gpio4_7			7,6	*	C-12	right_opamp_2_to_gpio4_7
+    right amp 2 out : gpio4_3			9,8	*	C-19	right_opamp_2_to_gpio4_3
+    right amp 2 out : analog 1			11,10	*	C-23	right_opamp_2_to_analog1
+    right amp 2 out : amuxbus B			13,12	*	C-26	right_opamp_2_to_amuxbusB
+    right amp 2 out : gpio3_7			15,14	*	C-28	right_opamp_2_to_gpio3_7
+    right amp 2 out : gpio3_3			17,16	*	C-39	right_opamp_2_to_gpio3_3
+
+E. Right opamp 1 output (18)		reg_ana_amp2_out
+    right opamp 1 out : ulp comp in-		1,0	*	D-5	right_opamp_1_to_ulpcomp_n
+    right opamp 1 out : prec comp in-		3,2	*	D-7	right_opamp_1_to_comp_n
+    right opamp 1 out : ADC 2 in		5,4	*	D-9	right_opamp_1_to_adc1
+    right opamp 1 out : gpio4_6			7,6	*	D-13	right_opamp_1_to_gpio4_6
+    right opamp 1 out : gpio4_2			9,8	*	D-20	right_opamp_1_to_gpio4_2
+    right opamp 1 out : analog 0		11,10	*	D-25	right_opamp_1_to_analog0
+    right opamp 1 out : amuxbus A		13,12	*	D-27	right_opamp_1_to_amuxbusA
+    right opamp 1 out : gpio3_6			15,14	*	D-29	right_opamp_1_to_gpio3_6
+    right opamp 1 out : gpio3_2			17,16	*	D-40	right_opamp_1_to_gpio3_2
+
+F. Left opamp 1 output (18)		reg_ana_amp1_out
+    left opamp 1 out : ulp comp in+		1,0	*	E-4	left_opamp_1_to_ulpcomp_p
+    left opamp 1 out : prec comp in+		3,2	*	E-6	left_opamp_1_to_comp_p
+    left opamp 1 out : ADC 1 in			5,4	*	E-8	left_opamp_1_to_adc0
+    left opamp 1 out : gpio4_5			7,6	*	E-14	left_opamp_1_to_gpio4_5
+    left opamp 1 out : gpio4_1			9,8	*	E-21	left_opamp_1_to_gpio4_1
+    left opamp 1 out : analog 1			11,10	*	E-23	left_opamp_1_to_analog1
+    left opamp 1 out : amuxbus B		13,12	*	E-26	left_opamp_1_to_amuxbusB
+    left opamp 1 out : gpio3_5			15,14	*	E-30	left_opamp_1_to_gpio3_5
+    left opamp 1 out : gpio3_1			17,16	*	E-41	left_opamp_1_to_gpio3_1
+
+G. Left opamp 2 output (14)		reg_ana_amp0_out
+    left opamp 2 out : ulp comp in-		1,0	*	F-5	left_opamp_2_to_ulpcomp_n
+    left opamp 2 out : prec comp in-		3,2	*	F-7	left_opamp_2_to_comp_n
+    left opamp 2 out : ADC 2 in			5,4	*	F-9	left_opamp_2_to_adc1
+    left opamp 2 out : gpio4_0			7,6	*	F-22	left_opamp_2_to_gpio4_0
+    left opamp 2 out : analog 0			9,8 	*	F-24	left_opamp_2_to_analog0
+    left opamp 2 out : amuxbus A		10,11	*	F-27	left_opamp_2_to_amuxbusA
+    left opamp 2 out : gpio3_4			12,13	*	F-31	left_opamp_2_to_gpio3_4
+
+H. Right opamp 2 positive input (10)	reg_ana_amp3_inp
+    right opamp 2 in+ : DAC 1 out		0		K-10	right_opamp_2_p_to_dac0
+    right opamp 2 in+ : analog 0		1		K-24	right_opamp_2_p_to_analog0
+    right opamp 2 in+ : amuxbusA		2		K-27	right_opamp_2_p_to_amuxbusA
+    left instr. amp in+ : right rheostat 2 out	3		T-36	left_isntramp_p_to_rheostat_out
+    right opamp 2 in+ : sio 0			4		K-41	right_opamp_2_p_to_sio0
+    right opamp 2 in+ : temp_out		5		K-45	right_opamp_2_p_to_tempsense
+    right opamp 2 in+ : vref w			6		K-47	right_opamp_2_p_to_left_vref
+    right opamp 2 in+ : voutref			7		K-49	right_opamp_2_p_to_voutref
+    right opamp 2 in+ : gpio2_5			9,8	*	K-50	right_opamp_2_p_to_gpio2_5
+
+I. Right opamp 2 negative input (11)	reg_ana_amp3_inn
+    right opamp 2 in- : DAC 2 out		0		L-11	right_opamp_2_n_to_dac1
+    right opamp 2 in- : analog 1		1		L-23	right_opamp_2_n_to_analog1
+    right opamp 2 in- : amuxbusB		2		L-26	right_opamp_2_n_to_amuxbusB
+    left instramp in- : right rheostat 2 out	3		U-36	left_instramp_n_to_rheostat_out
+    right opamp 2 in- : right rheostat 2 tap	4		L-38	right_opamp_2_n_to_rheostat_tap
+    right opamp 2 in- : sio 1			5		L-42	right_opamp_2_n_to_sio1
+    right opamp 2 in- : vbgtc			6		L-43	right_opamp_2_n_to_vbgtc
+    right opamp 2 in- : vref e			7		L-46	right_opamp_2_n_to_right_vref
+    right opamp 2 in- : vinref			8		L-48	right_opamp_2_n_to_vinref
+    right opamp 2 in- : gpio2_4			10,9	*	L-50	right_opamp_2_n_to_gpio2_4
+
+J. Right opamp 1 positive input (11)	reg_ana_amp2_inp
+    right opamp 1 in+ : gpio5_0			1,0	*	M-1	right_opamp_1_p_to_gpio5_0
+    right opamp 1 in+ : DAC 1 out		2		M-10	right_opamp_1_p_to_dac0
+    right opamp 1 in+ : analog 0		3		M-24	right_opamp_1_p_to_analog0
+    right opamp 1 in+ : amuxbusA		4		M-27	right_opamp_1_p_to_amuxbusA
+    right intstr amp in+ : right rheostat 1 out	5		J-32	right_instramp_p_to_rheostat_out
+    right opamp 1 in+ : sio 0			6		M-41	right_opamp_1_p_to_sio0
+    right opamp 1 in+ : vref w			7		M-47	right_opamp_1_p_to_left_vref
+    right opamp 1 in+ : voutref			9		M-49	right_opamp_1_p_to_voutref
+    right opamp 1 in+ : gpio2_3			10,9	*	M-50	right_opamp_1_p_to_gpio2_3
+
+K. Right opamp 1 negative input (13)	reg_ana_amp2_inn
+    right opamp 1 in- : gpio5_1			1,0	*	N-1	right_opamp_1_n_to_gpio5_1
+    right opamp 1 in- : DAC 2 out		2		N-11	right_opamp_1_n_to_dac1
+    right opamp 1 in- : analog 1		3		N-23	right_opamp_1_n_to_analog1
+    right opamp 1 in- : amuxbusB		4		N-26	right_opamp_1_n_to_amuxbusB
+    right instr amp in- : right rheostat 1 out	5		J-32	right_instramp_n_to_rheostat_out
+    right opamp 1 in- : right rheostat 1 tap	6		N-30	right_opamp_1_n_to_rheostat_tap
+    right opamp 1 in- : sio 1			7		N-42	right_opamp_1_n_to_sio1
+    right opamp 1 in- : vbgsc			8		N-44	right_opamp_1_n_to_vbgsc
+    right opamp 1 in- : vref e			9		N-46	right_opamp_1_n_to_right_vref
+    right opamp 1 in- : vinref		       10		N-48	right_opamp_1_n_to_vinref
+    right opamp 1 in- : gpio2_2		       11,12	*	N-50	right_opamp_1_n_to_gpio2_2
+
+L. Left opamp 1 positive input (12)	reg_ana_amp1_inp
+    left opamp 1 in+ : gpio5_2			1,0	*	P-1	left_opamp_1_p_to_gpio5_2
+    left opamp 1 in+ : DAC 1 out		2		P-10	left_opamp_1_p_to_dac0
+    left opamp 1 in+ : analog 0			3		P-24	left_opamp_1_p_to_analog0
+    left opamp 1 in+ : amuxbusA			4		P-27	left_opamp_1_p_to_amuxbusA
+    left instr amp in+ : left rheostat 1 out	5		T-19	left_instramp_p_to_rheostat_out
+    left opamp 1 in+ : sio 0			6		P-41	left_opamp_1_p_to_sio0
+    left opamp 1 in+ : temp_out			7		P-45	left_opamp_1_p_to_tempsense
+    left opamp 1 in+ : vref w			8		P-47	left_opamp_1_p_to_left_vref
+    left opamp 1 in+ : voutref			9		P-49	left_opamp_1_p_to_voutref
+    left opamp 1 in+ : gpio2_1		       11,10	*	P-50	left_opamp_1_p_to_gpio2_1
+
+M. Left opamp 1 negative input (13)	reg_ana_amp1_inn
+    left opamp 1 in- : gpio5_3			1,0	*	Q-1	left_opamp_1_n_to_gpio5_3
+    left opamp 1 in- : DAC 2 out		2		Q-11	left_opamp_1_n_to_dac1
+    left opamp 1 in- : analog 1			3		Q-23	left_opamp_1_n_to_analog1
+    left opamp 1 in- : amuxbusB			4		Q-26	left_opamp_1_n_to_amuxbusB
+    left instramp in- : left rheostat 1 out	5		U-18	left_instramp_n_to_rheostat_out
+    left opamp 1 in- : left rheostat 1 tap	6		Q-20	left_opamp_1_n_to_rheostat_tap
+    left opamp 1 in- : sio 1			7		Q-42	left_opamp_1_n_to_sio1
+    left opamp 1 in- : vbgtc			8		Q-43	left_opamp_1_n_to_vbgtc
+    left opamp 1 in- : vref e			9		Q-46	left_opamp_1_n_to_right_vref
+    left opamp 1 in- : vinref		       10		Q-48	left_opamp_1_n_to_vinref
+    left opamp 1 in- : gpio2_0		       12,11	*	Q-50	left_opamp_1_n_to_gpio2_0
+
+N. Left opamp 2 positive input (10)	reg_ana_amp0_inp
+    left opamp 2 in+ : gpio5_4			1,0	*	R-1	left_opamp_2_p_to_gpio5_4
+    left opamp 2 in+ : DAC 1 out		2		R-10	left_opamp_2_p_to_dac0
+    left opamp 2 in+ : analog 0			3		R-24	left_opamp_2_p_to_analog0
+    left opamp 2 in+ : amuxbusA			4		R-27	left_opamp_2_p_to_amuxbusA
+    right instr amp in+ : left rheostat 2 out	5		H-17	right_instramp_p_to_rheostat_out
+    left opamp 2 in+ : sio 0			6		R-41	left_opamp_2_p_to_sio0
+    left opamp 2 in+ : vref w			7		R-47	left_opamp_2_p_to_left_vref
+    left opamp 2 in+ : voutref			8		R-49	left_opamp_2_p_to_voutref
+
+O. Left opamp 2 negative input (11)	reg_ana_amp0_inn
+    left opamp 2 in- : gpio5_5			1,0	*	S-1	left_opamp_2_n_to_gpio5_5
+    left opamp 2 in- : DAC 2 out		2		S-11	left_opamp_2_n_to_dac1
+    left opamp 2 in- : analog 1			3		S-23	left_opamp_2_n_to_analog1
+    left opamp 2 in- : amuxbusB			4		S-26	left_opamp_2_n_to_amuxbusB
+    right instr amp in- : left rheostat 2 out	5		J-17	right_instramp_n_to_rheostat_out
+    left opamp 2 in- : left rheostat 2 tap	6		S-16	left_opamp_2_n_to_rheostat_tap
+    left opamp 2 in- : sio 1			7		S-42	left_opamp_2_n_to_sio1
+    left opamp 2 in- : vbgsc			8		S-44	left_opamp_2_n_to_vbgsc
+    left opamp 2 in- : vref e			9		S-46	left_opamp_2_n_to_right_vref
+    left opamp 2 in- : vinref		       10		S-48	left_opamp_2_n_to_vinref
+
+P. Left instr. amplifier output (12)	reg_ana_preamp0_out
+    left instr amp out : ulp comp in+		1,0	*	G-4	left_instramp_to_ulpcomp_p
+    left instr amp out : prec comp in+		3,2	*	G-6	left_instramp_to_comp_p
+    left instr amp out : ADC 1 in		5,4	*	G-8	left_instramp_to_adc0
+    left instr amp out : gpio4_4		7,6	*	G-15	left_instramp_to_gpio4_4
+    left instr amp out : analog_1		9,8	*	G-23	left_instramp_to_analog1
+    left instr amp out : amuxbusB		11,10	*	G-26	left_instramp_to_amuxbusB
+
+Q. Right instr. amplifier output (12)	reg_ana_preamp1_out
+    right instr amp out : ulp comp in-		1,0	*	B-5	right_instramp_to_ulpcomp_n
+    right instr amp out : prec comp in-		3,2	*	B-7	right_instramp_to_comp_n
+    right instr amp out : ADC 2 in		5,4	*	B-9	right_instramp_to_adc1
+    right instr amp out : analog_0		7,6	*	B-24	right_instramp_to_analog0
+    right instr amp out : amuxbusA		9,8	*	B-27	right_instramp_to_amuxbusA
+    right instr amp out : gpio3_0		11,10	*	B-42	right_instramp_to_gpio3_0
+
+R. Left instr. amp. negative input (7)	reg_ana_preamp0_inn
+    left instr amp in- : gpio5_7		1,0	*	U-1	left_instramp_n_to_gpio5_7
+    left instr amp in- : analog_1		2		U-23	left_instramp_n_to_analog1
+    left instr amp in- : amuxbusB		3		U-26	left_instramp_n_to_amuxbusB
+    left instr amp in- : sio 1			4		U-42	left_instramp_n_to_sio1
+    left instr amp in- : vref_e			5		U-46	left_instramp_n_to_right_vref
+    left instr amp in- : vrefin			6		U-48	left_instramp_n_to_vinref
+
+S. Left instr. amp. positive input (8)	reg_ana_preamp0_inp
+    left instr amp in+ : gpio5_6		1,0	*	T-1	left_instramp_p_to_gpio5_6
+    left instr amp in+ : analog_0		2		T-24	left_instramp_p_to_analog0
+    left instr amp in+ : amuxbusA		3		T-27	left_instramp_p_to_amuxbusA
+    left instr amp in+ : sio 0			4		T-41	left_instramp_p_to_sio0
+    left instr amp in+ : temp_out		5		T-45	left_instramp_p_to_tempsense
+    left instr amp in+ : vref_w			6		T-47	left_instramp_p_to_left_vref
+    left instr amp in+ : voutref		7		T-49	left_instramp_p_to_voutref
+
+T. Right instr. amp. negative input (7)	reg_ana_preamp1_inn
+    right instr amp in- : analog_1		0		J-23	right_instramp_n_to_analog1
+    right instr amp in- : amuxbusB		1		J-26	right_instramp_n_to_amuxbusB
+    right instr amp in- : sio 1			2		J-42	right_instramp_n_to_sio1
+    right instr amp in- : vref_e		3		J-46	right_instramp_n_to_right_vref
+    right instr amp in- : vinref		4		J-48	right_instramp_n_to_vinref
+    right instr amp in- : gpio2_6		6,5	*	J-50	right_instramp_n_to_gpio2_6
+
+U. Right instr. amp. positive input (8)	reg_ana_preamp1_inp
+    right instr amp in+ : analog_0		0		H-24	right_instramp_p_to_analog0
+    right instr amp in+ : amuxbusA		1		H-27	right_instramp_p_to_amuxbusA
+    right instr amp in+ : sio 0			2		H-41	right_instramp_p_to_sio0
+    right instr amp in+ : temp_out		3		H-45	right_instramp_p_to_tempsense
+    right instr amp in+ : vref_w		4		H-47	right_instramp_p_to_left_vref
+    right instr amp in+ : voutref		5		H-49	right_instramp_p_to_voutref
+    right instr amp in+ : gpio2_7		7,6	*	H-50	right_instramp_p_to_gpio2_7
+
+V. ULP Comparator positive input (11)	reg_ana_comp1_inp
+    ulp comp in+ : DAC 1 out			0		-X10	ulpcomp_p_to_dac0
+    ulp comp in+ : analog_1			1		-X23	ulpcomp_p_to_analog1
+    ulp comp in+ : sio 0			2		-X41	ulpcomp_p_to_sio0
+    ulp comp in+ : vbgtc			3		-X43	ulpcomp_p_to_vbgtc
+    ulp comp in+ : temp out			4		-X45	ulpcomp_p_to_tempsense
+    ulp comp in+ : vref w			5		-X47	ulpcomp_p_to_left_vref
+    ulp comp in+ : voutref			6		-X49	ulpcomp_p_to_voutref
+    ulp comp in+ : gpio6_0			8,7	*	-X1	ulpcomp_p_to_gpio6_0
+    ulp comp in+ : gpio1_7		        10,9	*	-X50	ulpcomp_p_to_gpio1_7
+
+W. ULP Comparator negative input (10)	reg_ana_comp1_inn
+    ulp comp in- : DAC 2 out			0		Y-11	ulpcomp_n_to_dac1
+    ulp comp in- : analog_0			1		Y-24	ulpcomp_n_to_analog0
+    ulp comp in- : sio 1			2		Y-42	ulpcomp_n_to_sio1
+    ulp comp in- : vbgsc			3		Y-44	ulpcomp_n_to_vbgsc
+    ulp comp in- : vref e			4		Y-46	ulpcomp_n_to_right_vref
+    ulp comp in- : vinref			5		Y-48	ulpcomp_n_to_vinref
+    ulp comp in- : gpio6_1			7,6	*	Y-1	ulpcomp_n_to_gpio6_1
+    ulp comp in- : gpio1_6			9,8	*	Y-50	ulpcomp_n_to_gpio1_6
+
+X. Prec. comp. positive input (11)	reg_ana_comp0_inp
+    prec. comp in+ : DAC 1 out			0		Z-10	comp_p_to_dac0
+    prec. comp in+ : analog_1			1		Z-23	comp_p_to_analog1
+    prec. comp in+ : sio 0			2		Z-41	comp_p_to_sio0
+    prec. comp in+ : vbgtc			3		Z-43	comp_p_to_vbgtc
+    prec. comp in+ : temp out			4		Z-45	comp_p_to_tempsense
+    prec. comp in+ : vref w			5		Z-47	comp_p_to_left_vref
+    prec. comp in+ : voutref			6		Z-49	comp_p_to_voutref
+    prec. comp in+ : gpio6_2			8,7	*	Z-1	comp_p_to_gpio6_2
+    prec. comp in+ : gpio1_5			10,9	*	Z-50	comp_p_to_gpio1_5
+
+Y. Prec. comp. negative input (10)	reg_ana_comp0_inn
+    prec. comp in- : DAC 2 out			0		AA-11	comp_n_to_dac1
+    prec. comp in- : analog_0			1		AA-25	comp_n_to_analog0
+    prec. comp in- : sio 1			2		AA-42	comp_n_to_sio1
+    prec. comp in- : vbgsc			3		AA-44	comp_n_to_vbgsc
+    prec. comp in- : vref e			4		AA-46	comp_n_to_right_vref
+    prec. comp in- : vinref			5		AA-48	comp_n_to_vinref
+    prec. comp in- : gpio6_3			7,6	*	AA-1	comp_n_to_gpio6_1
+    prec. comp in- : gpio1_4			9,8	*	AA-50	comp_n_to_gpio1_4
+
+Z. ADC 1 input (10)			reg_ana_adc0_in
+    ADC 1 in : DAC 1 out (test)			0		BB-10	adc0_to_dac0
+    ADC 1 in : analog 1				1		BB-23	adc0_to_analog1
+    ADC 1 in : vbgtc (test)			2		BB-43	adc0_to_vbgtc
+    ADC 1 in : temp out (test/char)		3		BB-45	adc0_to_tempsense
+    ADC 1 in : vref w	(test)			4		BB-47	adc0_to_left_vref
+    ADC 1 in : voutref (test)			5		BB-49	adc0_to_voutref
+    ADC 1 in : gpio6_4				7,6	*	BB-1	adc0_to_gpio6_4
+    ADC 1 in : gpio1_3				9,8	*	BB-50	adc0_to_gpio1_3
+
+AA. ADC 2 input (9)			reg_ana_adc1_in
+    ADC 2 in : DAC 2 out (test)			0		CC-1	adc1_to_dac1
+    ADC 2 in : analog 0				1		CC-25	adc1_to_analog0
+    ADC 2 in : vbgsc (test)			2		CC-44	adc1_to_vbgsc
+    ADC 2 in : vref e (test)			3		CC-46	adc1_to_right_vref
+    ADC 2 in : vinref	(test)			4		CC-48	adc1_to_vinref
+    ADC 2 in : gpio6_5				6,5	*	CC-1	adc1_to_gpio6_5
+    ADC 2 in : gpio1_2				8,7	*	CC-50	adc1_to_gpio1_2
+
+BB. DAC output (4)			reg_ana_dac_out
+    DAC 1 out : analog 1			0		DD-23	dac0_to_analog1
+    DAC 2 out : analog 0			1		EE-24	dac1_to_analog0
+    audiodac out : analog 1			2		W-23	audiodac_out_to_analog1
+    audiodac outb : analog 0			3		V-24	audiodac_outb_to_analog0
+
+CC. SIO isolation (4)			reg_ana_sio_iso
+    sio 0					1,0	*	NN-40	sio0_connect
+    sio 1					3,2	*	NN-42	sio1_connect
+
+DD. Analog isolation (4)		reg_ana_sio_ana
+    analog 0					1,0	*	A-23	analog0_connect
+    analog 1					3,2	*	A-25	analog1_connect
+
+EE. User project connections (21)	reg_ana_uproj
+    vbgtc      : uproj				0		MM-2	vbgtc_to_user
+    vbgsc      : uproj				1		MM-3	vbgsc_to_user
+    prec comp in- : uproj			3,2	*	MM-4	user_to_comp_n
+    prec comp in+ : uproj			5,4	*	MM-5	user_to_comp_p
+    ulp comp in- : uproj			7,6	*	MM-6	user_to_ulpcomp_n
+    ulp comp in+ : uproj			9,8	*	MM-7	user_to_ulpcomp_p
+    ADC 1 in   : uproj				11,10	*	MM-8	user_to_adc0
+    ADC 2 in   : uproj				13,12	*	MM-9	user_to_adc1
+    DAC 1 out  : uproj			        14		MM-10	dac0_to_user
+    DAC 2 out  : uproj			        15		MM-11	dac1_to_user
+    temp out   : uproj			        16		MM-32	tempsense_to_user
+    vref e     : uproj			        17		MM-33	right_vref_to_user
+    vref w     : uproj			        18		MM-34	left_vref_to_user
+    vinref     : uproj			        19		MM-35	vinref_to_user
+    voutref    : uproj			        20		MM-36	voutref_to_user
+ 

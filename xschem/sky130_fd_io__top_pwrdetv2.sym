@@ -1,0 +1,86 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=primitive
+format="@name @@in1_vddd_hv @@in1_vddio_hv @@in2_vddd_hv @@in2_vddio_hv @@in3_vddd_hv @@in3_vddio_hv @@out1_vddd_hv @@out1_vddio_hv @@out2_vddd_hv @@out2_vddio_hv @@out3_vddd_hv @@out3_vddio_hv @@rst_por_hv_n @@tie_lo_esd @@vccd @@vddd1 @@vddd2 @@vddd_present_vddio_hv @@vddio_present_vddd_hv @@vddio_q @@vssa @@vssd @@vssio_q @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -160 130 -160 {}
+L 4 -130 240 130 240 {}
+L 4 130 130 150 130 {}
+L 4 130 150 150 150 {}
+L 4 130 170 150 170 {}
+L 4 130 190 150 190 {}
+L 4 130 210 150 210 {}
+L 4 -150 130 -130 130 {}
+L 4 130 230 150 230 {}
+L 4 -150 150 -130 150 {}
+L 4 -150 170 -130 170 {}
+L 4 130 50 150 50 {}
+L 4 -150 190 -130 190 {}
+L 4 -150 210 -130 210 {}
+L 4 130 70 150 70 {}
+L 4 -150 230 -130 230 {}
+L 4 130 90 150 90 {}
+L 4 -150 10 -130 10 {}
+L 4 -130 -160 -130 240 {}
+L 4 130 -160 130 240 {}
+L 4 -130 110 130 110 {}
+L 7 130 -110 150 -110 {}
+L 7 130 -90 150 -90 {}
+L 7 130 -70 150 -70 {}
+L 7 130 -50 150 -50 {}
+L 7 130 -30 150 -30 {}
+L 7 130 -10 150 -10 {}
+L 7 130 10 150 10 {}
+B 5 -152.5 127.5 -147.5 132.5 {name=in1_vddd_hv dir=in}
+B 5 -152.5 147.5 -147.5 152.5 {name=in1_vddio_hv dir=in}
+B 5 -152.5 167.5 -147.5 172.5 {name=in2_vddd_hv dir=in}
+B 5 -152.5 187.5 -147.5 192.5 {name=in2_vddio_hv dir=in}
+B 5 -152.5 207.5 -147.5 212.5 {name=in3_vddd_hv dir=in}
+B 5 -152.5 227.5 -147.5 232.5 {name=in3_vddio_hv dir=in}
+B 5 147.5 127.5 152.5 132.5 {name=out1_vddd_hv dir=out}
+B 5 147.5 147.5 152.5 152.5 {name=out1_vddio_hv dir=out}
+B 5 147.5 167.5 152.5 172.5 {name=out2_vddd_hv dir=out}
+B 5 147.5 187.5 152.5 192.5 {name=out2_vddio_hv dir=out}
+B 5 147.5 207.5 152.5 212.5 {name=out3_vddd_hv dir=out}
+B 5 147.5 227.5 152.5 232.5 {name=out3_vddio_hv dir=out}
+B 5 -152.5 7.5 -147.5 12.5 {name=rst_por_hv_n dir=in}
+B 5 147.5 47.5 152.5 52.5 {name=tie_lo_esd dir=out}
+B 5 147.5 -112.5 152.5 -107.5 {name=vccd dir=inout}
+B 5 147.5 -92.5 152.5 -87.5 {name=vddd1 dir=inout}
+B 5 147.5 -72.5 152.5 -67.5 {name=vddd2 dir=inout}
+B 5 147.5 67.5 152.5 72.5 {name=vddd_present_vddio_hv dir=out}
+B 5 147.5 87.5 152.5 92.5 {name=vddio_present_vddd_hv dir=out}
+B 5 147.5 -52.5 152.5 -47.5 {name=vddio_q dir=inout}
+B 5 147.5 -32.5 152.5 -27.5 {name=vssa dir=inout}
+B 5 147.5 -12.5 152.5 -7.5 {name=vssd dir=inout}
+B 5 147.5 7.5 152.5 12.5 {name=vssio_q dir=inout}
+T {@symname} -115 -146 0 0 0.3 0.3 {}
+T {@name} 135 -172 0 0 0.2 0.2 {}
+T {in1_vddd_hv} -125 126 0 0 0.2 0.2 {}
+T {in1_vddio_hv} -125 146 0 0 0.2 0.2 {}
+T {in2_vddd_hv} -125 166 0 0 0.2 0.2 {}
+T {in2_vddio_hv} -125 186 0 0 0.2 0.2 {}
+T {in3_vddd_hv} -125 206 0 0 0.2 0.2 {}
+T {in3_vddio_hv} -125 226 0 0 0.2 0.2 {}
+T {out1_vddd_hv} 125 126 0 1 0.2 0.2 {}
+T {out1_vddio_hv} 125 146 0 1 0.2 0.2 {}
+T {out2_vddd_hv} 125 166 0 1 0.2 0.2 {}
+T {out2_vddio_hv} 125 186 0 1 0.2 0.2 {}
+T {out3_vddd_hv} 125 206 0 1 0.2 0.2 {}
+T {out3_vddio_hv} 125 226 0 1 0.2 0.2 {}
+T {rst_por_hv_n} -125 6 0 0 0.2 0.2 {}
+T {tie_lo_esd} 125 46 0 1 0.2 0.2 {}
+T {vccd} 125 -114 0 1 0.2 0.2 {}
+T {vddd1} 125 -94 0 1 0.2 0.2 {}
+T {vddd2} 125 -74 0 1 0.2 0.2 {}
+T {vddd_present_vddio_hv} 125 66 0 1 0.2 0.2 {}
+T {vddio_present_vddd_hv} 125 86 0 1 0.2 0.2 {}
+T {vddio_q} 125 -54 0 1 0.2 0.2 {}
+T {vssa} 125 -34 0 1 0.2 0.2 {}
+T {vssd} 125 -14 0 1 0.2 0.2 {}
+T {vssio_q} 125 6 0 1 0.2 0.2 {}

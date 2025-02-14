@@ -1,0 +1,426 @@
+** sch_path: /home/tim/gits/frigate_analog/xschem/frigate_timing_frontend.sch
+.subckt frigate_timing_frontend vdda3 vssa3 vccd0 vssd0 resetb_in_h resetb_out_l rc_osc_16M_ena rc_osc_16M_dout rc_osc_500k_ena
++ rc_osc_500k_dout lsxo_ena lsxo_standby lsxo_ibias lsxo_dout lsxo_xin lsxo_xout hsxo_ena hsxo_standby hsxo_ibias hsxo_dout hsxo_xin hsxo_xout
+*.PININFO resetb_in_h:I vssd0:B rc_osc_16M_dout:O vccd0:B vssa3:B vdda3:B resetb_out_l:O rc_osc_16M_ena:I rc_osc_500k_dout:O
+*+ rc_osc_500k_ena:I lsxo_dout:O lsxo_ena:I lsxo_standby:I lsxo_ibias:I lsxo_xin:B lsxo_xout:B hsxo_dout:O hsxo_ena:I hsxo_standby:I hsxo_ibias:I
+*+ hsxo_xin:B hsxo_xout:B
+x1 vdda3 vccd0 vssd0 vssd0 resetb_out_l resetb_in_h xres_buf
+x2 rc_osc_16M_ena vccd0 vdda3 vssd0 vssa3 rc_osc_16M_dout sky130_ef_ip__rc_osc_16M
+x3 rc_osc_500k_ena vccd0 vdda3 vssd0 vssa3 rc_osc_500k_dout sky130_ef_ip__rc_osc_500k
+x4 vdda3 vssa3 vccd0 vssd0 lsxo_ibias lsxo_ena lsxo_standby lsxo_dout lsxo_xin lsxo_xout sky130_be_ip__lsxo
+X5 hsxo_xout hsxo_xin hsxo_ena hsxo_standby hsxo_dout vdda3 vccd0 vssa3 vssd0 hsxo_ibias vssd0 sky130_ht_ip__hsxo_cpz1
+XC1 vccd0 vssd0 sky130_fd_pr__cap_mim_m3_2 W=10 L=10 m=7
+XC2 vdda3 vssa3 sky130_fd_pr__cap_mim_m3_2 W=10 L=10 m=8
+.ends
+
+* expanding   symbol:  xres_buf.sym # of pins=6
+** sym_path: /home/tim/gits/frigate_analog/xschem/xres_buf.sym
+** sch_path: /home/tim/gits/frigate_analog/xschem/xres_buf.sch
+.subckt xres_buf VPWR LVPWR VGND LVGND X A
+*.PININFO A:I X:O VPWR:B LVPWR:B VGND:B LVGND:B
+x1 A LVPWR VGND VGND VPWR VPWR X sky130_fd_sc_hvl__lsbufhv2lv_1
+x3[4] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_8
+x3[3] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_8
+x3[2] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_8
+x3[1] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_8
+x3[0] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_8
+x4[1] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_4
+x4[0] VGND VGND VPWR VPWR sky130_fd_sc_hvl__decap_4
+* noconn LVGND
+x2 A VGND VGND VPWR VPWR sky130_fd_sc_hvl__diode_2
+.ends
+
+
+* expanding   symbol:  ../dependencies/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sym # of pins=6
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sch
+.subckt sky130_ef_ip__rc_osc_16M ena dvdd avdd dvss avss dout
+*.PININFO avdd:B avss:B dvss:B dvdd:B ena:I dout:O
+XM1 net1 out0 net10 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM2 net1 out0 net9 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM3 net2 net1 net8 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM4 net2 net1 net11 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM5 dout dout0 dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM6 net5 dout0 dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XM9 net3 net2 net7 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM10 net3 net2 net6 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM11 dout0 out0 dvdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1.26 nf=1 m=1
+XM12 net4 out0 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM13 dout0 ena net4 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM24 net9 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM25 net8 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM26 net7 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM27 net6 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM28 net11 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM29 net10 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM21 nbias nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM22 pbias pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2.52 nf=1 m=1
+XR1 net18 avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=112.5 mult=1 m=1
+XM23 net18 ena_h nbias avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM30 net12 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM33 nbias enb_h avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM34 pbias ena_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM36 pbias ena_h net12 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+x1 dvdd ena_h avdd enb_h ena dvss avss enb rc_osc_level_shifter
+XD3 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=4e6
+XM7 net13 net3 net16 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM8 net13 net3 net17 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM15 out0 net13 net15 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 out0 net13 net14 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 net16 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 net15 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net14 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net17 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM43 dout0 ena dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM35 dout enb dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM14 dout enb net5 dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XR2 avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=787.5 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  ../dependencies/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sym # of pins=6
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sch
+.subckt sky130_ef_ip__rc_osc_500k ena dvdd avdd dvss avss dout
+*.PININFO avdd:B avss:B dvss:B dvdd:B ena:I dout:O
+XM1 net1 out0 net10 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM2 net1 out0 net9 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM3 net2 net1 net8 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM4 net2 net1 net11 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM5 net5 dout0 dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM6 dout dout0 dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM9 net3 net2 net7 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM10 net3 net2 net6 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM11 dout0 out0 dvdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM12 net4 out0 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM13 dout0 ena net4 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM14 dout ena net5 dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM24 net9 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM25 net8 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM26 net7 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM27 net6 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM28 net11 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM29 net10 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM21 nbias nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM22 pbias pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XR1 net24 avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=1254 mult=1 m=1
+XM23 net24 ena_h nbias avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM30 net12 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM33 nbias enb_h avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM34 pbias ena_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM36 pbias ena_h net12 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+x1 dvdd ena_h avdd enb_h ena dvss avss enb rc_osc_level_shifter
+XD3 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XM7 net13 net3 net17 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM8 net13 net3 net18 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM15 net14 net13 net16 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 net14 net13 net15 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 net17 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 net16 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net15 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net18 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM31 net19 net14 net22 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM32 net19 net14 net23 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM37 out0 net19 net21 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM38 out0 net19 net20 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM39 net22 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM40 net21 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM41 net20 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM42 net23 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XC1 net1 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC2 net3 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC3 net14 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC4 net2 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC5 net13 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XM43 dout0 ena dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM35 dout enb dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XR2[21] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[20] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[19] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[18] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[17] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[16] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[15] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[14] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[13] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[12] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[11] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[10] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[9] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[8] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[7] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[6] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[5] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[4] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[3] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[2] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[1] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[0] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  ../dependencies/sky130_be_ip__lsxo/xschem/sky130_be_ip__lsxo.sym # of pins=10
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/sky130_be_ip__lsxo.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/sky130_be_ip__lsxo.sch
+.subckt sky130_be_ip__lsxo avdd avss dvdd dvss ibias ena standby dout xin xout
+*.PININFO avdd:B dout:O avss:B dvdd:B dvss:B ibias:I ena:I standby:I xin:I xout:O
+XM1 xout xin avss_ip avss_ip sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=10
+XM2 xout vbreg avdd_ip avdd_ip sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=10
+XR2 xout xin avss_ip sky130_fd_pr__res_xhigh_po_0p35 L=2530 mult=1 m=1
+XM5 avss_ip ena_33 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=5
+XM6 avdd_ip ena_b_33 avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=5
+XM8 dvdd_ip standby_ip dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.5 W=4 nf=1 m=10
+XM9 ibias_ip standby_33 ibias ibias sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM11 dvss_ip standby_b dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 m=10
+XC1 avdd_ip avss_ip sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=4
+XC2 dvdd_ip dvss_ip sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=21
+XC3 avss avdd sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=4
+XC4 dvdd dvss sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=4
+x7 dvdd dvss dout_ip dout_filt ena_ip standby_ip standby_b ripl_dly_clk_buf
+XM3 dout_ip standby_ip dvss dvss sky130_fd_pr__nfet_01v8 L=4 W=0.5 nf=1 m=1
+x3 avdd dvdd ena_33 ena_b_33 ena_ip dvss avss net1 level_shift
+x4 avdd dvdd standby_33 net2 standby_ip dvss avss standby_b level_shift
+x6 dvdd_ip dvss_ip xin xout ibias_ip dout_ip dout_amp
+x5 avdd_ip vbreg xin avss_ip bias_gen
+XM4 dout dout_filt dvss_ip dvss_ip sky130_fd_pr__nfet_01v8 L=1 W=0.75 nf=1 m=1
+XM7 dout dout_filt dvdd_ip dvdd_ip sky130_fd_pr__pfet_01v8 L=1 W=4 nf=1 m=1
+x1 ena dvss dvss dvdd dvdd ena_ip sky130_fd_sc_hd__buf_1
+x2 standby dvss dvss dvdd dvdd standby_ip sky130_fd_sc_hd__buf_1
+* noconn #net1
+* noconn #net2
+XRD1 avss_ip avss_ip avss_ip sky130_fd_pr__res_xhigh_po_0p35 L=110 mult=2 m=2
+XMD1 avss_ip xin avss_ip avss_ip sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=2
+XD2 avss_ip xin sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XD4 avss_ip xout sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XD5 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XD6 dvss standby sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XMD2 xout vbreg xout avdd_ip sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XD1 xin avdd_ip sky130_fd_pr__diode_pd2nw_05v5 area=2.025e11 perim=1.8e6
+XD3 xout avdd_ip sky130_fd_pr__diode_pd2nw_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+
+* expanding   symbol:  ../dependencies/sky130_ht_ip__hsxo_cpz1/xschem/sky130_ht_ip__hsxo_cpz1.sym # of pins=11
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/sky130_ht_ip__hsxo_cpz1.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/sky130_ht_ip__hsxo_cpz1.sch
+.subckt sky130_ht_ip__hsxo_cpz1 XOUT XIN ENA STDBY DOUT AVDD DVDD AVSS DVSS IBIAS GUARD
+*.PININFO DVDD:B DVSS:B AVDD:B AVSS:B ENA:I STDBY:I XIN:I XOUT:O DOUT:O IBIAS:I GUARD:B
+x1 XOUT SG_AVDD EG_AVDD XIN EG_IBIAS AOUT SG_AVSS EG_AVSS vittoz_pierce_osc
+x2 SG_DVDD AIN DOUT SG_DVSS GUARD schmitt_trigger_pullmid
+XC1 AOUT AIN sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+x3 DOUT SG_AVDD DVDD EG_IBIAS SG_DVDD AVDD IBIAS EG_AVDD ENA SG_DVSS SG_AVSS STDBY EG_AVSS AVSS DVSS XIN GUARD power_gating
+.ends
+
+
+* expanding   symbol:  rc_osc_level_shifter.sym # of pins=8
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ef_ip__rc_osc_16M/xschem/rc_osc_level_shifter.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ef_ip__rc_osc_16M/xschem/rc_osc_level_shifter.sch
+.subckt rc_osc_level_shifter dvdd out_h avdd outb_h in_l dvss avss inb_l
+*.PININFO in_l:I dvdd:B avdd:B dvss:B avss:B out_h:O outb_h:O inb_l:O
+XM7 inb_l in_l dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM8 inb_l in_l dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM15 out_h outb_h net1 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 outb_h out_h net2 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 outb_h in_l avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 out_h inb_l avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net1 out_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net2 outb_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  ripl_dly_clk_buf.sym # of pins=7
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/ripl_dly_clk_buf.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/ripl_dly_clk_buf.sch
+.subckt ripl_dly_clk_buf dvdd dvss clkin clkout ena stby stby_b
+*.PININFO dvdd:B dvss:B clkin:I clkout:O ena:I stby:I stby_b:I
+XM3 clkout clk_disable dvss dvss sky130_fd_pr__nfet_01v8 L=4 W=0.5 nf=1 m=1
+x3 stby_b stby_done_b ena ena_done_b stby dvss dvss dvdd dvdd clk_disable sky130_fd_sc_hd__a221o_1
+x2 dvdd dvss clkin stby_done_b stby_b ripple_dly_4
+x1 dvdd dvss clkin ena_done_b ena ripple_dly_4
+x5 clkin clk_disable dvss dvss dvdd dvdd clkout sky130_fd_sc_hd__einvn_0
+.ends
+
+
+* expanding   symbol:  level_shift.sym # of pins=8
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/level_shift.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/level_shift.sch
+.subckt level_shift avdd dvdd out out_b in dvss avss in_b
+*.PININFO in:I avdd:B avss:B dvss:B dvdd:B out:O out_b:O in_b:O
+XM4 out in_b avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=2
+XM3 out_b in avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=2
+XM5 out_b out avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XM6 out out_b avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XM2 in_b in dvdd dvdd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM1 in_b in dvss dvss sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  dout_amp.sym # of pins=6
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/dout_amp.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/dout_amp.sch
+.subckt dout_amp dvdd dvss xin xout ibias dout
+*.PININFO xin:I dvdd:B dvss:B dout:O ibias:I xout:I
+XM1 ibias ibias dvss dvss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=2 nf=1 m=5
+XM2 vbp ibias dvss dvss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=2 nf=1 m=1
+XM5 vn xin tail dvdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XC1 inv_in xin_buf sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=12
+XM6 inv_m1 inv_in dvdd dvdd sky130_fd_pr__pfet_01v8 L=8 W=0.5 nf=1 m=1
+XM7 inv_m1 inv_in dvss dvss sky130_fd_pr__nfet_01v8 L=8 W=0.5 nf=1 m=1
+XM8 net1 net1 dvdd dvdd sky130_fd_pr__pfet_01v8 L=8 W=0.5 nf=1 m=1
+XM9 net1 net1 dvss dvss sky130_fd_pr__nfet_01v8 L=8 W=0.5 nf=1 m=1
+XR1 inv_in net1 dvss sky130_fd_pr__res_xhigh_po_0p35 L=990 mult=1 m=1
+XM10 inv_m2 inv_m1 dvdd dvdd sky130_fd_pr__pfet_01v8 L=1 W=0.5 nf=1 m=1
+XM11 inv_m2 inv_m1 dvss dvss sky130_fd_pr__nfet_01v8 L=1 W=0.5 nf=1 m=1
+XM12 dout inv_m2 dvdd dvdd sky130_fd_pr__pfet_01v8 L=1 W=0.5 nf=1 m=2
+XM13 dout inv_m2 dvss dvss sky130_fd_pr__nfet_01v8 L=1 W=0.5 nf=1 m=2
+XM16 tail vbp dvdd dvdd sky130_fd_pr__pfet_01v8 L=2 W=2 nf=1 m=10
+XM17 vbp vbp dvdd dvdd sky130_fd_pr__pfet_01v8 L=2 W=2 nf=1 m=1
+XM3 xin_buf xout tail dvdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XM4 xin_buf vn dvss dvss sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 m=1
+XM18 vn vn dvss dvss sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 m=1
+XMD2 vn vn vn dvss sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 m=1
+XMD1 dvdd inv_m1 dvdd dvdd sky130_fd_pr__pfet_01v8 L=1 W=0.5 nf=1 m=1
+XMD4 dvss ibias dvss dvss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=2 nf=1 m=2
+XMD3 dvdd vbp dvdd dvdd sky130_fd_pr__pfet_01v8 L=2 W=2 nf=1 m=5
+XMD5 vn xin vn dvdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XMD6 xin_buf vn xin_buf dvss sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 m=1
+XMD7 xin_buf xout xin_buf dvdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XMD8 dvss inv_m1 dvss dvss sky130_fd_pr__nfet_01v8 L=1 W=0.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  bias_gen.sym # of pins=4
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/bias_gen.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/bias_gen.sch
+.subckt bias_gen avdd vbreg xin avss
+*.PININFO xin:I avdd:B avss:B vbreg:O
+XM2 vbreg vg2 vrb avss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=4
+XM3 vbreg vbreg avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XM4 vg1 vbreg avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XM1 vg1 vg1 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XR2 vg2 vg1 avss sky130_fd_pr__res_xhigh_po_0p35 L=1968 mult=1 m=1
+XR3 avss vrb avss sky130_fd_pr__res_xhigh_po_0p35 L=150 mult=1 m=1
+XC3 avss vg2 sky130_fd_pr__cap_mim_m3_1 W=18 L=18 m=4
+XC1 vg1 xin sky130_fd_pr__cap_mim_m3_1 W=22 L=22 m=5
+XM5 icnode vg2 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XC2 avdd icnode sky130_fd_pr__cap_mim_m3_1 W=20 L=20 m=1
+XM6 vbreg icnode net3 avss sky130_fd_pr__nfet_g5v0d10v5 L=8 W=0.42 nf=1 m=1
+XM8 net1 net1 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=8 W=0.42 nf=1 m=1
+XM7 net3 icnode net1 avss sky130_fd_pr__nfet_g5v0d10v5 L=8 W=0.42 nf=1 m=1
+XRD1 avss avss avss sky130_fd_pr__res_xhigh_po_0p35 L=82 mult=2 m=2
+XRD2 avss avss avss sky130_fd_pr__res_xhigh_po_0p35 L=75 mult=2 m=2
+XMD1 avdd vbreg avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=4
+XMD2 net2 vbreg net2 avdd sky130_fd_pr__pfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XMD3 avss avss avss avss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=4
+XMD4 vbreg vg1 vbreg avss sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  vittoz_pierce_osc.sym # of pins=8
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/vittoz_pierce_osc.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/vittoz_pierce_osc.sch
+.subckt vittoz_pierce_osc XOUT SG_AVDD EG_AVDD XIN EG_IBIAS AOUT SG_AVSS EG_AVSS
+*.PININFO EG_AVDD:B EG_AVSS:B SG_AVDD:B SG_AVSS:B XIN:I EG_IBIAS:I XOUT:O AOUT:O
+XM9 net6 PBIAS EG_AVDD EG_AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1024 nf=32 m=1
+XM10 net7 PBIAS EG_AVDD EG_AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=128 nf=4 m=1
+XM11 PBIAS PBIAS EG_AVDD EG_AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=128 nf=4 m=1
+Vmeas3 net6 XOUT 0
+.save i(vmeas3)
+Vmeas4 net7 net1 0
+.save i(vmeas4)
+Vmeas2 PBIAS net3 0
+.save i(vmeas2)
+XM12 net1 net2 EG_AVSS EG_AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=128 nf=4 m=1
+XR1 net2 net1 EG_AVSS sky130_fd_pr__res_xhigh_po_0p35 L=7 mult=1 m=1
+XC1 net1 EG_AVSS sky130_fd_pr__cap_mim_m3_1 W=2 L=2 m=1
+XC2 XIN net2 sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+XC7 net2 EG_AVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+XM13 XOUT XIN EG_AVSS EG_AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=32 nf=8 m=1
+XM14 net3 net2 net5 EG_AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1024 nf=32 m=1
+XM15 net5 net4 EG_AVSS EG_AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=128 nf=4 m=1
+XM16 net4 net4 EG_AVSS EG_AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8 nf=1 m=1
+XR3 XIN XOUT EG_AVSS sky130_fd_pr__res_xhigh_po_0p35 L=2.8 mult=1 m=1
+XM17 AOUT XIN SG_AVSS SG_AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM18 net8 PBIAS SG_AVDD SG_AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=128 nf=4 m=1
+Vmeas5 net8 AOUT 0
+.save i(vmeas5)
+XC8 AOUT SG_AVSS sky130_fd_pr__cap_mim_m3_1 W=2 L=2 m=1
+XC3 EG_AVDD EG_AVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+XC4 SG_AVDD SG_AVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+Vmeas1 EG_IBIAS net4 0
+.save i(vmeas1)
+.ends
+
+
+* expanding   symbol:  schmitt_trigger_pullmid.sym # of pins=5
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/schmitt_trigger_pullmid.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/schmitt_trigger_pullmid.sch
+.subckt schmitt_trigger_pullmid SG_DVDD AIN DOUT SG_DVSS VSUB
+*.PININFO SG_DVDD:B SG_DVSS:B AIN:I DOUT:O VSUB:B
+XR3 net2 net1 SG_DVSS sky130_fd_pr__res_xhigh_po_0p35 L=128 mult=1 m=1
+XM3 DOUT net2 DHT SG_DVDD sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 m=1
+XM4 DOUT net2 DLT SG_DVSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM5 DHT net2 SG_DVDD SG_DVDD sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 m=1
+XM6 DLT net2 SG_DVSS SG_DVSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM7 SG_DVSS DOUT DHT SG_DVDD sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 m=1
+XM8 SG_DVDD DOUT DLT SG_DVSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XC4 SG_DVDD SG_DVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+XR1 net1 SG_DVDD SG_DVSS sky130_fd_pr__res_xhigh_po_0p35 L=16 mult=1 m=1
+XR2 SG_DVSS net1 SG_DVSS sky130_fd_pr__res_xhigh_po_0p35 L=16 mult=1 m=1
+Vmeas6 AIN net2 0
+.save i(vmeas6)
+.ends
+
+
+* expanding   symbol:  power_gating.sym # of pins=17
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/power_gating.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/power_gating.sch
+.subckt power_gating DOUT SG_AVDD DVDD EG_IBIAS SG_DVDD AVDD IBIAS EG_AVDD ENA SG_DVSS SG_AVSS STDBY EG_AVSS AVSS DVSS XIN VSUB
+*.PININFO DVDD:B DVSS:B AVDD:B AVSS:B ENA:I STDBY:I DOUT:O IBIAS:I EG_AVDD:B EG_AVSS:B SG_AVDD:B SG_AVSS:B SG_DVDD:B SG_DVSS:B
+*+ EG_IBIAS:O XIN:I VSUB:B
+x3 AVDD ENA_B DVDD ENA ENA_H AVSS DVSS ENA_BH level_shifter_xd
+x4 AVDD STDBY_B DVDD STDBY STDBY_H AVSS DVSS STDBY_BH level_shifter_xd
+XM18 SG_DVSS STDBY_B DVSS DVSS sky130_fd_pr__nfet_01v8 L=0.15 W=32 nf=8 m=1
+XM21 EG_AVSS ENA_H AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=32 nf=8 m=1
+XM25 EG_AVDD ENA_BH AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=32 nf=8 m=1
+XM27 SG_DVDD STDBY DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=32 nf=8 m=1
+XM1 SG_AVDD STDBY_H AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=32 nf=8 m=1
+XM2 EG_IBIAS ENA_BH IBIAS AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=32 nf=8 m=1
+XM3 SG_AVSS STDBY_BH AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=32 nf=8 m=1
+XM4 DOUT STDBY DVSS DVSS sky130_fd_pr__nfet_01v8 L=0.15 W=32 nf=8 m=1
+XC3 AVDD AVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+XC4 DVDD DVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=6
+XD1 XIN AVDD sky130_fd_pr__diode_pd2nw_11v0 area=2e11 perim=4e6
+XD2 AVSS XIN sky130_fd_pr__diode_pw2nd_11v0 area=2e11 perim=4e6
+.ends
+
+
+* expanding   symbol:  ripple_dly_4.sym # of pins=5
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/ripple_dly_4.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_be_ip__lsxo/xschem/ripple_dly_4.sch
+.subckt ripple_dly_4 dvdd dvss clkin doneb ena
+*.PININFO clkin:I ena:I doneb:O dvdd:B dvss:B
+x2 gated_clk Qb1 ena dvss dvss dvdd dvdd net1 Qb1 sky130_fd_sc_hd__dfrbp_1
+x3 Qb1 Qb2 ena dvss dvss dvdd dvdd net2 Qb2 sky130_fd_sc_hd__dfrbp_1
+* noconn #net1
+* noconn #net2
+x4 Qb2 doneb ena dvss dvss dvdd dvdd net3 doneb sky130_fd_sc_hd__dfrbp_1
+x1 clkin doneb dvss dvss dvdd dvdd gated_clk sky130_fd_sc_hd__and2_0
+* noconn #net3
+.ends
+
+
+* expanding   symbol:  level_shifter_xd.sym # of pins=8
+** sym_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/level_shifter_xd.sym
+** sch_path: /home/tim/gits/frigate_analog/dependencies/sky130_ht_ip__hsxo_cpz1/xschem/level_shifter_xd.sch
+.subckt level_shifter_xd AVDD LO_B DVDD LO HI AVSS DVSS HI_B
+*.PININFO DVDD:B DVSS:B AVDD:B AVSS:B LO:I LO_B:O HI:O HI_B:O
+XM18 LO_B LO DVSS DVSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM21 HI_B LO AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM25 HI_B HI AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM27 LO_B LO DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM1 HI HI_B AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM2 HI LO_B AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+.ends
+
+.end

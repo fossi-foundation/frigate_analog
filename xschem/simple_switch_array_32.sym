@@ -1,0 +1,196 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -320 -130 320 {}
+L 4 300 -320 300 320 {}
+L 4 -150 -310 -130 -310 {}
+L 4 -150 -290 -130 -290 {}
+L 4 -150 -270 -130 -270 {}
+L 4 -150 -250 -130 -250 {}
+L 4 -150 -230 -130 -230 {}
+L 4 -150 -210 -130 -210 {}
+L 4 -150 -190 -130 -190 {}
+L 4 -150 -170 -130 -170 {}
+L 4 -150 -150 -130 -150 {}
+L 4 -150 -130 -130 -130 {}
+L 4 -150 -110 -130 -110 {}
+L 4 -150 -90 -130 -90 {}
+L 4 -150 -70 -130 -70 {}
+L 4 -150 -50 -130 -50 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -150 10 -130 10 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 50 -130 50 {}
+L 4 -150 70 -130 70 {}
+L 4 -150 90 -130 90 {}
+L 4 -150 110 -130 110 {}
+L 4 -150 130 -130 130 {}
+L 4 -150 150 -130 150 {}
+L 4 -150 170 -130 170 {}
+L 4 -150 190 -130 190 {}
+L 4 -150 210 -130 210 {}
+L 4 -150 230 -130 230 {}
+L 4 -150 250 -130 250 {}
+L 4 -150 270 -130 270 {}
+L 4 -150 290 -130 290 {}
+L 4 -150 310 -130 310 {}
+L 4 -130 320 300 320 {}
+L 4 -130 -320 300 -320 {}
+L 7 300 -310 320 -310 {}
+L 7 300 -290 320 -290 {}
+L 7 300 -270 320 -270 {}
+L 7 300 -250 320 -250 {}
+L 7 300 -190 320 -190 {}
+L 7 300 -170 320 -170 {}
+L 7 300 -150 320 -150 {}
+L 7 300 -210 320 -210 {}
+L 7 300 -110 320 -110 {}
+L 7 300 -90 320 -90 {}
+L 7 300 -70 320 -70 {}
+L 7 300 -50 320 -50 {}
+L 7 300 -30 320 -30 {}
+L 7 300 -10 320 -10 {}
+L 7 300 10 320 10 {}
+L 7 300 30 320 30 {}
+L 7 300 50 320 50 {}
+L 7 300 70 320 70 {}
+L 7 300 90 320 90 {}
+L 7 300 110 320 110 {}
+L 7 300 150 320 150 {}
+L 7 300 170 320 170 {}
+L 7 300 190 320 190 {}
+L 7 300 210 320 210 {}
+L 7 300 230 320 230 {}
+L 7 300 250 320 250 {}
+L 7 300 270 320 270 {}
+L 7 300 290 320 290 {}
+B 5 317.5 -312.5 322.5 -307.5 {name=vdda0 dir=inout}
+B 5 317.5 -292.5 322.5 -287.5 {name=vssa0 dir=inout}
+B 5 317.5 -272.5 322.5 -267.5 {name=vccd0 dir=inout}
+B 5 317.5 -252.5 322.5 -247.5 {name=vssd0 dir=inout}
+B 5 317.5 -192.5 322.5 -187.5 {name=analog1 dir=inout}
+B 5 317.5 -172.5 322.5 -167.5 {name=amuxbusA dir=inout}
+B 5 317.5 -152.5 322.5 -147.5 {name=amuxbusB dir=inout}
+B 5 317.5 -212.5 322.5 -207.5 {name=analog0 dir=inout}
+B 5 -152.5 -312.5 -147.5 -307.5 {name=right_instramp_n_to_analog1 dir=in}
+B 5 -152.5 -292.5 -147.5 -287.5 {name=right_instramp_p_to_amuxbusA dir=in}
+B 5 -152.5 -272.5 -147.5 -267.5 {name=right_instramp_n_to_amuxbusB dir=in}
+B 5 -152.5 -252.5 -147.5 -247.5 {name=right_instramp_p_to_analog0 dir=in}
+B 5 317.5 -112.5 322.5 -107.5 {name=right_instramp_n dir=inout}
+B 5 -152.5 -232.5 -147.5 -227.5 {name=right_hgbw_opamp_n_to_analog1 dir=in}
+B 5 317.5 -92.5 322.5 -87.5 {name=right_instramp_p dir=inout}
+B 5 -152.5 -212.5 -147.5 -207.5 {name=right_hgbw_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 -192.5 -147.5 -187.5 {name=right_hgbw_opamp_p_to_amuxbusA dir=in}
+B 5 -152.5 -172.5 -147.5 -167.5 {name=right_hgbw_opamp_p_to_analog0 dir=in}
+B 5 317.5 -72.5 322.5 -67.5 {name=right_hgbw_opamp_n dir=inout}
+B 5 317.5 -52.5 322.5 -47.5 {name=right_hgbw_opamp_p dir=inout}
+B 5 317.5 -32.5 322.5 -27.5 {name=right_lp_opamp_n dir=inout}
+B 5 317.5 -12.5 322.5 -7.5 {name=right_lp_opamp_p dir=inout}
+B 5 -152.5 -152.5 -147.5 -147.5 {name=right_lp_opamp_n_to_analog1 dir=in}
+B 5 -152.5 -132.5 -147.5 -127.5 {name=right_lp_opamp_p_to_amuxbusA dir=in}
+B 5 -152.5 -112.5 -147.5 -107.5 {name=right_lp_opamp_p_to_analog0 dir=in}
+B 5 -152.5 -92.5 -147.5 -87.5 {name=right_lp_opamp_n_to_amuxbusB dir=in}
+B 5 317.5 7.5 322.5 12.5 {name=left_instramp_n dir=inout}
+B 5 317.5 27.5 322.5 32.5 {name=left_instramp_p dir=inout}
+B 5 317.5 47.5 322.5 52.5 {name=left_hgbw_opamp_n dir=inout}
+B 5 317.5 67.5 322.5 72.5 {name=left_hgbw_opamp_p dir=inout}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=left_lp_opamp_n_to_analog1 dir=in}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=left_lp_opamp_p_to_amuxbusA dir=in}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=left_lp_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=left_lp_opamp_p_to_analog0 dir=in}
+B 5 317.5 87.5 322.5 92.5 {name=left_lp_opamp_n dir=inout}
+B 5 317.5 107.5 322.5 112.5 {name=left_lp_opamp_p dir=inout}
+B 5 317.5 147.5 322.5 152.5 {name=ulpcomp_p dir=inout}
+B 5 317.5 167.5 322.5 172.5 {name=ulpcomp_n dir=inout}
+B 5 -152.5 7.5 -147.5 12.5 {name=left_hgbw_opamp_n_to_analog1 dir=in}
+B 5 -152.5 27.5 -147.5 32.5 {name=left_hgbw_opamp_p_to_analog0 dir=in}
+B 5 -152.5 47.5 -147.5 52.5 {name=left_hgbw_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 67.5 -147.5 72.5 {name=left_hgbw_opamp_p_to_amuxbusA dir=in}
+B 5 317.5 187.5 322.5 192.5 {name=comp_p dir=inout}
+B 5 317.5 207.5 322.5 212.5 {name=comp_n dir=inout}
+B 5 317.5 227.5 322.5 232.5 {name=adc0 dir=inout}
+B 5 317.5 247.5 322.5 252.5 {name=adc1 dir=inout}
+B 5 -152.5 87.5 -147.5 92.5 {name=left_instramp_n_to_analog1 dir=in}
+B 5 317.5 267.5 322.5 272.5 {name=dac0 dir=inout}
+B 5 -152.5 107.5 -147.5 112.5 {name=left_instramp_p_to_analog0 dir=in}
+B 5 -152.5 127.5 -147.5 132.5 {name=left_instramp_n_to_amuxbusB dir=in}
+B 5 -152.5 147.5 -147.5 152.5 {name=left_instramp_p_to_amuxbusA dir=in}
+B 5 317.5 287.5 322.5 292.5 {name=dac1 dir=inout}
+B 5 -152.5 167.5 -147.5 172.5 {name=ulpcomp_p_to_analog1 dir=in}
+B 5 -152.5 187.5 -147.5 192.5 {name=ulpcomp_n_to_analog0 dir=in}
+B 5 -152.5 207.5 -147.5 212.5 {name=comp_p_to_analog1 dir=in}
+B 5 -152.5 227.5 -147.5 232.5 {name=comp_n_to_analog0 dir=in}
+B 5 -152.5 247.5 -147.5 252.5 {name=adc0_to_analog1 dir=in}
+B 5 -152.5 267.5 -147.5 272.5 {name=adc1_to_analog0 dir=in}
+B 5 -152.5 287.5 -147.5 292.5 {name=dac0_to_analog1 dir=in}
+B 5 -152.5 307.5 -147.5 312.5 {name=dac1_to_analog0 dir=in}
+T {@symname} -7 284 0 0 0.3 0.3 {}
+T {@name} 305 -332 0 0 0.2 0.2 {}
+T {vdda0} 295 -314 0 1 0.2 0.2 {}
+T {vssa0} 295 -294 0 1 0.2 0.2 {}
+T {vccd0} 295 -274 0 1 0.2 0.2 {}
+T {vssd0} 295 -254 0 1 0.2 0.2 {}
+T {analog1} 295 -194 0 1 0.2 0.2 {}
+T {amuxbusA} 295 -174 0 1 0.2 0.2 {}
+T {amuxbusB} 295 -154 0 1 0.2 0.2 {}
+T {analog0} 295 -214 0 1 0.2 0.2 {}
+T {right_instramp_n_to_analog1} -125 -314 0 0 0.2 0.2 {}
+T {right_instramp_p_to_amuxbusA} -125 -294 0 0 0.2 0.2 {}
+T {right_instramp_n_to_amuxbusB} -125 -274 0 0 0.2 0.2 {}
+T {right_instramp_p_to_analog0} -125 -254 0 0 0.2 0.2 {}
+T {right_instramp_n} 295 -114 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_analog1} -125 -234 0 0 0.2 0.2 {}
+T {right_instramp_p} 295 -94 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_amuxbusB} -125 -214 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_amuxbusA} -125 -194 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_analog0} -125 -174 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n} 295 -74 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_p} 295 -54 0 1 0.2 0.2 {}
+T {right_lp_opamp_n} 295 -34 0 1 0.2 0.2 {}
+T {right_lp_opamp_p} 295 -14 0 1 0.2 0.2 {}
+T {right_lp_opamp_n_to_analog1} -125 -154 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_amuxbusA} -125 -134 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_analog0} -125 -114 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_amuxbusB} -125 -94 0 0 0.2 0.2 {}
+T {left_instramp_n} 295 6 0 1 0.2 0.2 {}
+T {left_instramp_p} 295 26 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_n} 295 46 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_p} 295 66 0 1 0.2 0.2 {}
+T {left_lp_opamp_n_to_analog1} -125 -74 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_amuxbusA} -125 -54 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_amuxbusB} -125 -34 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_analog0} -125 -14 0 0 0.2 0.2 {}
+T {left_lp_opamp_n} 295 86 0 1 0.2 0.2 {}
+T {left_lp_opamp_p} 295 106 0 1 0.2 0.2 {}
+T {ulpcomp_p} 295 146 0 1 0.2 0.2 {}
+T {ulpcomp_n} 295 166 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_analog1} -125 6 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_analog0} -125 26 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_amuxbusB} -125 46 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_amuxbusA} -125 66 0 0 0.2 0.2 {}
+T {comp_p} 295 186 0 1 0.2 0.2 {}
+T {comp_n} 295 206 0 1 0.2 0.2 {}
+T {adc0} 295 226 0 1 0.2 0.2 {}
+T {adc1} 295 246 0 1 0.2 0.2 {}
+T {left_instramp_n_to_analog1} -125 86 0 0 0.2 0.2 {}
+T {dac0} 295 266 0 1 0.2 0.2 {}
+T {left_instramp_p_to_analog0} -125 106 0 0 0.2 0.2 {}
+T {left_instramp_n_to_amuxbusB} -125 126 0 0 0.2 0.2 {}
+T {left_instramp_p_to_amuxbusA} -125 146 0 0 0.2 0.2 {}
+T {dac1} 295 286 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_analog1} -125 166 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_analog0} -125 186 0 0 0.2 0.2 {}
+T {comp_p_to_analog1} -125 206 0 0 0.2 0.2 {}
+T {comp_n_to_analog0} -125 226 0 0 0.2 0.2 {}
+T {adc0_to_analog1} -125 246 0 0 0.2 0.2 {}
+T {adc1_to_analog0} -125 266 0 0 0.2 0.2 {}
+T {dac0_to_analog1} -125 286 0 0 0.2 0.2 {}
+T {dac1_to_analog0} -125 306 0 0 0.2 0.2 {}

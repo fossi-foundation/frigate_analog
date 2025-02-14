@@ -1,0 +1,29 @@
+Initialization of dependent repositories:
+-----------------------------------------
+This only needs to be once when the repository is defined.  This notes
+is maintained for reference when copying to a new repository, or just
+in general information on how to add dependent repositories. 
+
+For repositories belonging to the same group (efabless) as the design, use:
+
+	 git submodule add ../panamax.git dependencies/panamax
+
+For repositories with a different ownership, use, e.g.,:
+
+	git submodule add ../../RTimothyEdwards/sky130_ef_ip__analog_switches \
+		dependencies/sky130_ef_ip__analog_switches
+
+Submodules should be updated recursively, since some dependencies have
+their own dependencies.  This creates redundant versions of some circuits,
+but will keep the version that was checked in with the top level repository.
+Tools like "magic" will check the repository commit hash and treat cells
+with the same name from different directories that are from the same
+commit of the same repository as the same cell.  If cells have the same
+name but exist in different commits of the same repository or different
+repositories, then magic will throw an error.
+
+Be sure to do
+
+	git submodule update --init --recursive
+
+if the top level repository was not cloned with the --recursive option.

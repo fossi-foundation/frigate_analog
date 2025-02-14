@@ -1,0 +1,1249 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -2820 -130 2820 {}
+L 4 240 -2820 240 2820 {}
+L 4 -150 -2810 -130 -2810 {}
+L 4 -150 -2790 -130 -2790 {}
+L 4 -150 -2770 -130 -2770 {}
+L 4 -150 -2750 -130 -2750 {}
+L 4 -150 -2730 -130 -2730 {}
+L 4 -150 -2710 -130 -2710 {}
+L 4 -150 -2690 -130 -2690 {}
+L 4 -150 -2670 -130 -2670 {}
+L 4 -150 -2650 -130 -2650 {}
+L 4 -150 -2630 -130 -2630 {}
+L 4 240 -2750 260 -2750 {}
+L 4 -150 -2610 -130 -2610 {}
+L 4 -150 -2590 -130 -2590 {}
+L 4 -150 -2570 -130 -2570 {}
+L 4 -150 -2550 -130 -2550 {}
+L 4 -150 -2530 -130 -2530 {}
+L 4 -150 -2510 -130 -2510 {}
+L 4 -150 -2490 -130 -2490 {}
+L 4 -150 -2470 -130 -2470 {}
+L 4 -150 -2450 -130 -2450 {}
+L 4 -150 -2430 -130 -2430 {}
+L 4 -150 -2410 -130 -2410 {}
+L 4 -150 -2390 -130 -2390 {}
+L 4 -150 -2370 -130 -2370 {}
+L 4 240 -2690 260 -2690 {}
+L 4 -150 -2350 -130 -2350 {}
+L 4 -150 -2330 -130 -2330 {}
+L 4 -150 -2310 -130 -2310 {}
+L 4 -150 -2290 -130 -2290 {}
+L 4 240 -2650 260 -2650 {}
+L 4 -150 -2270 -130 -2270 {}
+L 4 -150 -2250 -130 -2250 {}
+L 4 -150 -2230 -130 -2230 {}
+L 4 -150 -2210 -130 -2210 {}
+L 4 240 -2610 260 -2610 {}
+L 4 -150 -2190 -130 -2190 {}
+L 4 -150 -2170 -130 -2170 {}
+L 4 -150 -2150 -130 -2150 {}
+L 4 -150 -2130 -130 -2130 {}
+L 4 240 -2570 260 -2570 {}
+L 4 -150 -2110 -130 -2110 {}
+L 4 -150 -2090 -130 -2090 {}
+L 4 -150 -2070 -130 -2070 {}
+L 4 -150 -2050 -130 -2050 {}
+L 4 -150 -2030 -130 -2030 {}
+L 4 -150 -2010 -130 -2010 {}
+L 4 -150 -1990 -130 -1990 {}
+L 4 -150 -1970 -130 -1970 {}
+L 4 -150 -1950 -130 -1950 {}
+L 4 -150 -1930 -130 -1930 {}
+L 4 -150 -1910 -130 -1910 {}
+L 4 -150 -1890 -130 -1890 {}
+L 4 -150 -1870 -130 -1870 {}
+L 4 -150 -1850 -130 -1850 {}
+L 4 -150 -1830 -130 -1830 {}
+L 4 -150 -1810 -130 -1810 {}
+L 4 -150 -1790 -130 -1790 {}
+L 4 -150 -1770 -130 -1770 {}
+L 4 -150 -1750 -130 -1750 {}
+L 4 -150 -1730 -130 -1730 {}
+L 4 -150 -1710 -130 -1710 {}
+L 4 -150 -1690 -130 -1690 {}
+L 4 -150 -1670 -130 -1670 {}
+L 4 -150 -1650 -130 -1650 {}
+L 4 -150 -1630 -130 -1630 {}
+L 4 -150 -1610 -130 -1610 {}
+L 4 -150 -1590 -130 -1590 {}
+L 4 -150 -1570 -130 -1570 {}
+L 4 -150 -1550 -130 -1550 {}
+L 4 -150 -1530 -130 -1530 {}
+L 4 -150 -1510 -130 -1510 {}
+L 4 -150 -1490 -130 -1490 {}
+L 4 -150 -1470 -130 -1470 {}
+L 4 -150 -1430 -130 -1430 {}
+L 4 -150 -1410 -130 -1410 {}
+L 4 -150 -1390 -130 -1390 {}
+L 4 -150 -1370 -130 -1370 {}
+L 4 -150 -1350 -130 -1350 {}
+L 4 -150 -1330 -130 -1330 {}
+L 4 -150 -1310 -130 -1310 {}
+L 4 -150 -1290 -130 -1290 {}
+L 4 -150 -1270 -130 -1270 {}
+L 4 -150 -1250 -130 -1250 {}
+L 4 -150 -1230 -130 -1230 {}
+L 4 -150 -1210 -130 -1210 {}
+L 4 -150 -1190 -130 -1190 {}
+L 4 -150 -1170 -130 -1170 {}
+L 4 -150 -1150 -130 -1150 {}
+L 4 -150 -1130 -130 -1130 {}
+L 4 -150 -1110 -130 -1110 {}
+L 4 -150 -1090 -130 -1090 {}
+L 4 -150 -1070 -130 -1070 {}
+L 4 -150 -1030 -130 -1030 {}
+L 4 -150 -1010 -130 -1010 {}
+L 4 -150 -990 -130 -990 {}
+L 4 -150 -970 -130 -970 {}
+L 4 -150 -950 -130 -950 {}
+L 4 -150 -930 -130 -930 {}
+L 4 -150 -910 -130 -910 {}
+L 4 -150 -890 -130 -890 {}
+L 4 -150 -870 -130 -870 {}
+L 4 -150 -850 -130 -850 {}
+L 4 -150 -830 -130 -830 {}
+L 4 -150 -810 -130 -810 {}
+L 4 -150 -790 -130 -790 {}
+L 4 -150 -770 -130 -770 {}
+L 4 -150 -750 -130 -750 {}
+L 4 -150 -730 -130 -730 {}
+L 4 -150 -710 -130 -710 {}
+L 4 -150 -690 -130 -690 {}
+L 4 -150 -670 -130 -670 {}
+L 4 -150 -650 -130 -650 {}
+L 4 -150 -630 -130 -630 {}
+L 4 -150 -610 -130 -610 {}
+L 4 -150 -590 -130 -590 {}
+L 4 -150 -570 -130 -570 {}
+L 4 -150 -550 -130 -550 {}
+L 4 -150 -530 -130 -530 {}
+L 4 -150 -510 -130 -510 {}
+L 4 -150 -490 -130 -490 {}
+L 4 -150 -470 -130 -470 {}
+L 4 -150 -450 -130 -450 {}
+L 4 -150 -430 -130 -430 {}
+L 4 -150 -410 -130 -410 {}
+L 4 -150 -390 -130 -390 {}
+L 4 240 -2510 260 -2510 {}
+L 4 -150 -370 -130 -370 {}
+L 4 -150 -350 -130 -350 {}
+L 4 -150 -330 -130 -330 {}
+L 4 -150 -310 -130 -310 {}
+L 4 -150 -290 -130 -290 {}
+L 4 -150 -270 -130 -270 {}
+L 4 -150 -250 -130 -250 {}
+L 4 -150 -230 -130 -230 {}
+L 4 -150 -210 -130 -210 {}
+L 4 -150 -190 -130 -190 {}
+L 4 -150 -170 -130 -170 {}
+L 4 -150 -150 -130 -150 {}
+L 4 -150 -130 -130 -130 {}
+L 4 -150 -110 -130 -110 {}
+L 4 -150 -90 -130 -90 {}
+L 4 -150 -70 -130 -70 {}
+L 4 -150 -50 -130 -50 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -150 10 -130 10 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 50 -130 50 {}
+L 4 -150 70 -130 70 {}
+L 4 -150 90 -130 90 {}
+L 4 -150 110 -130 110 {}
+L 4 -150 130 -130 130 {}
+L 4 -150 150 -130 150 {}
+L 4 -150 170 -130 170 {}
+L 4 -150 190 -130 190 {}
+L 4 -150 210 -130 210 {}
+L 4 240 -2490 260 -2490 {}
+L 4 -150 230 -130 230 {}
+L 4 -150 250 -130 250 {}
+L 4 -150 270 -130 270 {}
+L 4 -150 290 -130 290 {}
+L 4 -150 310 -130 310 {}
+L 4 -150 330 -130 330 {}
+L 4 -150 350 -130 350 {}
+L 4 -150 370 -130 370 {}
+L 4 -150 390 -130 390 {}
+L 4 -150 410 -130 410 {}
+L 4 -150 430 -130 430 {}
+L 4 -150 450 -130 450 {}
+L 4 240 -2470 260 -2470 {}
+L 4 -150 470 -130 470 {}
+L 4 -150 490 -130 490 {}
+L 4 -150 510 -130 510 {}
+L 4 -150 530 -130 530 {}
+L 4 -150 550 -130 550 {}
+L 4 -150 570 -130 570 {}
+L 4 -150 590 -130 590 {}
+L 4 -150 610 -130 610 {}
+L 4 -150 630 -130 630 {}
+L 4 -150 650 -130 650 {}
+L 4 -150 690 -130 690 {}
+L 4 -150 710 -130 710 {}
+L 4 -150 730 -130 730 {}
+L 4 -150 750 -130 750 {}
+L 4 -150 770 -130 770 {}
+L 4 -150 790 -130 790 {}
+L 4 -150 810 -130 810 {}
+L 4 240 -2450 260 -2450 {}
+L 4 -150 830 -130 830 {}
+L 4 -150 850 -130 850 {}
+L 4 -150 870 -130 870 {}
+L 4 -150 890 -130 890 {}
+L 4 -150 910 -130 910 {}
+L 4 -150 930 -130 930 {}
+L 4 -150 950 -130 950 {}
+L 4 -150 970 -130 970 {}
+L 4 -150 990 -130 990 {}
+L 4 -150 1010 -130 1010 {}
+L 4 -150 1030 -130 1030 {}
+L 4 -150 1050 -130 1050 {}
+L 4 -150 1070 -130 1070 {}
+L 4 -150 1090 -130 1090 {}
+L 4 -150 1110 -130 1110 {}
+L 4 -150 1130 -130 1130 {}
+L 4 -150 1150 -130 1150 {}
+L 4 -150 1170 -130 1170 {}
+L 4 -150 1190 -130 1190 {}
+L 4 -150 1210 -130 1210 {}
+L 4 -150 1230 -130 1230 {}
+L 4 -150 1250 -130 1250 {}
+L 4 240 -2430 260 -2430 {}
+L 4 240 -2410 260 -2410 {}
+L 4 240 -2390 260 -2390 {}
+L 4 240 -2350 260 -2350 {}
+L 4 -150 1270 -130 1270 {}
+L 4 -150 1290 -130 1290 {}
+L 4 240 -2270 260 -2270 {}
+L 4 -150 1310 -130 1310 {}
+L 4 -150 1330 -130 1330 {}
+L 4 240 -2230 260 -2230 {}
+L 4 -150 1350 -130 1350 {}
+L 4 -150 1370 -130 1370 {}
+L 4 240 -2150 260 -2150 {}
+L 4 -150 1390 -130 1390 {}
+L 4 -150 1410 -130 1410 {}
+L 4 240 -2090 260 -2090 {}
+L 4 -150 1430 -130 1430 {}
+L 4 -150 1450 -130 1450 {}
+L 4 240 -2030 260 -2030 {}
+L 4 -150 1470 -130 1470 {}
+L 4 -150 1490 -130 1490 {}
+L 4 240 -1970 260 -1970 {}
+L 4 -150 1510 -130 1510 {}
+L 4 -150 1530 -130 1530 {}
+L 4 240 -1910 260 -1910 {}
+L 4 -150 1550 -130 1550 {}
+L 4 -150 1570 -130 1570 {}
+L 4 240 -1850 260 -1850 {}
+L 4 -150 1590 -130 1590 {}
+L 4 -150 1610 -130 1610 {}
+L 4 240 -1830 260 -1830 {}
+L 4 -150 1630 -130 1630 {}
+L 4 -150 1650 -130 1650 {}
+L 4 240 -1770 260 -1770 {}
+L 4 -150 1670 -130 1670 {}
+L 4 -150 1690 -130 1690 {}
+L 4 -150 1710 -130 1710 {}
+L 4 -150 1730 -130 1730 {}
+L 4 -150 1750 -130 1750 {}
+L 4 -150 1770 -130 1770 {}
+L 4 -150 1790 -130 1790 {}
+L 4 -150 1810 -130 1810 {}
+L 4 -150 1830 -130 1830 {}
+L 4 -150 1850 -130 1850 {}
+L 4 -150 1870 -130 1870 {}
+L 4 -150 1890 -130 1890 {}
+L 4 -150 1910 -130 1910 {}
+L 4 -150 1930 -130 1930 {}
+L 4 -150 1950 -130 1950 {}
+L 4 -150 1970 -130 1970 {}
+L 4 -150 1990 -130 1990 {}
+L 4 -150 2010 -130 2010 {}
+L 4 -150 2030 -130 2030 {}
+L 4 -150 2050 -130 2050 {}
+L 4 -150 2070 -130 2070 {}
+L 4 -150 2090 -130 2090 {}
+L 4 -150 2110 -130 2110 {}
+L 4 -150 2130 -130 2130 {}
+L 4 -150 2150 -130 2150 {}
+L 4 -150 2170 -130 2170 {}
+L 4 -150 2190 -130 2190 {}
+L 4 -150 2210 -130 2210 {}
+L 4 -150 2230 -130 2230 {}
+L 4 -150 2250 -130 2250 {}
+L 4 -150 2270 -130 2270 {}
+L 4 -150 2290 -130 2290 {}
+L 4 -150 2310 -130 2310 {}
+L 4 -150 2330 -130 2330 {}
+L 4 -150 2350 -130 2350 {}
+L 4 -150 2370 -130 2370 {}
+L 4 -150 2390 -130 2390 {}
+L 4 -150 2410 -130 2410 {}
+L 4 -150 2430 -130 2430 {}
+L 4 -150 2450 -130 2450 {}
+L 4 -150 2470 -130 2470 {}
+L 4 -150 2490 -130 2490 {}
+L 4 -150 2510 -130 2510 {}
+L 4 -150 2530 -130 2530 {}
+L 4 240 -870 260 -870 {}
+L 4 -150 2550 -130 2550 {}
+L 4 240 -850 260 -850 {}
+L 4 -150 2570 -130 2570 {}
+L 4 -150 2590 -130 2590 {}
+L 4 -150 2610 -130 2610 {}
+L 4 240 -810 260 -810 {}
+L 4 -150 2630 -130 2630 {}
+L 4 -150 2650 -130 2650 {}
+L 4 -150 2670 -130 2670 {}
+L 4 -150 2690 -130 2690 {}
+L 4 -150 2710 -130 2710 {}
+L 4 -150 2730 -130 2730 {}
+L 4 -150 2750 -130 2750 {}
+L 4 -150 2770 -130 2770 {}
+L 4 -150 2790 -130 2790 {}
+L 4 -150 2810 -130 2810 {}
+L 4 -130 -2880 240 -2880 {}
+L 4 -130 3090 240 3090 {}
+L 4 -150 670 -130 670 {}
+L 4 -150 2830 -130 2830 {}
+L 4 -150 2850 -130 2850 {}
+L 4 -150 2870 -130 2870 {}
+L 4 -150 2890 -130 2890 {}
+L 4 -150 -1450 -130 -1450 {}
+L 4 -130 -2880 -130 -2820 {}
+L 4 240 -2880 240 -2820 {}
+L 4 -150 -2830 -130 -2830 {}
+L 4 -150 -2850 -130 -2850 {}
+L 4 -150 -2870 -130 -2870 {}
+L 4 240 -2800 240 2840 {}
+L 4 240 -2780 240 2860 {}
+L 4 -150 2910 -130 2910 {}
+L 4 -150 2930 -130 2930 {}
+L 4 -150 2950 -130 2950 {}
+L 4 -150 2970 -130 2970 {}
+L 4 -150 2990 -130 2990 {}
+L 4 -150 3010 -130 3010 {}
+L 4 -150 3030 -130 3030 {}
+L 4 -150 3050 -130 3050 {}
+L 4 -150 3070 -130 3070 {}
+L 4 240 2860 240 3090 {}
+L 4 -130 2820 -130 3090 {}
+L 7 240 -2810 260 -2810 {}
+L 7 240 -2790 260 -2790 {}
+L 7 240 -2770 260 -2770 {}
+L 7 240 -2730 260 -2730 {}
+L 7 240 -2710 260 -2710 {}
+L 7 240 -2670 260 -2670 {}
+L 7 240 -2630 260 -2630 {}
+L 7 240 -2590 260 -2590 {}
+L 7 240 -2550 260 -2550 {}
+L 7 240 -2530 260 -2530 {}
+L 7 240 -2370 260 -2370 {}
+L 7 240 -2330 260 -2330 {}
+L 7 240 -2310 260 -2310 {}
+L 7 240 -2290 260 -2290 {}
+L 7 240 -2250 260 -2250 {}
+L 7 240 -2210 260 -2210 {}
+L 7 240 -2190 260 -2190 {}
+L 7 240 -2170 260 -2170 {}
+L 7 240 -2130 260 -2130 {}
+L 7 240 -2110 260 -2110 {}
+L 7 240 -2070 260 -2070 {}
+L 7 240 -2050 260 -2050 {}
+L 7 240 -2010 260 -2010 {}
+L 7 240 -1990 260 -1990 {}
+L 7 240 -1950 260 -1950 {}
+L 7 240 -1930 260 -1930 {}
+L 7 240 -1890 260 -1890 {}
+L 7 240 -1870 260 -1870 {}
+L 7 240 -1810 260 -1810 {}
+L 7 240 -1790 260 -1790 {}
+L 7 240 -1750 260 -1750 {}
+L 7 240 -1730 260 -1730 {}
+L 7 240 -1710 260 -1710 {}
+L 7 240 -1690 260 -1690 {}
+L 7 240 -1670 260 -1670 {}
+L 7 240 -1650 260 -1650 {}
+L 7 240 -1630 260 -1630 {}
+L 7 240 -1610 260 -1610 {}
+L 7 240 -1590 260 -1590 {}
+L 7 240 -1570 260 -1570 {}
+L 7 240 -1550 260 -1550 {}
+L 7 240 -1530 260 -1530 {}
+L 7 240 -1510 260 -1510 {}
+L 7 240 -1490 260 -1490 {}
+L 7 240 -1470 260 -1470 {}
+L 7 240 -1450 260 -1450 {}
+L 7 240 -1430 260 -1430 {}
+L 7 240 -1410 260 -1410 {}
+L 7 240 -1390 260 -1390 {}
+L 7 240 -1370 260 -1370 {}
+L 7 240 -1350 260 -1350 {}
+L 7 240 -1330 260 -1330 {}
+L 7 240 -1310 260 -1310 {}
+L 7 240 -1290 260 -1290 {}
+L 7 240 -1270 260 -1270 {}
+L 7 240 -1250 260 -1250 {}
+L 7 240 -1230 260 -1230 {}
+L 7 240 -1210 260 -1210 {}
+L 7 240 -1190 260 -1190 {}
+L 7 240 -1170 260 -1170 {}
+L 7 240 -1150 260 -1150 {}
+L 7 240 -1130 260 -1130 {}
+L 7 240 -1110 260 -1110 {}
+L 7 240 -1090 260 -1090 {}
+L 7 240 -1070 260 -1070 {}
+L 7 240 -1050 260 -1050 {}
+L 7 240 -1030 260 -1030 {}
+L 7 240 -1010 260 -1010 {}
+L 7 240 -990 260 -990 {}
+L 7 240 -970 260 -970 {}
+L 7 240 -950 260 -950 {}
+L 7 240 -930 260 -930 {}
+L 7 240 -910 260 -910 {}
+L 7 240 -890 260 -890 {}
+L 7 240 -830 260 -830 {}
+L 7 240 -790 260 -790 {}
+L 7 240 -770 260 -770 {}
+L 7 240 -750 260 -750 {}
+L 7 240 -2850 260 -2850 {}
+L 7 240 -2830 260 -2830 {}
+L 7 240 -730 260 -730 {}
+L 7 240 -710 260 -710 {}
+L 7 240 -690 260 -690 {}
+L 7 240 -670 260 -670 {}
+L 7 240 -650 260 -650 {}
+L 7 240 -630 260 -630 {}
+B 5 -152.5 -2812.5 -147.5 -2807.5 {name=left_hgbw_opamp_p_to_gpio5_2[1:0] dir=in}
+B 5 -152.5 -2792.5 -147.5 -2787.5 {name=ibias_test_to_gpio1_2[1:0] dir=in}
+B 5 -152.5 -2772.5 -147.5 -2767.5 {name=right_lp_opamp_p_to_dac0 dir=in}
+B 5 -152.5 -2752.5 -147.5 -2747.5 {name=overvoltage_ena dir=in}
+B 5 -152.5 -2732.5 -147.5 -2727.5 {name=left_instramp_to_ulpcomp_p[1:0] dir=in}
+B 5 257.5 -2812.5 262.5 -2807.5 {name=vdda0 dir=inout}
+B 5 -152.5 -2712.5 -147.5 -2707.5 {name=right_lp_opamp_p_to_analog0 dir=in}
+B 5 257.5 -2792.5 262.5 -2787.5 {name=vssa0 dir=inout}
+B 5 -152.5 -2692.5 -147.5 -2687.5 {name=left_hgbw_opamp_p_to_dac0 dir=in}
+B 5 -152.5 -2672.5 -147.5 -2667.5 {name=left_instramp_to_comp_p[1:0] dir=in}
+B 5 -152.5 -2652.5 -147.5 -2647.5 {name=overvoltage_trim[3:0] dir=in}
+B 5 -152.5 -2632.5 -147.5 -2627.5 {name=vbg_test_to_gpio1_1[1:0] dir=in}
+B 5 257.5 -2772.5 262.5 -2767.5 {name=vdda1 dir=inout}
+B 5 257.5 -2752.5 262.5 -2747.5 {name=overvoltage_out dir=out}
+B 5 -152.5 -2612.5 -147.5 -2607.5 {name=left_instramp_to_adc0[1:0] dir=in}
+B 5 -152.5 -2592.5 -147.5 -2587.5 {name=right_lp_opamp_p_to_amuxbusA dir=in}
+B 5 -152.5 -2572.5 -147.5 -2567.5 {name=left_hgbw_opamp_p_to_analog0 dir=in}
+B 5 -152.5 -2552.5 -147.5 -2547.5 {name=idac_to_gpio1_3[1:0] dir=in}
+B 5 -152.5 -2532.5 -147.5 -2527.5 {name=left_instramp_p_to_left_rheostat1_out dir=in}
+B 5 -152.5 -2512.5 -147.5 -2507.5 {name=left_hgbw_opamp_p_to_amuxbusA dir=in}
+B 5 257.5 -2732.5 262.5 -2727.5 {name=vssa1 dir=inout}
+B 5 -152.5 -2492.5 -147.5 -2487.5 {name=tempsense_ena dir=in}
+B 5 -152.5 -2472.5 -147.5 -2467.5 {name=left_instramp_to_gpio4_4[1:0] dir=in}
+B 5 -152.5 -2452.5 -147.5 -2447.5 {name=idac_to_gpio1_2[1:0] dir=in}
+B 5 257.5 -2712.5 262.5 -2707.5 {name=vdda2 dir=inout}
+B 5 -152.5 -2432.5 -147.5 -2427.5 {name=left_instramp_to_analog1[1:0] dir=in}
+B 5 -152.5 -2412.5 -147.5 -2407.5 {name=left_instramp_p_to_right_rheostat2_out dir=in}
+B 5 -152.5 -2392.5 -147.5 -2387.5 {name=right_lp_opamp_p_to_sio0 dir=in}
+B 5 -152.5 -2372.5 -147.5 -2367.5 {name=adc_refh_to_gpio6_6[1:0] dir=in}
+B 5 257.5 -2692.5 262.5 -2687.5 {name=vdda1_pwr_good dir=out}
+B 5 -152.5 -2352.5 -147.5 -2347.5 {name=left_hgbw_opamp_p_to_sio0 dir=in}
+B 5 -152.5 -2332.5 -147.5 -2327.5 {name=left_instramp_to_amuxbusB[1:0] dir=in}
+B 5 -152.5 -2312.5 -147.5 -2307.5 {name=right_lp_opamp_p_to_tempsense dir=in}
+B 5 257.5 -2672.5 262.5 -2667.5 {name=vssa2 dir=inout}
+B 5 -152.5 -2292.5 -147.5 -2287.5 {name=dac_refh_to_gpio1_1[1:0] dir=in}
+B 5 257.5 -2652.5 262.5 -2647.5 {name=vccd1_pwr_good dir=out}
+B 5 -152.5 -2272.5 -147.5 -2267.5 {name=right_instramp_to_ulpcomp_n[1:0] dir=in}
+B 5 -152.5 -2252.5 -147.5 -2247.5 {name=left_hgbw_opamp_p_to_left_vref dir=in}
+B 5 257.5 -2632.5 262.5 -2627.5 {name=vccd1 dir=inout}
+B 5 -152.5 -2232.5 -147.5 -2227.5 {name=right_lp_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -2212.5 -147.5 -2207.5 {name=adc_refl_to_gpio6_7[1:0] dir=in}
+B 5 257.5 -2612.5 262.5 -2607.5 {name=vdda2_pwr_good dir=out}
+B 5 -152.5 -2192.5 -147.5 -2187.5 {name=right_lp_opamp_p_to_voutref dir=in}
+B 5 257.5 -2592.5 262.5 -2587.5 {name=vssd1 dir=inout}
+B 5 -152.5 -2172.5 -147.5 -2167.5 {name=left_hgbw_opamp_p_to_voutref dir=in}
+B 5 -152.5 -2152.5 -147.5 -2147.5 {name=right_instramp_to_comp_n[1:0] dir=in}
+B 5 -152.5 -2132.5 -147.5 -2127.5 {name=dac_refl_to_gpio1_0[1:0] dir=in}
+B 5 257.5 -2572.5 262.5 -2567.5 {name=vccd2_pwr_good dir=out}
+B 5 -152.5 -2112.5 -147.5 -2107.5 {name=right_lp_opamp_p_to_gpio2_5[1:0] dir=in}
+B 5 -152.5 -2092.5 -147.5 -2087.5 {name=right_instramp_to_adc1[1:0] dir=in}
+B 5 -152.5 -2072.5 -147.5 -2067.5 {name=left_hgbw_opamp_p_to_gpio2_1[1:0] dir=in}
+B 5 257.5 -2552.5 262.5 -2547.5 {name=vccd2 dir=inout}
+B 5 -152.5 -2052.5 -147.5 -2047.5 {name=right_lp_opamp_to_ulpcomp_p[1:0] dir=in}
+B 5 -152.5 -2032.5 -147.5 -2027.5 {name=right_lp_opamp_n_to_dac1 dir=in}
+B 5 -152.5 -2012.5 -147.5 -2007.5 {name=right_instramp_to_analog0[1:0] dir=in}
+B 5 257.5 -2532.5 262.5 -2527.5 {name=vssd2 dir=inout}
+B 5 -152.5 -1992.5 -147.5 -1987.5 {name=left_hgbw_opamp_n_to_gpio5_3[1:0] dir=in}
+B 5 -152.5 -1972.5 -147.5 -1967.5 {name=right_lp_opamp_to_comp_p[1:0] dir=in}
+B 5 -152.5 -1952.5 -147.5 -1947.5 {name=right_instramp_to_amuxbusA[1:0] dir=in}
+B 5 -152.5 -1932.5 -147.5 -1927.5 {name=right_lp_opamp_n_to_analog1 dir=in}
+B 5 -152.5 -1912.5 -147.5 -1907.5 {name=left_hgbw_opamp_n_to_dac1 dir=in}
+B 5 -152.5 -1892.5 -147.5 -1887.5 {name=right_lp_opamp_to_adc0[1:0] dir=in}
+B 5 -152.5 -1872.5 -147.5 -1867.5 {name=right_lp_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 -1852.5 -147.5 -1847.5 {name=left_hgbw_opamp_n_to_analog1 dir=in}
+B 5 -152.5 -1832.5 -147.5 -1827.5 {name=right_instramp_to_gpio3_0[1:0] dir=in}
+B 5 -152.5 -1812.5 -147.5 -1807.5 {name=right_lp_opamp_to_gpio4_7[1:0] dir=in}
+B 5 -152.5 -1792.5 -147.5 -1787.5 {name=left_instramp_n_to_gpio5_7[1:0] dir=in}
+B 5 -152.5 -1772.5 -147.5 -1767.5 {name=right_instramp_n_to_left_rheostat2_out dir=in}
+B 5 -152.5 -1752.5 -147.5 -1747.5 {name=left_hgbw_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 -1732.5 -147.5 -1727.5 {name=idac_value[11:0] dir=in}
+B 5 -152.5 -1712.5 -147.5 -1707.5 {name=right_lp_opamp_to_gpio4_3[1:0] dir=in}
+B 5 -152.5 -1692.5 -147.5 -1687.5 {name=left_instramp_ena dir=in}
+B 5 -152.5 -1672.5 -147.5 -1667.5 {name=right_lp_opamp_n_to_rheostat_tap dir=in}
+B 5 -152.5 -1652.5 -147.5 -1647.5 {name=left_instramp_n_to_analog1 dir=in}
+B 5 -152.5 -1632.5 -147.5 -1627.5 {name=left_instramp_n_to_right_rheostat2_out dir=in}
+B 5 -152.5 -1612.5 -147.5 -1607.5 {name=right_lp_opamp_to_analog1[1:0] dir=in}
+B 5 -152.5 -1592.5 -147.5 -1587.5 {name=idac_ena dir=in}
+B 5 -152.5 -1572.5 -147.5 -1567.5 {name=left_instramp_G1[4:0] dir=in}
+B 5 -152.5 -1552.5 -147.5 -1547.5 {name=left_hgbw_opamp_n_to_rheostat_tap dir=in}
+B 5 -152.5 -1532.5 -147.5 -1527.5 {name=right_lp_opamp_n_to_sio1 dir=in}
+B 5 -152.5 -1512.5 -147.5 -1507.5 {name=left_instramp_n_to_amuxbusB dir=in}
+B 5 -152.5 -1492.5 -147.5 -1487.5 {name=right_lp_opamp_to_amuxbusB[1:0] dir=in}
+B 5 -152.5 -1472.5 -147.5 -1467.5 {name=audiodac_in dir=in}
+B 5 -152.5 -1432.5 -147.5 -1427.5 {name=left_instramp_G2[4:0] dir=in}
+B 5 -152.5 -1412.5 -147.5 -1407.5 {name=right_lp_opamp_n_to_vbgtc dir=in}
+B 5 -152.5 -1392.5 -147.5 -1387.5 {name=left_instramp_n_to_sio1 dir=in}
+B 5 -152.5 -1372.5 -147.5 -1367.5 {name=left_hgbw_opamp_n_to_sio1 dir=in}
+B 5 -152.5 -1352.5 -147.5 -1347.5 {name=right_lp_opamp_to_gpio3_7[1:0] dir=in}
+B 5 -152.5 -1332.5 -147.5 -1327.5 {name=rdac0_ena dir=in}
+B 5 -152.5 -1312.5 -147.5 -1307.5 {name=left_hgbw_opamp_ena dir=in}
+B 5 -152.5 -1292.5 -147.5 -1287.5 {name=left_hgbw_opamp_n_to_vbgtc dir=in}
+B 5 -152.5 -1272.5 -147.5 -1267.5 {name=left_instramp_n_to_right_vref dir=in}
+B 5 -152.5 -1252.5 -147.5 -1247.5 {name=right_lp_opamp_n_to_right_vref dir=in}
+B 5 -152.5 -1232.5 -147.5 -1227.5 {name=right_lp_opamp_to_gpio3_3[1:0] dir=in}
+B 5 -152.5 -1212.5 -147.5 -1207.5 {name=rdac0_value[11:0] dir=in}
+B 5 -152.5 -1192.5 -147.5 -1187.5 {name=left_lp_opamp_ena dir=in}
+B 5 -152.5 -1172.5 -147.5 -1167.5 {name=left_hgbw_opamp_n_to_right_vref dir=in}
+B 5 -152.5 -1152.5 -147.5 -1147.5 {name=left_instramp_n_to_vinref dir=in}
+B 5 -152.5 -1132.5 -147.5 -1127.5 {name=right_lp_opamp_n_to_vinref dir=in}
+B 5 -152.5 -1112.5 -147.5 -1107.5 {name=right_hgbw_opamp_to_ulpcomp_n[1:0] dir=in}
+B 5 -152.5 -1092.5 -147.5 -1087.5 {name=rdac1_ena dir=in}
+B 5 -152.5 -1072.5 -147.5 -1067.5 {name=left_rheostat1_b[7:0] dir=in}
+B 5 -152.5 -1032.5 -147.5 -1027.5 {name=right_lp_opamp_n_to_gpio2_4[1:0] dir=in}
+B 5 -152.5 -1012.5 -147.5 -1007.5 {name=left_hgbw_opamp_n_to_vinref dir=in}
+B 5 -152.5 -992.5 -147.5 -987.5 {name=rdac1_value[11:0] dir=in}
+B 5 -152.5 -972.5 -147.5 -967.5 {name=right_hgbw_opamp_to_comp_n[1:0] dir=in}
+B 5 -152.5 -952.5 -147.5 -947.5 {name=left_rheostat2_b[7:0] dir=in}
+B 5 -152.5 -932.5 -147.5 -927.5 {name=left_instramp_p_to_gpio5_6[1:0] dir=in}
+B 5 -152.5 -912.5 -147.5 -907.5 {name=left_hgbw_opamp_n_to_gpio2_0[1:0] dir=in}
+B 5 -152.5 -892.5 -147.5 -887.5 {name=right_hgbw_opamp_p_to_gpio5_0[1:0] dir=in}
+B 5 -152.5 -872.5 -147.5 -867.5 {name=right_hgbw_opamp_to_adc1[1:0] dir=in}
+B 5 -152.5 -852.5 -147.5 -847.5 {name=adc0_ena dir=in}
+B 5 -152.5 -832.5 -147.5 -827.5 {name=left_lp_opamp_p_to_dac0 dir=in}
+B 5 -152.5 -812.5 -147.5 -807.5 {name=left_instramp_p_to_analog0 dir=in}
+B 5 -152.5 -792.5 -147.5 -787.5 {name=right_instramp_ena dir=in}
+B 5 -152.5 -772.5 -147.5 -767.5 {name=right_hgbw_opamp_p_to_dac0 dir=in}
+B 5 -152.5 -752.5 -147.5 -747.5 {name=right_hgbw_opamp_to_gpio4_6[1:0] dir=in}
+B 5 -152.5 -732.5 -147.5 -727.5 {name=adc0_reset dir=in}
+B 5 -152.5 -712.5 -147.5 -707.5 {name=left_instramp_p_to_amuxbusA dir=in}
+B 5 -152.5 -692.5 -147.5 -687.5 {name=left_lp_opamp_p_to_analog0 dir=in}
+B 5 -152.5 -672.5 -147.5 -667.5 {name=right_instramp_G1[4:0] dir=in}
+B 5 -152.5 -652.5 -147.5 -647.5 {name=right_hgbw_opamp_p_to_analog0 dir=in}
+B 5 -152.5 -632.5 -147.5 -627.5 {name=right_hgbw_opamp_to_gpio4_2[1:0] dir=in}
+B 5 -152.5 -612.5 -147.5 -607.5 {name=adc0_hold dir=in}
+B 5 -152.5 -592.5 -147.5 -587.5 {name=right_hgbw_opamp_p_to_amuxbusA dir=in}
+B 5 -152.5 -572.5 -147.5 -567.5 {name=left_instramp_p_to_sio0 dir=in}
+B 5 -152.5 -552.5 -147.5 -547.5 {name=right_instramp_G2[4:0] dir=in}
+B 5 -152.5 -532.5 -147.5 -527.5 {name=left_lp_opamp_p_to_amuxbusA dir=in}
+B 5 -152.5 -512.5 -147.5 -507.5 {name=right_hgbw_opamp_to_analog0[1:0] dir=in}
+B 5 -152.5 -492.5 -147.5 -487.5 {name=adc0_dac_val[15:0] dir=in}
+B 5 -152.5 -472.5 -147.5 -467.5 {name=left_instramp_p_to_tempsense dir=in}
+B 5 -152.5 -452.5 -147.5 -447.5 {name=right_instramp_p_to_left_rheostat2_out dir=in}
+B 5 -152.5 -432.5 -147.5 -427.5 {name=right_hgbw_opamp_ena dir=in}
+B 5 -152.5 -412.5 -147.5 -407.5 {name=right_instramp_p_to_right_rheostat1_out dir=in}
+B 5 -152.5 -392.5 -147.5 -387.5 {name=right_hgbw_opamp_to_amuxbusA[1:0] dir=in}
+B 5 257.5 -2512.5 262.5 -2507.5 {name=adc0_comp_out dir=out}
+B 5 -152.5 -372.5 -147.5 -367.5 {name=left_instramp_p_to_left_vref dir=in}
+B 5 -152.5 -352.5 -147.5 -347.5 {name=right_lp_opamp_ena dir=in}
+B 5 -152.5 -332.5 -147.5 -327.5 {name=left_lp_opamp_p_to_sio0 dir=in}
+B 5 -152.5 -312.5 -147.5 -307.5 {name=right_hgbw_opamp_p_to_sio0 dir=in}
+B 5 -152.5 -292.5 -147.5 -287.5 {name=right_hgbw_opamp_to_gpio3_6[1:0] dir=in}
+B 5 -152.5 -272.5 -147.5 -267.5 {name=adc1_ena dir=in}
+B 5 -152.5 -252.5 -147.5 -247.5 {name=left_hgbw_opamp_p_to_tempsense dir=in}
+B 5 -152.5 -232.5 -147.5 -227.5 {name=right_rheostat1_b[7:0] dir=in}
+B 5 -152.5 -212.5 -147.5 -207.5 {name=left_instramp_p_to_voutref dir=in}
+B 5 -152.5 -192.5 -147.5 -187.5 {name=right_hgbw_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -172.5 -147.5 -167.5 {name=right_hgbw_opamp_to_gpio3_2[1:0] dir=in}
+B 5 -152.5 -152.5 -147.5 -147.5 {name=adc1_reset dir=in}
+B 5 -152.5 -132.5 -147.5 -127.5 {name=right_instramp_n_to_analog1 dir=in}
+B 5 -152.5 -112.5 -147.5 -107.5 {name=right_rheostat2_b[7:0] dir=in}
+B 5 -152.5 -92.5 -147.5 -87.5 {name=left_lp_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=right_hgbw_opamp_p_to_voutref dir=in}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=left_hgbw_opamp_to_ulpcomp_p[1:0] dir=in}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=right_instramp_n_to_amuxbusB dir=in}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=left_lp_opamp_p_to_voutref dir=in}
+B 5 -152.5 7.5 -147.5 12.5 {name=right_hgbw_opamp_p_to_gpio2_3[1:0] dir=in}
+B 5 -152.5 27.5 -147.5 32.5 {name=adc1_hold dir=in}
+B 5 -152.5 47.5 -147.5 52.5 {name=left_hgbw_opamp_to_comp_p[1:0] dir=in}
+B 5 -152.5 67.5 -147.5 72.5 {name=left_lp_opamp_n_to_gpio5_5[1:0] dir=in}
+B 5 -152.5 87.5 -147.5 92.5 {name=right_instramp_n_to_sio1 dir=in}
+B 5 -152.5 107.5 -147.5 112.5 {name=right_hgbw_opamp_n_to_gpio5_1[1:0] dir=in}
+B 5 -152.5 127.5 -147.5 132.5 {name=adc1_dac_val[15:0] dir=in}
+B 5 -152.5 147.5 -147.5 152.5 {name=left_hgbw_opamp_to_adc0[1:0] dir=in}
+B 5 -152.5 167.5 -147.5 172.5 {name=right_instramp_n_to_right_vref dir=in}
+B 5 -152.5 187.5 -147.5 192.5 {name=comp_ena dir=in}
+B 5 -152.5 207.5 -147.5 212.5 {name=left_lp_opamp_n_to_dac1 dir=in}
+B 5 257.5 -2492.5 262.5 -2487.5 {name=adc1_comp_out dir=out}
+B 5 -152.5 227.5 -147.5 232.5 {name=right_hgbw_opamp_n_to_dac1 dir=in}
+B 5 -152.5 247.5 -147.5 252.5 {name=left_hgbw_opamp_to_gpio4_5[1:0] dir=in}
+B 5 -152.5 267.5 -147.5 272.5 {name=comp_trim[5:0] dir=in}
+B 5 -152.5 287.5 -147.5 292.5 {name=right_instramp_n_to_vinref dir=in}
+B 5 -152.5 307.5 -147.5 312.5 {name=left_lp_opamp_n_to_analog1 dir=in}
+B 5 -152.5 327.5 -147.5 332.5 {name=right_hgbw_opamp_n_to_analog1 dir=in}
+B 5 -152.5 347.5 -147.5 352.5 {name=left_hgbw_opamp_to_gpio4_1[1:0] dir=in}
+B 5 -152.5 367.5 -147.5 372.5 {name=left_lp_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 387.5 -147.5 392.5 {name=comp_hyst[1:0] dir=in}
+B 5 -152.5 407.5 -147.5 412.5 {name=right_instramp_n_to_gpio2_6[1:0] dir=in}
+B 5 -152.5 427.5 -147.5 432.5 {name=right_hgbw_opamp_n_to_amuxbusB dir=in}
+B 5 -152.5 447.5 -147.5 452.5 {name=left_hgbw_opamp_to_analog1[1:0] dir=in}
+B 5 257.5 -2472.5 262.5 -2467.5 {name=comp_out dir=out}
+B 5 -152.5 467.5 -147.5 472.5 {name=right_instramp_p_to_analog0 dir=in}
+B 5 -152.5 487.5 -147.5 492.5 {name=left_instramp_n_to_left_rheostat1_out dir=in}
+B 5 -152.5 507.5 -147.5 512.5 {name=right_instramp_n_to_right_rheostat1_out dir=in}
+B 5 -152.5 527.5 -147.5 532.5 {name=left_hgbw_opamp_to_amuxbusB[1:0] dir=in}
+B 5 -152.5 547.5 -147.5 552.5 {name=ulpcomp_ena dir=in}
+B 5 -152.5 567.5 -147.5 572.5 {name=right_instramp_p_to_amuxbusA dir=in}
+B 5 -152.5 587.5 -147.5 592.5 {name=right_hgbw_opamp_n_to_rheostat_tap dir=in}
+B 5 -152.5 607.5 -147.5 612.5 {name=left_lp_opamp_n_to_rheostat_tap dir=in}
+B 5 -152.5 627.5 -147.5 632.5 {name=left_hgbw_opamp_to_gpio3_5[1:0] dir=in}
+B 5 -152.5 647.5 -147.5 652.5 {name=right_instramp_p_to_tempsense dir=in}
+B 5 -152.5 687.5 -147.5 692.5 {name=ulpcomp_clk dir=in}
+B 5 -152.5 707.5 -147.5 712.5 {name=left_lp_opamp_n_to_sio1 dir=in}
+B 5 -152.5 727.5 -147.5 732.5 {name=right_hgbw_opamp_n_to_sio1 dir=in}
+B 5 -152.5 747.5 -147.5 752.5 {name=left_hgbw_opamp_to_gpio3_1[1:0] dir=in}
+B 5 -152.5 767.5 -147.5 772.5 {name=right_instramp_p_to_left_vref dir=in}
+B 5 -152.5 787.5 -147.5 792.5 {name=left_lp_opamp_n_to_vbgsc dir=in}
+B 5 -152.5 807.5 -147.5 812.5 {name=right_hgbw_opamp_n_to_vbgsc dir=in}
+B 5 257.5 -2452.5 262.5 -2447.5 {name=ulpcomp_out dir=out}
+B 5 -152.5 827.5 -147.5 832.5 {name=left_lp_opamp_to_ulpcomp_n[1:0] dir=in}
+B 5 -152.5 847.5 -147.5 852.5 {name=right_instramp_p_to_voutref dir=in}
+B 5 -152.5 867.5 -147.5 872.5 {name=left_lp_opamp_n_to_right_vref dir=in}
+B 5 -152.5 887.5 -147.5 892.5 {name=right_hgbw_opamp_n_to_right_vref dir=in}
+B 5 -152.5 907.5 -147.5 912.5 {name=left_lp_opamp_to_comp_n[1:0] dir=in}
+B 5 -152.5 927.5 -147.5 932.5 {name=right_instramp_p_to_gpio2_7[1:0] dir=in}
+B 5 -152.5 947.5 -147.5 952.5 {name=left_lp_opamp_n_to_vinref dir=in}
+B 5 -152.5 967.5 -147.5 972.5 {name=right_hgbw_opamp_n_to_vinref dir=in}
+B 5 -152.5 987.5 -147.5 992.5 {name=left_lp_opamp_to_adc1[1:0] dir=in}
+B 5 -152.5 1007.5 -147.5 1012.5 {name=left_lp_opamp_p_to_gpio5_4[1:0] dir=in}
+B 5 -152.5 1027.5 -147.5 1032.5 {name=right_hgbw_opamp_n_to_gpio2_2[1:0] dir=in}
+B 5 -152.5 1047.5 -147.5 1052.5 {name=bandgap_ena dir=in}
+B 5 -152.5 1067.5 -147.5 1072.5 {name=bandgap_trim[15:0] dir=in}
+B 5 -152.5 1087.5 -147.5 1092.5 {name=left_lp_opamp_to_gpio4_0[1:0] dir=in}
+B 5 -152.5 1107.5 -147.5 1112.5 {name=ldo_ena dir=in}
+B 5 -152.5 1127.5 -147.5 1132.5 {name=left_lp_opamp_to_analog0[1:0] dir=in}
+B 5 -152.5 1147.5 -147.5 1152.5 {name=ibias_ena dir=in}
+B 5 -152.5 1167.5 -147.5 1172.5 {name=left_lp_opamp_to_amuxbusA[1:0] dir=in}
+B 5 -152.5 1187.5 -147.5 1192.5 {name=ibias_src_ena[23:0] dir=in}
+B 5 -152.5 1207.5 -147.5 1212.5 {name=left_lp_opamp_to_gpio3_4[1:0] dir=in}
+B 5 -152.5 1227.5 -147.5 1232.5 {name=ibias_snk_ena[3:0] dir=in}
+B 5 -152.5 1247.5 -147.5 1252.5 {name=ibias_ref_select dir=in}
+B 5 257.5 -2432.5 262.5 -2427.5 {name=por dir=out}
+B 5 257.5 -2412.5 262.5 -2407.5 {name=porb dir=out}
+B 5 257.5 -2392.5 262.5 -2387.5 {name=porb_h[1:0] dir=out}
+B 5 257.5 -2372.5 262.5 -2367.5 {name=gpio1_0 dir=inout}
+B 5 257.5 -2352.5 262.5 -2347.5 {name=user_voutref dir=out}
+B 5 257.5 -2332.5 262.5 -2327.5 {name=gpio4_0 dir=inout}
+B 5 -152.5 1267.5 -147.5 1272.5 {name=ulpcomp_p_to_dac0 dir=in}
+B 5 -152.5 1287.5 -147.5 1292.5 {name=adc0_to_dac0 dir=in}
+B 5 257.5 -2312.5 262.5 -2307.5 {name=gpio4_1 dir=inout}
+B 5 257.5 -2292.5 262.5 -2287.5 {name=gpio1_1 dir=inout}
+B 5 257.5 -2272.5 262.5 -2267.5 {name=user_vinref dir=out}
+B 5 -152.5 1307.5 -147.5 1312.5 {name=ulpcomp_p_to_analog1 dir=in}
+B 5 -152.5 1327.5 -147.5 1332.5 {name=adc0_to_analog1 dir=in}
+B 5 257.5 -2252.5 262.5 -2247.5 {name=gpio4_2 dir=inout}
+B 5 257.5 -2232.5 262.5 -2227.5 {name=user_left_vref dir=out}
+B 5 257.5 -2212.5 262.5 -2207.5 {name=gpio1_2 dir=inout}
+B 5 -152.5 1347.5 -147.5 1352.5 {name=ulpcomp_p_to_sio0 dir=in}
+B 5 -152.5 1367.5 -147.5 1372.5 {name=adc0_to_vbgtc dir=in}
+B 5 257.5 -2192.5 262.5 -2187.5 {name=gpio4_3 dir=inout}
+B 5 257.5 -2172.5 262.5 -2167.5 {name=gpio1_3 dir=inout}
+B 5 257.5 -2152.5 262.5 -2147.5 {name=user_right_vref dir=out}
+B 5 -152.5 1387.5 -147.5 1392.5 {name=ulpcomp_p_to_vbgtc dir=in}
+B 5 -152.5 1407.5 -147.5 1412.5 {name=adc0_to_tempsense dir=in}
+B 5 257.5 -2132.5 262.5 -2127.5 {name=gpio1_4 dir=inout}
+B 5 257.5 -2112.5 262.5 -2107.5 {name=gpio4_4 dir=inout}
+B 5 257.5 -2092.5 262.5 -2087.5 {name=user_tempsense dir=out}
+B 5 -152.5 1427.5 -147.5 1432.5 {name=ulpcomp_p_to_tempsense dir=in}
+B 5 -152.5 1447.5 -147.5 1452.5 {name=adc0_to_left_vref dir=in}
+B 5 257.5 -2072.5 262.5 -2067.5 {name=gpio4_5 dir=inout}
+B 5 257.5 -2052.5 262.5 -2047.5 {name=gpio1_5 dir=inout}
+B 5 257.5 -2032.5 262.5 -2027.5 {name=user_dac0 dir=out}
+B 5 -152.5 1467.5 -147.5 1472.5 {name=ulpcomp_p_to_left_vref dir=in}
+B 5 -152.5 1487.5 -147.5 1492.5 {name=adc0_to_voutref dir=in}
+B 5 257.5 -2012.5 262.5 -2007.5 {name=gpio4_6 dir=inout}
+B 5 257.5 -1992.5 262.5 -1987.5 {name=gpio1_6 dir=inout}
+B 5 257.5 -1972.5 262.5 -1967.5 {name=user_dac1 dir=out}
+B 5 -152.5 1507.5 -147.5 1512.5 {name=ulpcomp_p_to_voutref dir=in}
+B 5 -152.5 1527.5 -147.5 1532.5 {name=adc0_to_gpio6_4[1:0] dir=in}
+B 5 257.5 -1952.5 262.5 -1947.5 {name=gpio4_7 dir=inout}
+B 5 257.5 -1932.5 262.5 -1927.5 {name=gpio1_7 dir=inout}
+B 5 257.5 -1912.5 262.5 -1907.5 {name=user_vbgtc dir=out}
+B 5 -152.5 1547.5 -147.5 1552.5 {name=ulpcomp_p_to_gpio6_0[1:0] dir=in}
+B 5 -152.5 1567.5 -147.5 1572.5 {name=adc0_to_gpio1_3[1:0] dir=in}
+B 5 257.5 -1892.5 262.5 -1887.5 {name=gpio5_0 dir=inout}
+B 5 257.5 -1872.5 262.5 -1867.5 {name=gpio2_0 dir=inout}
+B 5 257.5 -1852.5 262.5 -1847.5 {name=user_vbgsc dir=out}
+B 5 -152.5 1587.5 -147.5 1592.5 {name=ulpcomp_p_to_gpio1_7[1:0] dir=in}
+B 5 -152.5 1607.5 -147.5 1612.5 {name=adc1_to_dac1 dir=in}
+B 5 257.5 -1832.5 262.5 -1827.5 {name=user_ibias50 dir=out}
+B 5 257.5 -1812.5 262.5 -1807.5 {name=gpio5_1 dir=inout}
+B 5 257.5 -1792.5 262.5 -1787.5 {name=gpio2_1 dir=inout}
+B 5 -152.5 1627.5 -147.5 1632.5 {name=ulpcomp_n_to_dac1 dir=in}
+B 5 -152.5 1647.5 -147.5 1652.5 {name=adc1_to_analog0 dir=in}
+B 5 257.5 -1772.5 262.5 -1767.5 {name=user_ibias100 dir=out}
+B 5 257.5 -1752.5 262.5 -1747.5 {name=gpio5_2 dir=inout}
+B 5 257.5 -1732.5 262.5 -1727.5 {name=gpio2_2 dir=inout}
+B 5 -152.5 1667.5 -147.5 1672.5 {name=ulpcomp_n_to_analog0 dir=in}
+B 5 -152.5 1687.5 -147.5 1692.5 {name=adc1_to_vbgsc dir=in}
+B 5 257.5 -1712.5 262.5 -1707.5 {name=gpio5_3 dir=inout}
+B 5 257.5 -1692.5 262.5 -1687.5 {name=gpio2_3 dir=inout}
+B 5 -152.5 1707.5 -147.5 1712.5 {name=user_adc0 dir=in}
+B 5 -152.5 1727.5 -147.5 1732.5 {name=ulpcomp_n_to_sio1 dir=in}
+B 5 -152.5 1747.5 -147.5 1752.5 {name=adc1_to_right_vref dir=in}
+B 5 257.5 -1672.5 262.5 -1667.5 {name=gpio2_4 dir=inout}
+B 5 257.5 -1652.5 262.5 -1647.5 {name=gpio5_4 dir=inout}
+B 5 -152.5 1767.5 -147.5 1772.5 {name=user_adc1 dir=in}
+B 5 -152.5 1787.5 -147.5 1792.5 {name=ulpcomp_n_to_vbgsc dir=in}
+B 5 -152.5 1807.5 -147.5 1812.5 {name=adc1_to_vinref dir=in}
+B 5 257.5 -1632.5 262.5 -1627.5 {name=gpio5_5 dir=inout}
+B 5 257.5 -1612.5 262.5 -1607.5 {name=gpio2_5 dir=inout}
+B 5 -152.5 1827.5 -147.5 1832.5 {name=user_comp_n dir=in}
+B 5 -152.5 1847.5 -147.5 1852.5 {name=ulpcomp_n_to_right_vref dir=in}
+B 5 -152.5 1867.5 -147.5 1872.5 {name=adc1_to_gpio6_5[1:0] dir=in}
+B 5 257.5 -1592.5 262.5 -1587.5 {name=gpio5_6 dir=inout}
+B 5 257.5 -1572.5 262.5 -1567.5 {name=gpio2_6 dir=inout}
+B 5 -152.5 1887.5 -147.5 1892.5 {name=user_comp_p dir=in}
+B 5 -152.5 1907.5 -147.5 1912.5 {name=ulpcomp_n_to_vinref dir=in}
+B 5 -152.5 1927.5 -147.5 1932.5 {name=adc1_to_gpio1_2[1:0] dir=in}
+B 5 257.5 -1552.5 262.5 -1547.5 {name=gpio5_7 dir=inout}
+B 5 257.5 -1532.5 262.5 -1527.5 {name=gpio2_7 dir=inout}
+B 5 -152.5 1947.5 -147.5 1952.5 {name=user_ulpcomp_n dir=in}
+B 5 -152.5 1967.5 -147.5 1972.5 {name=ulpcomp_n_to_gpio6_1[1:0] dir=in}
+B 5 -152.5 1987.5 -147.5 1992.5 {name=sio0_connect[1:0] dir=in}
+B 5 257.5 -1512.5 262.5 -1507.5 {name=gpio6_0 dir=inout}
+B 5 257.5 -1492.5 262.5 -1487.5 {name=gpio3_0 dir=inout}
+B 5 -152.5 2007.5 -147.5 2012.5 {name=user_ulpcomp_p dir=in}
+B 5 -152.5 2027.5 -147.5 2032.5 {name=ulpcomp_n_to_gpio1_6[1:0] dir=in}
+B 5 -152.5 2047.5 -147.5 2052.5 {name=sio1_connect[1:0] dir=in}
+B 5 257.5 -1472.5 262.5 -1467.5 {name=gpio6_1 dir=inout}
+B 5 257.5 -1452.5 262.5 -1447.5 {name=gpio3_1 dir=inout}
+B 5 -152.5 2067.5 -147.5 2072.5 {name=comp_p_to_dac0 dir=in}
+B 5 257.5 -1432.5 262.5 -1427.5 {name=user_gpio3_0_analog dir=inout}
+B 5 -152.5 2087.5 -147.5 2092.5 {name=analog0_connect[1:0] dir=in}
+B 5 257.5 -1412.5 262.5 -1407.5 {name=gpio6_2 dir=inout}
+B 5 257.5 -1392.5 262.5 -1387.5 {name=gpio3_2 dir=inout}
+B 5 -152.5 2107.5 -147.5 2112.5 {name=comp_p_to_analog1 dir=in}
+B 5 257.5 -1372.5 262.5 -1367.5 {name=user_gpio3_1_analog dir=inout}
+B 5 -152.5 2127.5 -147.5 2132.5 {name=analog1_connect[1:0] dir=in}
+B 5 257.5 -1352.5 262.5 -1347.5 {name=gpio6_3 dir=inout}
+B 5 257.5 -1332.5 262.5 -1327.5 {name=gpio3_3 dir=inout}
+B 5 -152.5 2147.5 -147.5 2152.5 {name=comp_p_to_sio0 dir=in}
+B 5 257.5 -1312.5 262.5 -1307.5 {name=user_gpio3_2_analog dir=inout}
+B 5 -152.5 2167.5 -147.5 2172.5 {name=vbgtc_to_user dir=in}
+B 5 257.5 -1292.5 262.5 -1287.5 {name=gpio3_4 dir=inout}
+B 5 257.5 -1272.5 262.5 -1267.5 {name=gpio6_4 dir=inout}
+B 5 -152.5 2187.5 -147.5 2192.5 {name=comp_p_to_vbgtc dir=in}
+B 5 257.5 -1252.5 262.5 -1247.5 {name=user_gpio3_3_analog dir=inout}
+B 5 -152.5 2207.5 -147.5 2212.5 {name=vbgsc_to_user dir=in}
+B 5 257.5 -1232.5 262.5 -1227.5 {name=gpio6_5 dir=inout}
+B 5 257.5 -1212.5 262.5 -1207.5 {name=gpio3_5 dir=inout}
+B 5 -152.5 2227.5 -147.5 2232.5 {name=comp_p_to_tempsense dir=in}
+B 5 257.5 -1192.5 262.5 -1187.5 {name=user_gpio3_4_analog dir=inout}
+B 5 -152.5 2247.5 -147.5 2252.5 {name=user_to_comp_n[1:0] dir=in}
+B 5 257.5 -1172.5 262.5 -1167.5 {name=gpio6_6 dir=inout}
+B 5 257.5 -1152.5 262.5 -1147.5 {name=gpio3_6 dir=inout}
+B 5 -152.5 2267.5 -147.5 2272.5 {name=comp_p_to_left_vref dir=in}
+B 5 257.5 -1132.5 262.5 -1127.5 {name=user_gpio3_5_analog dir=inout}
+B 5 -152.5 2287.5 -147.5 2292.5 {name=user_to_comp_p[1:0] dir=in}
+B 5 257.5 -1112.5 262.5 -1107.5 {name=gpio6_7 dir=inout}
+B 5 257.5 -1092.5 262.5 -1087.5 {name=gpio3_7 dir=inout}
+B 5 -152.5 2307.5 -147.5 2312.5 {name=comp_p_to_voutref dir=in}
+B 5 257.5 -1072.5 262.5 -1067.5 {name=user_gpio3_6_analog dir=inout}
+B 5 -152.5 2327.5 -147.5 2332.5 {name=user_to_ulpcomp_n[1:0] dir=in}
+B 5 257.5 -1052.5 262.5 -1047.5 {name=analog0 dir=inout}
+B 5 257.5 -1032.5 262.5 -1027.5 {name=sio0 dir=inout}
+B 5 -152.5 2347.5 -147.5 2352.5 {name=comp_p_to_gpio6_2[1:0] dir=in}
+B 5 257.5 -1012.5 262.5 -1007.5 {name=user_gpio3_7_analog dir=inout}
+B 5 -152.5 2367.5 -147.5 2372.5 {name=user_to_ulpcomp_p[1:0] dir=in}
+B 5 257.5 -992.5 262.5 -987.5 {name=analog1 dir=inout}
+B 5 257.5 -972.5 262.5 -967.5 {name=sio1 dir=inout}
+B 5 -152.5 2387.5 -147.5 2392.5 {name=comp_p_to_gpio1_5[1:0] dir=in}
+B 5 257.5 -952.5 262.5 -947.5 {name=user_gpio4_0_analog dir=inout}
+B 5 -152.5 2407.5 -147.5 2412.5 {name=user_to_adc0[1:0] dir=in}
+B 5 -152.5 2427.5 -147.5 2432.5 {name=comp_n_to_dac1 dir=in}
+B 5 257.5 -932.5 262.5 -927.5 {name=user_gpio4_1_analog dir=inout}
+B 5 -152.5 2447.5 -147.5 2452.5 {name=user_to_adc1[1:0] dir=in}
+B 5 -152.5 2467.5 -147.5 2472.5 {name=comp_n_to_analog0 dir=in}
+B 5 257.5 -912.5 262.5 -907.5 {name=user_gpio4_2_analog dir=inout}
+B 5 -152.5 2487.5 -147.5 2492.5 {name=dac0_to_user dir=in}
+B 5 -152.5 2507.5 -147.5 2512.5 {name=voutref dir=in}
+B 5 257.5 -892.5 262.5 -887.5 {name=user_gpio4_3_analog dir=inout}
+B 5 -152.5 2527.5 -147.5 2532.5 {name=dac1_to_user dir=in}
+B 5 257.5 -872.5 262.5 -867.5 {name=vbg dir=out}
+B 5 -152.5 2547.5 -147.5 2552.5 {name=comp_n_to_sio1 dir=in}
+B 5 257.5 -852.5 262.5 -847.5 {name=ibias_lsxo dir=out}
+B 5 -152.5 2567.5 -147.5 2572.5 {name=vinref dir=in}
+B 5 257.5 -832.5 262.5 -827.5 {name=user_gpio4_4_analog dir=inout}
+B 5 -152.5 2587.5 -147.5 2592.5 {name=tempsense_to_user dir=in}
+B 5 -152.5 2607.5 -147.5 2612.5 {name=comp_n_to_vbgsc dir=in}
+B 5 257.5 -812.5 262.5 -807.5 {name=ibias_hsxo dir=out}
+B 5 -152.5 2627.5 -147.5 2632.5 {name=right_vref dir=in}
+B 5 257.5 -792.5 262.5 -787.5 {name=user_gpio4_5_analog dir=inout}
+B 5 -152.5 2647.5 -147.5 2652.5 {name=right_vref_to_user dir=in}
+B 5 -152.5 2667.5 -147.5 2672.5 {name=comp_n_to_right_vref dir=in}
+B 5 -152.5 2687.5 -147.5 2692.5 {name=left_vref dir=in}
+B 5 257.5 -772.5 262.5 -767.5 {name=user_gpio4_6_analog dir=inout}
+B 5 -152.5 2707.5 -147.5 2712.5 {name=left_vref_to_user dir=in}
+B 5 -152.5 2727.5 -147.5 2732.5 {name=comp_n_to_vinref dir=in}
+B 5 257.5 -752.5 262.5 -747.5 {name=user_gpio4_7_analog dir=inout}
+B 5 -152.5 2747.5 -147.5 2752.5 {name=vinref_to_user dir=in}
+B 5 -152.5 2767.5 -147.5 2772.5 {name=comp_n_to_gpio6_3[1:0] dir=in}
+B 5 -152.5 2787.5 -147.5 2792.5 {name=voutref_to_user dir=in}
+B 5 -152.5 2807.5 -147.5 2812.5 {name=comp_n_to_gpio1_4[1:0] dir=in}
+B 5 -152.5 667.5 -147.5 672.5 {name=right_instramp_p_to_sio0 dir=in}
+B 5 -152.5 2827.5 -147.5 2832.5 {name=dac0_to_analog1 dir=in}
+B 5 -152.5 2847.5 -147.5 2852.5 {name=dac1_to_analog0 dir=in}
+B 5 -152.5 2867.5 -147.5 2872.5 {name=audiodac_out_to_analog1[1:0] dir=in}
+B 5 -152.5 2887.5 -147.5 2892.5 {name=audiodac_outb_to_analog0[1:0] dir=in}
+B 5 -152.5 -1452.5 -147.5 -1447.5 {name=audiodac_inb dir=in}
+B 5 257.5 -2852.5 262.5 -2847.5 {name=vddio dir=inout}
+B 5 257.5 -2832.5 262.5 -2827.5 {name=vssio dir=inout}
+B 5 -152.5 -2832.5 -147.5 -2827.5 {name=tempsense_sel dir=in}
+B 5 -152.5 -2852.5 -147.5 -2847.5 {name=ldo_ref_sel dir=in}
+B 5 -152.5 -2872.5 -147.5 -2867.5 {name=bandgap_sel dir=in}
+B 5 257.5 -732.5 262.5 -727.5 {name=brownout_vunder dir=out}
+B 5 257.5 -712.5 262.5 -707.5 {name=brownout_timeout dir=out}
+B 5 257.5 -692.5 262.5 -687.5 {name=brownout_filt dir=out}
+B 5 257.5 -672.5 262.5 -667.5 {name=brownout_unfilt dir=out}
+B 5 -152.5 2907.5 -147.5 2912.5 {name=brownout_ena dir=in}
+B 5 -152.5 2927.5 -147.5 2932.5 {name=brownout_vtrip[2:0] dir=in}
+B 5 -152.5 2947.5 -147.5 2952.5 {name=brownout_otrip[2:0] dir=in}
+B 5 -152.5 2967.5 -147.5 2972.5 {name=brownout_isrc_sel dir=in}
+B 5 -152.5 2987.5 -147.5 2992.5 {name=brownout_oneshot dir=in}
+B 5 -152.5 3007.5 -147.5 3012.5 {name=brownout_rc_ena dir=in}
+B 5 -152.5 3027.5 -147.5 3032.5 {name=brownout_rc_dis dir=in}
+B 5 -152.5 3047.5 -147.5 3052.5 {name=amuxbus_a_n dir=inout}
+B 5 -152.5 3067.5 -147.5 3072.5 {name=amuxbus_b_n dir=inout}
+B 5 257.5 -652.5 262.5 -647.5 {name=vccd0 dir=inout}
+B 5 257.5 -632.5 262.5 -627.5 {name=vssd0 dir=inout}
+T {@symname} -44.5 24 0 0 0.3 0.3 {}
+T {@name} 245 -2902 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_gpio5_2[1:0]} -125 -2814 0 0 0.2 0.2 {}
+T {ibias_test_to_gpio1_2[1:0]} -125 -2794 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_dac0} -125 -2774 0 0 0.2 0.2 {}
+T {overvoltage_ena} -125 -2754 0 0 0.2 0.2 {}
+T {left_instramp_to_ulpcomp_p[1:0]} -125 -2734 0 0 0.2 0.2 {}
+T {vdda0} 235 -2814 0 1 0.2 0.2 {}
+T {right_lp_opamp_p_to_analog0} -125 -2714 0 0 0.2 0.2 {}
+T {vssa0} 235 -2794 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_dac0} -125 -2694 0 0 0.2 0.2 {}
+T {left_instramp_to_comp_p[1:0]} -125 -2674 0 0 0.2 0.2 {}
+T {overvoltage_trim[3:0]} -125 -2654 0 0 0.2 0.2 {}
+T {vbg_test_to_gpio1_1[1:0]} -125 -2634 0 0 0.2 0.2 {}
+T {vdda1} 235 -2774 0 1 0.2 0.2 {}
+T {overvoltage_out} 235 -2754 0 1 0.2 0.2 {}
+T {left_instramp_to_adc0[1:0]} -125 -2614 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_amuxbusA} -125 -2594 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_analog0} -125 -2574 0 0 0.2 0.2 {}
+T {idac_to_gpio1_3[1:0]} -125 -2554 0 0 0.2 0.2 {}
+T {left_instramp_p_to_left_rheostat1_out} -125 -2534 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_amuxbusA} -125 -2514 0 0 0.2 0.2 {}
+T {vssa1} 235 -2734 0 1 0.2 0.2 {}
+T {tempsense_ena} -125 -2494 0 0 0.2 0.2 {}
+T {left_instramp_to_gpio4_4[1:0]} -125 -2474 0 0 0.2 0.2 {}
+T {idac_to_gpio1_2[1:0]} -125 -2454 0 0 0.2 0.2 {}
+T {vdda2} 235 -2714 0 1 0.2 0.2 {}
+T {left_instramp_to_analog1[1:0]} -125 -2434 0 0 0.2 0.2 {}
+T {left_instramp_p_to_right_rheostat2_out} -125 -2414 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_sio0} -125 -2394 0 0 0.2 0.2 {}
+T {adc_refh_to_gpio6_6[1:0]} -125 -2374 0 0 0.2 0.2 {}
+T {vdda1_pwr_good} 235 -2694 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_sio0} -125 -2354 0 0 0.2 0.2 {}
+T {left_instramp_to_amuxbusB[1:0]} -125 -2334 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_tempsense} -125 -2314 0 0 0.2 0.2 {}
+T {vssa2} 235 -2674 0 1 0.2 0.2 {}
+T {dac_refh_to_gpio1_1[1:0]} -125 -2294 0 0 0.2 0.2 {}
+T {vccd1_pwr_good} 235 -2654 0 1 0.2 0.2 {}
+T {right_instramp_to_ulpcomp_n[1:0]} -125 -2274 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_left_vref} -125 -2254 0 0 0.2 0.2 {}
+T {vccd1} 235 -2634 0 1 0.2 0.2 {}
+T {right_lp_opamp_p_to_left_vref} -125 -2234 0 0 0.2 0.2 {}
+T {adc_refl_to_gpio6_7[1:0]} -125 -2214 0 0 0.2 0.2 {}
+T {vdda2_pwr_good} 235 -2614 0 1 0.2 0.2 {}
+T {right_lp_opamp_p_to_voutref} -125 -2194 0 0 0.2 0.2 {}
+T {vssd1} 235 -2594 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_voutref} -125 -2174 0 0 0.2 0.2 {}
+T {right_instramp_to_comp_n[1:0]} -125 -2154 0 0 0.2 0.2 {}
+T {dac_refl_to_gpio1_0[1:0]} -125 -2134 0 0 0.2 0.2 {}
+T {vccd2_pwr_good} 235 -2574 0 1 0.2 0.2 {}
+T {right_lp_opamp_p_to_gpio2_5[1:0]} -125 -2114 0 0 0.2 0.2 {}
+T {right_instramp_to_adc1[1:0]} -125 -2094 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_gpio2_1[1:0]} -125 -2074 0 0 0.2 0.2 {}
+T {vccd2} 235 -2554 0 1 0.2 0.2 {}
+T {right_lp_opamp_to_ulpcomp_p[1:0]} -125 -2054 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_dac1} -125 -2034 0 0 0.2 0.2 {}
+T {right_instramp_to_analog0[1:0]} -125 -2014 0 0 0.2 0.2 {}
+T {vssd2} 235 -2534 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_gpio5_3[1:0]} -125 -1994 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_comp_p[1:0]} -125 -1974 0 0 0.2 0.2 {}
+T {right_instramp_to_amuxbusA[1:0]} -125 -1954 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_analog1} -125 -1934 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_dac1} -125 -1914 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_adc0[1:0]} -125 -1894 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_amuxbusB} -125 -1874 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_analog1} -125 -1854 0 0 0.2 0.2 {}
+T {right_instramp_to_gpio3_0[1:0]} -125 -1834 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_gpio4_7[1:0]} -125 -1814 0 0 0.2 0.2 {}
+T {left_instramp_n_to_gpio5_7[1:0]} -125 -1794 0 0 0.2 0.2 {}
+T {right_instramp_n_to_left_rheostat2_out} -125 -1774 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_amuxbusB} -125 -1754 0 0 0.2 0.2 {}
+T {idac_value[11:0]} -125 -1734 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_gpio4_3[1:0]} -125 -1714 0 0 0.2 0.2 {}
+T {left_instramp_ena} -125 -1694 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_rheostat_tap} -125 -1674 0 0 0.2 0.2 {}
+T {left_instramp_n_to_analog1} -125 -1654 0 0 0.2 0.2 {}
+T {left_instramp_n_to_right_rheostat2_out} -125 -1634 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_analog1[1:0]} -125 -1614 0 0 0.2 0.2 {}
+T {idac_ena} -125 -1594 0 0 0.2 0.2 {}
+T {left_instramp_G1[4:0]} -125 -1574 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_rheostat_tap} -125 -1554 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_sio1} -125 -1534 0 0 0.2 0.2 {}
+T {left_instramp_n_to_amuxbusB} -125 -1514 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_amuxbusB[1:0]} -125 -1494 0 0 0.2 0.2 {}
+T {audiodac_in} -125 -1474 0 0 0.2 0.2 {}
+T {left_instramp_G2[4:0]} -125 -1434 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_vbgtc} -125 -1414 0 0 0.2 0.2 {}
+T {left_instramp_n_to_sio1} -125 -1394 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_sio1} -125 -1374 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_gpio3_7[1:0]} -125 -1354 0 0 0.2 0.2 {}
+T {rdac0_ena} -125 -1334 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_ena} -125 -1314 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_vbgtc} -125 -1294 0 0 0.2 0.2 {}
+T {left_instramp_n_to_right_vref} -125 -1274 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_right_vref} -125 -1254 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_gpio3_3[1:0]} -125 -1234 0 0 0.2 0.2 {}
+T {rdac0_value[11:0]} -125 -1214 0 0 0.2 0.2 {}
+T {left_lp_opamp_ena} -125 -1194 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_right_vref} -125 -1174 0 0 0.2 0.2 {}
+T {left_instramp_n_to_vinref} -125 -1154 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_vinref} -125 -1134 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_ulpcomp_n[1:0]} -125 -1114 0 0 0.2 0.2 {}
+T {rdac1_ena} -125 -1094 0 0 0.2 0.2 {}
+T {left_rheostat1_b[7:0]} -125 -1074 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_gpio2_4[1:0]} -125 -1034 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_vinref} -125 -1014 0 0 0.2 0.2 {}
+T {rdac1_value[11:0]} -125 -994 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_comp_n[1:0]} -125 -974 0 0 0.2 0.2 {}
+T {left_rheostat2_b[7:0]} -125 -954 0 0 0.2 0.2 {}
+T {left_instramp_p_to_gpio5_6[1:0]} -125 -934 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_gpio2_0[1:0]} -125 -914 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_gpio5_0[1:0]} -125 -894 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_adc1[1:0]} -125 -874 0 0 0.2 0.2 {}
+T {adc0_ena} -125 -854 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_dac0} -125 -834 0 0 0.2 0.2 {}
+T {left_instramp_p_to_analog0} -125 -814 0 0 0.2 0.2 {}
+T {right_instramp_ena} -125 -794 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_dac0} -125 -774 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_gpio4_6[1:0]} -125 -754 0 0 0.2 0.2 {}
+T {adc0_reset} -125 -734 0 0 0.2 0.2 {}
+T {left_instramp_p_to_amuxbusA} -125 -714 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_analog0} -125 -694 0 0 0.2 0.2 {}
+T {right_instramp_G1[4:0]} -125 -674 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_analog0} -125 -654 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_gpio4_2[1:0]} -125 -634 0 0 0.2 0.2 {}
+T {adc0_hold} -125 -614 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_amuxbusA} -125 -594 0 0 0.2 0.2 {}
+T {left_instramp_p_to_sio0} -125 -574 0 0 0.2 0.2 {}
+T {right_instramp_G2[4:0]} -125 -554 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_amuxbusA} -125 -534 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_analog0[1:0]} -125 -514 0 0 0.2 0.2 {}
+T {adc0_dac_val[15:0]} -125 -494 0 0 0.2 0.2 {}
+T {left_instramp_p_to_tempsense} -125 -474 0 0 0.2 0.2 {}
+T {right_instramp_p_to_left_rheostat2_out} -125 -454 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_ena} -125 -434 0 0 0.2 0.2 {}
+T {right_instramp_p_to_right_rheostat1_out} -125 -414 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_amuxbusA[1:0]} -125 -394 0 0 0.2 0.2 {}
+T {adc0_comp_out} 235 -2514 0 1 0.2 0.2 {}
+T {left_instramp_p_to_left_vref} -125 -374 0 0 0.2 0.2 {}
+T {right_lp_opamp_ena} -125 -354 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_sio0} -125 -334 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_sio0} -125 -314 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_gpio3_6[1:0]} -125 -294 0 0 0.2 0.2 {}
+T {adc1_ena} -125 -274 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_tempsense} -125 -254 0 0 0.2 0.2 {}
+T {right_rheostat1_b[7:0]} -125 -234 0 0 0.2 0.2 {}
+T {left_instramp_p_to_voutref} -125 -214 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_left_vref} -125 -194 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_gpio3_2[1:0]} -125 -174 0 0 0.2 0.2 {}
+T {adc1_reset} -125 -154 0 0 0.2 0.2 {}
+T {right_instramp_n_to_analog1} -125 -134 0 0 0.2 0.2 {}
+T {right_rheostat2_b[7:0]} -125 -114 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_left_vref} -125 -94 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_voutref} -125 -74 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_ulpcomp_p[1:0]} -125 -54 0 0 0.2 0.2 {}
+T {right_instramp_n_to_amuxbusB} -125 -34 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_voutref} -125 -14 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_gpio2_3[1:0]} -125 6 0 0 0.2 0.2 {}
+T {adc1_hold} -125 26 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_comp_p[1:0]} -125 46 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_gpio5_5[1:0]} -125 66 0 0 0.2 0.2 {}
+T {right_instramp_n_to_sio1} -125 86 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_gpio5_1[1:0]} -125 106 0 0 0.2 0.2 {}
+T {adc1_dac_val[15:0]} -125 126 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_adc0[1:0]} -125 146 0 0 0.2 0.2 {}
+T {right_instramp_n_to_right_vref} -125 166 0 0 0.2 0.2 {}
+T {comp_ena} -125 186 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_dac1} -125 206 0 0 0.2 0.2 {}
+T {adc1_comp_out} 235 -2494 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_dac1} -125 226 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_gpio4_5[1:0]} -125 246 0 0 0.2 0.2 {}
+T {comp_trim[5:0]} -125 266 0 0 0.2 0.2 {}
+T {right_instramp_n_to_vinref} -125 286 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_analog1} -125 306 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_analog1} -125 326 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_gpio4_1[1:0]} -125 346 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_amuxbusB} -125 366 0 0 0.2 0.2 {}
+T {comp_hyst[1:0]} -125 386 0 0 0.2 0.2 {}
+T {right_instramp_n_to_gpio2_6[1:0]} -125 406 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_amuxbusB} -125 426 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_analog1[1:0]} -125 446 0 0 0.2 0.2 {}
+T {comp_out} 235 -2474 0 1 0.2 0.2 {}
+T {right_instramp_p_to_analog0} -125 466 0 0 0.2 0.2 {}
+T {left_instramp_n_to_left_rheostat1_out} -125 486 0 0 0.2 0.2 {}
+T {right_instramp_n_to_right_rheostat1_out} -125 506 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_amuxbusB[1:0]} -125 526 0 0 0.2 0.2 {}
+T {ulpcomp_ena} -125 546 0 0 0.2 0.2 {}
+T {right_instramp_p_to_amuxbusA} -125 566 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_rheostat_tap} -125 586 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_rheostat_tap} -125 606 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_gpio3_5[1:0]} -125 626 0 0 0.2 0.2 {}
+T {right_instramp_p_to_tempsense} -125 646 0 0 0.2 0.2 {}
+T {ulpcomp_clk} -125 686 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_sio1} -125 706 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_sio1} -125 726 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_gpio3_1[1:0]} -125 746 0 0 0.2 0.2 {}
+T {right_instramp_p_to_left_vref} -125 766 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_vbgsc} -125 786 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_vbgsc} -125 806 0 0 0.2 0.2 {}
+T {ulpcomp_out} 235 -2454 0 1 0.2 0.2 {}
+T {left_lp_opamp_to_ulpcomp_n[1:0]} -125 826 0 0 0.2 0.2 {}
+T {right_instramp_p_to_voutref} -125 846 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_right_vref} -125 866 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_right_vref} -125 886 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_comp_n[1:0]} -125 906 0 0 0.2 0.2 {}
+T {right_instramp_p_to_gpio2_7[1:0]} -125 926 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_vinref} -125 946 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_vinref} -125 966 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_adc1[1:0]} -125 986 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_gpio5_4[1:0]} -125 1006 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_gpio2_2[1:0]} -125 1026 0 0 0.2 0.2 {}
+T {bandgap_ena} -125 1046 0 0 0.2 0.2 {}
+T {bandgap_trim[15:0]} -125 1066 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_gpio4_0[1:0]} -125 1086 0 0 0.2 0.2 {}
+T {ldo_ena} -125 1106 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_analog0[1:0]} -125 1126 0 0 0.2 0.2 {}
+T {ibias_ena} -125 1146 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_amuxbusA[1:0]} -125 1166 0 0 0.2 0.2 {}
+T {ibias_src_ena[23:0]} -125 1186 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_gpio3_4[1:0]} -125 1206 0 0 0.2 0.2 {}
+T {ibias_snk_ena[3:0]} -125 1226 0 0 0.2 0.2 {}
+T {ibias_ref_select} -125 1246 0 0 0.2 0.2 {}
+T {por} 235 -2434 0 1 0.2 0.2 {}
+T {porb} 235 -2414 0 1 0.2 0.2 {}
+T {porb_h} 235 -2394 0 1 0.2 0.2 {}
+T {gpio1_0} 235 -2374 0 1 0.2 0.2 {}
+T {user_voutref} 235 -2354 0 1 0.2 0.2 {}
+T {gpio4_0} 235 -2334 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_dac0} -125 1266 0 0 0.2 0.2 {}
+T {adc0_to_dac0} -125 1286 0 0 0.2 0.2 {}
+T {gpio4_1} 235 -2314 0 1 0.2 0.2 {}
+T {gpio1_1} 235 -2294 0 1 0.2 0.2 {}
+T {user_vinref} 235 -2274 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_analog1} -125 1306 0 0 0.2 0.2 {}
+T {adc0_to_analog1} -125 1326 0 0 0.2 0.2 {}
+T {gpio4_2} 235 -2254 0 1 0.2 0.2 {}
+T {user_left_vref} 235 -2234 0 1 0.2 0.2 {}
+T {gpio1_2} 235 -2214 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_sio0} -125 1346 0 0 0.2 0.2 {}
+T {adc0_to_vbgtc} -125 1366 0 0 0.2 0.2 {}
+T {gpio4_3} 235 -2194 0 1 0.2 0.2 {}
+T {gpio1_3} 235 -2174 0 1 0.2 0.2 {}
+T {user_right_vref} 235 -2154 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_vbgtc} -125 1386 0 0 0.2 0.2 {}
+T {adc0_to_tempsense} -125 1406 0 0 0.2 0.2 {}
+T {gpio1_4} 235 -2134 0 1 0.2 0.2 {}
+T {gpio4_4} 235 -2114 0 1 0.2 0.2 {}
+T {user_tempsense} 235 -2094 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_tempsense} -125 1426 0 0 0.2 0.2 {}
+T {adc0_to_left_vref} -125 1446 0 0 0.2 0.2 {}
+T {gpio4_5} 235 -2074 0 1 0.2 0.2 {}
+T {gpio1_5} 235 -2054 0 1 0.2 0.2 {}
+T {user_dac0} 235 -2034 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_left_vref} -125 1466 0 0 0.2 0.2 {}
+T {adc0_to_voutref} -125 1486 0 0 0.2 0.2 {}
+T {gpio4_6} 235 -2014 0 1 0.2 0.2 {}
+T {gpio1_6} 235 -1994 0 1 0.2 0.2 {}
+T {user_dac1} 235 -1974 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_voutref} -125 1506 0 0 0.2 0.2 {}
+T {adc0_to_gpio6_4[1:0]} -125 1526 0 0 0.2 0.2 {}
+T {gpio4_7} 235 -1954 0 1 0.2 0.2 {}
+T {gpio1_7} 235 -1934 0 1 0.2 0.2 {}
+T {user_vbgtc} 235 -1914 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_gpio6_0[1:0]} -125 1546 0 0 0.2 0.2 {}
+T {adc0_to_gpio1_3[1:0]} -125 1566 0 0 0.2 0.2 {}
+T {gpio5_0} 235 -1894 0 1 0.2 0.2 {}
+T {gpio2_0} 235 -1874 0 1 0.2 0.2 {}
+T {user_vbgsc} 235 -1854 0 1 0.2 0.2 {}
+T {ulpcomp_p_to_gpio1_7[1:0]} -125 1586 0 0 0.2 0.2 {}
+T {adc1_to_dac1} -125 1606 0 0 0.2 0.2 {}
+T {user_ibias50} 235 -1834 0 1 0.2 0.2 {}
+T {gpio5_1} 235 -1814 0 1 0.2 0.2 {}
+T {gpio2_1} 235 -1794 0 1 0.2 0.2 {}
+T {ulpcomp_n_to_dac1} -125 1626 0 0 0.2 0.2 {}
+T {adc1_to_analog0} -125 1646 0 0 0.2 0.2 {}
+T {user_ibias100} 235 -1774 0 1 0.2 0.2 {}
+T {gpio5_2} 235 -1754 0 1 0.2 0.2 {}
+T {gpio2_2} 235 -1734 0 1 0.2 0.2 {}
+T {ulpcomp_n_to_analog0} -125 1666 0 0 0.2 0.2 {}
+T {adc1_to_vbgsc} -125 1686 0 0 0.2 0.2 {}
+T {gpio5_3} 235 -1714 0 1 0.2 0.2 {}
+T {gpio2_3} 235 -1694 0 1 0.2 0.2 {}
+T {user_adc0} -125 1706 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_sio1} -125 1726 0 0 0.2 0.2 {}
+T {adc1_to_right_vref} -125 1746 0 0 0.2 0.2 {}
+T {gpio2_4} 235 -1674 0 1 0.2 0.2 {}
+T {gpio5_4} 235 -1654 0 1 0.2 0.2 {}
+T {user_adc1} -125 1766 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_vbgsc} -125 1786 0 0 0.2 0.2 {}
+T {adc1_to_vinref} -125 1806 0 0 0.2 0.2 {}
+T {gpio5_5} 235 -1634 0 1 0.2 0.2 {}
+T {gpio2_5} 235 -1614 0 1 0.2 0.2 {}
+T {user_comp_n} -125 1826 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_right_vref} -125 1846 0 0 0.2 0.2 {}
+T {adc1_to_gpio6_5[1:0]} -125 1866 0 0 0.2 0.2 {}
+T {gpio5_6} 235 -1594 0 1 0.2 0.2 {}
+T {gpio2_6} 235 -1574 0 1 0.2 0.2 {}
+T {user_comp_p} -125 1886 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_vinref} -125 1906 0 0 0.2 0.2 {}
+T {adc1_to_gpio1_2[1:0]} -125 1926 0 0 0.2 0.2 {}
+T {gpio5_7} 235 -1554 0 1 0.2 0.2 {}
+T {gpio2_7} 235 -1534 0 1 0.2 0.2 {}
+T {user_ulpcomp_n} -125 1946 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_gpio6_1[1:0]} -125 1966 0 0 0.2 0.2 {}
+T {sio0_connect[1:0]} -125 1986 0 0 0.2 0.2 {}
+T {gpio6_0} 235 -1514 0 1 0.2 0.2 {}
+T {gpio3_0} 235 -1494 0 1 0.2 0.2 {}
+T {user_ulpcomp_p} -125 2006 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_gpio1_6[1:0]} -125 2026 0 0 0.2 0.2 {}
+T {sio1_connect[1:0]} -125 2046 0 0 0.2 0.2 {}
+T {gpio6_1} 235 -1474 0 1 0.2 0.2 {}
+T {gpio3_1} 235 -1454 0 1 0.2 0.2 {}
+T {comp_p_to_dac0} -125 2066 0 0 0.2 0.2 {}
+T {user_gpio3_0_analog} 235 -1434 0 1 0.2 0.2 {}
+T {analog0_connect[1:0]} -125 2086 0 0 0.2 0.2 {}
+T {gpio6_2} 235 -1414 0 1 0.2 0.2 {}
+T {gpio3_2} 235 -1394 0 1 0.2 0.2 {}
+T {comp_p_to_analog1} -125 2106 0 0 0.2 0.2 {}
+T {user_gpio3_1_analog} 235 -1374 0 1 0.2 0.2 {}
+T {analog1_connect[1:0]} -125 2126 0 0 0.2 0.2 {}
+T {gpio6_3} 235 -1354 0 1 0.2 0.2 {}
+T {gpio3_3} 235 -1334 0 1 0.2 0.2 {}
+T {comp_p_to_sio0} -125 2146 0 0 0.2 0.2 {}
+T {user_gpio3_2_analog} 235 -1314 0 1 0.2 0.2 {}
+T {vbgtc_to_user} -125 2166 0 0 0.2 0.2 {}
+T {gpio3_4} 235 -1294 0 1 0.2 0.2 {}
+T {gpio6_4} 235 -1274 0 1 0.2 0.2 {}
+T {comp_p_to_vbgtc} -125 2186 0 0 0.2 0.2 {}
+T {user_gpio3_3_analog} 235 -1254 0 1 0.2 0.2 {}
+T {vbgsc_to_user} -125 2206 0 0 0.2 0.2 {}
+T {gpio6_5} 235 -1234 0 1 0.2 0.2 {}
+T {gpio3_5} 235 -1214 0 1 0.2 0.2 {}
+T {comp_p_to_tempsense} -125 2226 0 0 0.2 0.2 {}
+T {user_gpio3_4_analog} 235 -1194 0 1 0.2 0.2 {}
+T {user_to_comp_n[1:0]} -125 2246 0 0 0.2 0.2 {}
+T {gpio6_6} 235 -1174 0 1 0.2 0.2 {}
+T {gpio3_6} 235 -1154 0 1 0.2 0.2 {}
+T {comp_p_to_left_vref} -125 2266 0 0 0.2 0.2 {}
+T {user_gpio3_5_analog} 235 -1134 0 1 0.2 0.2 {}
+T {user_to_comp_p[1:0]} -125 2286 0 0 0.2 0.2 {}
+T {gpio6_7} 235 -1114 0 1 0.2 0.2 {}
+T {gpio3_7} 235 -1094 0 1 0.2 0.2 {}
+T {comp_p_to_voutref} -125 2306 0 0 0.2 0.2 {}
+T {user_gpio3_6_analog} 235 -1074 0 1 0.2 0.2 {}
+T {user_to_ulpcomp_n[1:0]} -125 2326 0 0 0.2 0.2 {}
+T {analog0} 235 -1054 0 1 0.2 0.2 {}
+T {sio0} 235 -1034 0 1 0.2 0.2 {}
+T {comp_p_to_gpio6_2[1:0]} -125 2346 0 0 0.2 0.2 {}
+T {user_gpio3_7_analog} 235 -1014 0 1 0.2 0.2 {}
+T {user_to_ulpcomp_p[1:0]} -125 2366 0 0 0.2 0.2 {}
+T {analog1} 235 -994 0 1 0.2 0.2 {}
+T {sio1} 235 -974 0 1 0.2 0.2 {}
+T {comp_p_to_gpio1_5[1:0]} -125 2386 0 0 0.2 0.2 {}
+T {user_gpio4_0_analog} 235 -954 0 1 0.2 0.2 {}
+T {user_to_adc0[1:0]} -125 2406 0 0 0.2 0.2 {}
+T {comp_n_to_dac1} -125 2426 0 0 0.2 0.2 {}
+T {user_gpio4_1_analog} 235 -934 0 1 0.2 0.2 {}
+T {user_to_adc1[1:0]} -125 2446 0 0 0.2 0.2 {}
+T {comp_n_to_analog0} -125 2466 0 0 0.2 0.2 {}
+T {user_gpio4_2_analog} 235 -914 0 1 0.2 0.2 {}
+T {dac0_to_user} -125 2486 0 0 0.2 0.2 {}
+T {voutref} -125 2506 0 0 0.2 0.2 {}
+T {user_gpio4_3_analog} 235 -894 0 1 0.2 0.2 {}
+T {dac1_to_user} -125 2526 0 0 0.2 0.2 {}
+T {vbg} 235 -874 0 1 0.2 0.2 {}
+T {comp_n_to_sio1} -125 2546 0 0 0.2 0.2 {}
+T {ibias_lsxo} 235 -854 0 1 0.2 0.2 {}
+T {vinref} -125 2566 0 0 0.2 0.2 {}
+T {user_gpio4_4_analog} 235 -834 0 1 0.2 0.2 {}
+T {tempsense_to_user} -125 2586 0 0 0.2 0.2 {}
+T {comp_n_to_vbgsc} -125 2606 0 0 0.2 0.2 {}
+T {ibias_hsxo} 235 -814 0 1 0.2 0.2 {}
+T {right_vref} -125 2626 0 0 0.2 0.2 {}
+T {user_gpio4_5_analog} 235 -794 0 1 0.2 0.2 {}
+T {right_vref_to_user} -125 2646 0 0 0.2 0.2 {}
+T {comp_n_to_right_vref} -125 2666 0 0 0.2 0.2 {}
+T {left_vref} -125 2686 0 0 0.2 0.2 {}
+T {user_gpio4_6_analog} 235 -774 0 1 0.2 0.2 {}
+T {left_vref_to_user} -125 2706 0 0 0.2 0.2 {}
+T {comp_n_to_vinref} -125 2726 0 0 0.2 0.2 {}
+T {user_gpio4_7_analog} 235 -754 0 1 0.2 0.2 {}
+T {vinref_to_user} -125 2746 0 0 0.2 0.2 {}
+T {comp_n_to_gpio6_3[1:0]} -125 2766 0 0 0.2 0.2 {}
+T {voutref_to_user} -125 2786 0 0 0.2 0.2 {}
+T {comp_n_to_gpio1_4[1:0]} -125 2806 0 0 0.2 0.2 {}
+T {right_instramp_p_to_sio0} -125 666 0 0 0.2 0.2 {}
+T {dac0_to_analog1} -125 2826 0 0 0.2 0.2 {}
+T {dac1_to_analog0} -125 2846 0 0 0.2 0.2 {}
+T {audiodac_out_to_analog1[1:0]} -125 2866 0 0 0.2 0.2 {}
+T {audiodac_outb_to_analog0[1:0]} -125 2886 0 0 0.2 0.2 {}
+T {audiodac_inb} -125 -1454 0 0 0.2 0.2 {}
+T {vddio} 235 -2854 0 1 0.2 0.2 {}
+T {vssio} 235 -2834 0 1 0.2 0.2 {}
+T {tempsense_sel} -125 -2834 0 0 0.2 0.2 {}
+T {ldo_ref_sel} -125 -2854 0 0 0.2 0.2 {}
+T {bandgap_sel} -125 -2874 0 0 0.2 0.2 {}
+T {brownout_vunder} 235 -734 0 1 0.2 0.2 {}
+T {brownout_timeout} 235 -714 0 1 0.2 0.2 {}
+T {brownout_filt} 235 -694 0 1 0.2 0.2 {}
+T {brownout_unfilt} 235 -674 0 1 0.2 0.2 {}
+T {brownout_ena} -125 2906 0 0 0.2 0.2 {}
+T {brownout_vtrip[2:0]} -125 2926 0 0 0.2 0.2 {}
+T {brownout_otrip[2:0]} -125 2946 0 0 0.2 0.2 {}
+T {brownout_isrc_sel} -125 2966 0 0 0.2 0.2 {}
+T {brownout_oneshot} -125 2986 0 0 0.2 0.2 {}
+T {brownout_rc_ena} -125 3006 0 0 0.2 0.2 {}
+T {brownout_rc_dis} -125 3026 0 0 0.2 0.2 {}
+T {amuxbus_a_n} -125 3046 0 0 0.2 0.2 {}
+T {amuxbus_b_n} -125 3066 0 0 0.2 0.2 {}
+T {vccd0} 235 -654 0 1 0.2 0.2 {}
+T {vssd0} 235 -634 0 1 0.2 0.2 {}

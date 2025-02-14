@@ -1,0 +1,106 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -150 100 -130 100 {}
+L 4 -150 120 -130 120 {}
+L 4 -150 140 -130 140 {}
+L 4 -150 80 -130 80 {}
+L 4 -150 60 -130 60 {}
+L 4 -150 40 -130 40 {}
+L 4 -150 -40 -130 -40 {}
+L 4 -150 -20 -130 -20 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 -60 -130 -60 {}
+L 4 -150 -80 -130 -80 {}
+L 4 -150 -100 -130 -100 {}
+L 4 -130 -140 220 -140 {}
+L 4 -130 220 220 220 {}
+L 4 220 -140 220 220 {}
+L 4 -130 -140 -130 220 {}
+L 4 -150 180 -130 180 {}
+L 4 -150 200 -130 200 {}
+L 7 220 -130 240 -130 {}
+L 7 220 -110 240 -110 {}
+L 7 220 -90 240 -90 {}
+L 7 220 -70 240 -70 {}
+L 7 220 10 240 10 {}
+L 7 220 30 240 30 {}
+L 7 220 50 240 50 {}
+L 7 220 -10 240 -10 {}
+L 7 220 -30 240 -30 {}
+L 7 220 -50 240 -50 {}
+L 7 220 150 240 150 {}
+L 7 220 110 240 110 {}
+L 7 220 130 240 130 {}
+L 7 220 90 240 90 {}
+L 7 220 190 240 190 {}
+L 7 220 170 240 170 {}
+B 5 237.5 -132.5 242.5 -127.5 {name=avdd dir=inout}
+B 5 237.5 -112.5 242.5 -107.5 {name=dvdd dir=inout}
+B 5 237.5 -92.5 242.5 -87.5 {name=dvss dir=inout}
+B 5 237.5 -72.5 242.5 -67.5 {name=avss dir=inout}
+B 5 -152.5 97.5 -147.5 102.5 {name=right_instramp_to_amuxbusA[1:0] dir=in}
+B 5 237.5 7.5 242.5 12.5 {name=right_instramp_out dir=inout}
+B 5 -152.5 117.5 -147.5 122.5 {name=left_hgbw_opamp_to_amuxbusB[1:0] dir=in}
+B 5 -152.5 137.5 -147.5 142.5 {name=left_lp_opamp_to_amuxbusA[1:0] dir=in}
+B 5 -152.5 77.5 -147.5 82.5 {name=right_lp_opamp_to_amuxbusB[1:0] dir=in}
+B 5 -152.5 57.5 -147.5 62.5 {name=right_hgbw_opamp_to_amuxbusA[1:0] dir=in}
+B 5 -152.5 37.5 -147.5 42.5 {name=left_instramp_to_amuxbusB[1:0] dir=in}
+B 5 237.5 27.5 242.5 32.5 {name=right_hgbw_opamp_out dir=inout}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=right_instramp_to_analog0[1:0] dir=in}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=left_hgbw_opamp_to_analog1[1:0] dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=left_lp_opamp_to_analog0[1:0] dir=in}
+B 5 -152.5 -62.5 -147.5 -57.5 {name=right_lp_opamp_to_analog1[1:0] dir=in}
+B 5 -152.5 -82.5 -147.5 -77.5 {name=right_hgbw_opamp_to_analog0[1:0] dir=in}
+B 5 -152.5 -102.5 -147.5 -97.5 {name=left_instramp_to_analog1[1:0] dir=in}
+B 5 237.5 47.5 242.5 52.5 {name=right_lp_opamp_out dir=inout}
+B 5 237.5 -12.5 242.5 -7.5 {name=left_lp_opamp_out dir=inout}
+B 5 237.5 -32.5 242.5 -27.5 {name=left_hgbw_opamp_out dir=inout}
+B 5 237.5 -52.5 242.5 -47.5 {name=left_instramp_out dir=inout}
+B 5 237.5 147.5 242.5 152.5 {name=analog1 dir=inout}
+B 5 237.5 107.5 242.5 112.5 {name=analog1_core dir=inout}
+B 5 237.5 127.5 242.5 132.5 {name=analog0 dir=inout}
+B 5 237.5 87.5 242.5 92.5 {name=analog0_core dir=inout}
+B 5 237.5 187.5 242.5 192.5 {name=amuxbusB dir=inout}
+B 5 237.5 167.5 242.5 172.5 {name=amuxbusA dir=inout}
+B 5 -152.5 177.5 -147.5 182.5 {name=analog1_connect[1:0] dir=in}
+B 5 -152.5 197.5 -147.5 202.5 {name=analog0_connect[1:0] dir=in}
+T {@symname} -125.5 -136 0 0 0.3 0.3 {}
+T {@name} 225 -152 0 0 0.2 0.2 {}
+T {avdd} 215 -134 0 1 0.2 0.2 {}
+T {dvdd} 215 -114 0 1 0.2 0.2 {}
+T {dvss} 215 -94 0 1 0.2 0.2 {}
+T {avss} 215 -74 0 1 0.2 0.2 {}
+T {right_instramp_to_amuxbusA[1:0]} -125 96 0 0 0.2 0.2 {}
+T {right_instramp_out} 215 6 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_to_amuxbusB[1:0]} -125 116 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_amuxbusA[1:0]} -125 136 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_amuxbusB[1:0]} -125 76 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_amuxbusA[1:0]} -125 56 0 0 0.2 0.2 {}
+T {left_instramp_to_amuxbusB[1:0]} -125 36 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_out} 215 26 0 1 0.2 0.2 {}
+T {right_instramp_to_analog0[1:0]} -125 -44 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_analog1[1:0]} -125 -24 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_analog0[1:0]} -125 -4 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_analog1[1:0]} -125 -64 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_analog0[1:0]} -125 -84 0 0 0.2 0.2 {}
+T {left_instramp_to_analog1[1:0]} -125 -104 0 0 0.2 0.2 {}
+T {right_lp_opamp_out} 215 46 0 1 0.2 0.2 {}
+T {left_lp_opamp_out} 215 -14 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_out} 215 -34 0 1 0.2 0.2 {}
+T {left_instramp_out} 215 -54 0 1 0.2 0.2 {}
+T {analog1} 215 146 0 1 0.2 0.2 {}
+T {analog1_core} 215 106 0 1 0.2 0.2 {}
+T {analog0} 215 126 0 1 0.2 0.2 {}
+T {analog0_core} 215 86 0 1 0.2 0.2 {}
+T {amuxbusB} 215 186 0 1 0.2 0.2 {}
+T {amuxbusA} 215 166 0 1 0.2 0.2 {}
+T {analog1_connect[1:0]} -125 176 0 0 0.2 0.2 {}
+T {analog0_connect[1:0]} -125 196 0 0 0.2 0.2 {}

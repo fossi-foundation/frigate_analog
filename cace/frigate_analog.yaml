@@ -1,0 +1,160 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           frigate_analog
+description:    Efabless "Frigate" harness chip analog signal processing components
+PDK:            sky130A
+
+cace_format:    5.2
+
+authorship:
+  designer:         Tim Edwards
+  company:          Efabless
+  creation_date:    November 24, 2024
+  license:          Apache 2.0
+
+paths:
+  root:             ..
+  schematic:        xschem
+  layout:           gds
+  netlist:          netlist
+  documentation:    docs
+
+pins:
+  # Too many pins to list for now;  need to automate a pin list. . .
+  vddio:
+    description: Positive ESD power supply
+    type: power
+    direction: inout
+    Vmin: 1.62
+    Vmax: 5.50
+  vssio:
+    description: ESD ground
+    type: ground
+    direction: inout
+  vdda0:
+    description: Positive analog power supply
+    type: power
+    direction: inout
+    Vmin: 3.30
+    Vmax: 5.0
+  vssa0:
+    description: analog ground
+    type: ground
+    direction: inout
+  vccd0:
+    description: Positive digital power supply
+    type: power
+    direction: inout
+    Vmin: 1.62
+    Vmax: 1.98
+  vssd0:
+    description: Digital ground
+    type: ground
+    direction: inout
+
+default_conditions:
+  vddio:
+    description: ESD power supply voltage
+    display: vddio
+    unit: V
+    typical: 3.3
+  vdda0:
+    description: Analog power supply voltage
+    display: avdd
+    unit: V
+    typical: 3.3
+  vccd0:
+    description: Digital power supply voltage
+    display: vccd
+    unit: V
+    typical: 1.8
+  corner:
+    description: Process corner
+    display: Corner
+    typical: tt
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    typical: 27
+
+parameters:
+  magic_area:
+    spec:
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: 600
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
+    tool:
+      magic_area
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc:
+        gds_flatten: true
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      lvs_errors:
+        maximum:
+          value: 0
+    tool:
+      netgen_lvs:
+        script: run_project_lvs.tcl
+
+  klayout_drc_feol:
+    description: KLayout DRC feol
+    display: KLayout DRC feol
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true']
+
+  klayout_drc_beol:
+    description: KLayout DRC beol
+    display: KLayout DRC beol
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'beol=true']
+
+  klayout_drc_full:
+    description: KLayout DRC full
+    display: KLayout DRC full
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']

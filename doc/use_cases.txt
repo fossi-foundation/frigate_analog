@@ -1,0 +1,293 @@
+Use cases for Frigate Analog
+--------------------------------------------
+
+NOTE:  For simulation, it is sufficient that the default state of
+all switch inputs is zero.  In actual operation, those switches
+with 2-bit values may get reduced noise by turning on the shunt
+to ground when the switch is off (value 2'b10).
+
+Under no circumstance should a 2-bit switch value ever be set to
+value 2'b11, as this effectively shorts certain module outputs
+to ground.
+
+Setup:  All analog digital input values should be zero on power-up
+except for the following bits.  These bits affect the power-on-reset
+operation, so failure to set the correct value will result in complete
+chip failure:
+
+		rc_osc_500k_ena = 1 (in the timing front-end)
+	
+		ldo_ena = 1
+		bandgap_ena = 1
+
+NOTES:  In the configuration descriptions below, when a pad is
+	declared to be "turned off", it should be sufficient to
+	set the pad cells' DM[2:0] mode to 3'b000.
+
+1. ADC 0 operation 
+	A. ADC low voltage reference comes from gpio6_7.  gpio6_7
+	   may be turned off and driven to 0V externally, set as a
+	   digital output with value 0, or set as a pull-down
+	   digital input.
+
+		adc_refl_to_gpio6_7[1:0] = 2'b01
+
+	B. ADC high voltage reference comes from gpio6_6.  gpio6_6
+	   may be turned off and driven to 3.3V externally, set as a
+	   digital output with value 1, or set as a pull-up digital
+	   input.
+
+		adc_refh_to_gpio6_6[1:0] = 2'b01
+
+	C. ADC 0 input can be sourced directly from either gpio6_4,
+	   gpio1_3, or analog1.  ONLY ONE of these three sources
+	   should be connected at any one time, or else the
+	   sources will be shorted.  The switches can be used to
+	   multiplex between sources.  Additional sources can be
+	   used (such as from the user area, or voltage references
+	   or temperature sensor output) but this description is
+	   for checking the ADC with only external sources.
+	
+	   To connect the input to gpio6_4, the pad must be turned
+	   off and the following switch set:
+
+		adc0_to_gpio6_4[1:0] = 2'b01
+
+	   To connect the input to gpio1_3, the pad must be turned
+	   off and the following switch set:
+
+		adc0_to_gpio1_3[1:0] = 2'b01
+
+	   To connect the input to analog1, the following switches
+	   should be set:
+
+		adc0_to_analog1 = 1'b1
+		analog1_connect = 2'b01
+
+	The ADC in the analog section consists of a 12-bit CDAC,
+	a sample-and-hold circuit, and a precision comparator.
+	These have the following combined control signals:
+
+		adc0_ena = 1'b1		enables the ADC sample-and-hold
+		adc0_hold		apply to sample input value
+		adc0_reset		toggle before start of conversion
+		adc0_dac_val[11:0]	apply each successive value
+		adc0_comp_out		read comparator result
+
+2. ADC 1 operation 
+	A. ADC low voltage reference comes from gpio6_7.  gpio6_7
+	   may be turned off and driven to 0V externally, set as a
+	   digital output with value 0, or set as a pull-down
+	   digital input.
+
+		adc_refl_to_gpio6_7[1:0] = 2'b01
+
+	B. ADC high voltage reference comes from gpio6_6.  gpio6_6
+	   may be turned off and driven to 3.3V externally, set as a
+	   digital output with value 1, or set as a pull-up digital
+	   input.
+
+		adc_refh_to_gpio6_6[1:0] = 2'b01
+
+	C. ADC 1 input can be sourced directly from either gpio6_5,
+	   gpio1_2, or analog0.  ONLY ONE of these three sources
+	   should be connected at any one time, or else the
+	   sources will be shorted.  The switches can be used to
+	   multiplex between sources.  Additional sources can be
+	   used (such as from the user area, or voltage references
+	   or temperature sensor output) but this description is
+	   for checking the ADC with only external sources.
+	
+	   To connect the input to gpio6_5, the pad must be turned
+	   off and the following switch set:
+
+		adc1_to_gpio6_5[1:0] = 2'b01
+
+	   To connect the input to gpio1_2, the pad must be turned
+	   off and the following switch set:
+
+		adc1_to_gpio1_2[1:0] = 2'b01
+
+	   To connect the input to analog0, the following switch
+	   should be set:
+
+		adc1_to_analog0 = 1'b1
+		analog0_connect = 2'b01
+
+	The ADC in the analog section consists of a 12-bit CDAC,
+	a sample-and-hold circuit, and a precision comparator.
+	These have the following combined control signals:
+
+		adc1_ena = 1'b1		enables the ADC sample-and-hold
+		adc1_hold		apply to sample input value
+		adc1_reset		toggle before start of conversion
+		adc1_dac_val[11:0]	apply each successive value
+		adc1_comp_out		read comparator result
+
+3. DAC 0 operation 
+	A. DAC low voltage reference comes from gpio6_7.  gpio6_7
+	   may be turned off and driven to 0V externally, set as a
+	   digital output with value 0, or set as a pull-down
+	   digital input.
+
+		dac_refl_to_gpio6_7[1:0] = 2'b01
+
+	B. DAC high voltage reference comes from gpio1_1.  gpio1_1
+	   may be turned off and driven to 3.3V externally, set as a
+	   digital output with value 1, or set as a pull-up digital
+	   input.
+
+		dac_refh_to_gpio1_1[1:0] = 2'b01
+
+	C. DAC 0 output can be connected directly to the analog1
+	   pin.  This is the only pin which can be connected
+	   directly to the DAC, although other pins are reachable
+	   via connections to other modules (e.g., DAC 0 to
+	   gpio6_4 by connecting to the ADC 0 input).  
+
+	   To connect the input to analog1, the following switch
+	   should be set:
+
+		dac0_to_analog1 = 1'b1
+		analog1_connect = 2'b01
+
+	   Note that the DAC does not have a high-drive output and
+	   is not intended to connect directly to a pin.  This use
+	   case suffices for testing with care taken not to load
+	   the output pin.  A more typical use is to route the DAC
+	   output to an amplifier connected as a buffer.  For that
+	   case, use, e.g.:
+
+		ibias_ena = 1'b1
+		ibias_src_ena[2] = 1'b1
+		right_lp_opamp_p_to_dac0 = 1'b1
+		right_lp_opamp_n_to_analog1 = 1'b1
+		right_lp_to_analog1 = 2'b01
+		analog1_connect = 2'b01
+
+	   This setting uses the right-side operational amplifer
+	   as a unity-gain buffer which buffers the DAC output
+	   signal and outputs to the analog1 pin.
+
+	D. DAC 0 has the following signal connections for the
+	   operation:
+
+		rdac0_ena = 1'b1	enables DAC 0
+		rdac0_value[7:0]	apply the value to these bits
+
+4. DAC 1 operation 
+	A. DAC low voltage reference comes from gpio6_7.  gpio6_7
+	   may be turned off and driven to 0V externally, set as a
+	   digital output with value 0, or set as a pull-down
+	   digital input.
+
+		dac_refl_to_gpio6_7[1:0] = 2'b01
+
+	B. DAC high voltage reference comes from gpio1_1.  gpio1_1
+	   may be turned off and driven to 3.3V externally, set as a
+	   digital output with value 1, or set as a pull-up digital
+	   input.
+
+		dac_refh_to_gpio1_1[1:0] = 2'b01
+
+	C. DAC 1 output can be connected directly to the analog0
+	   pin.  This is the only pin which can be connected
+	   directly to the DAC, although other pins are reachable
+	   via connections to other modules (e.g., DAC 1 to
+	   gpio6_5 by connecting to the ADC 1 input).  
+
+	   To connect the input to analog0, the following switch
+	   should be set:
+
+		dac1_to_analog0 = 1'b1
+		analog0_connect = 2'b01
+
+	   Note that the DAC does not have a high-drive output and
+	   is not intended to connect directly to a pin.  This use
+	   case suffices for testing with care taken not to load
+	   the output pin.  However, unlike DAC 0, DAC 1 is
+	   connected to the negative side of all the amplifiers,
+	   making it difficult to configure as input to a unity-
+	   gain buffer.  However, DAC 1 is appropriate to check
+	   using a loop-back to ADC 1, with the following connections:
+
+		adc1_to_dac1 = 1'b1
+
+	   Then use ADC 1 as described above (except for the input
+	   selection, as the setting above connects the ADC 1 input
+	   to the DAC 1 output).
+
+	D. DAC 1 has the following signal connections for the
+	   operation:
+
+		rdac1_ena = 1'b1	enables DAC 1
+		rdac1_value[7:0]	apply the value to these bits
+
+5. AudioDAC operation 
+
+	The audioDAC is defined entirely in verilog up to the output
+	driver stage, which is the only component in the analog block.
+	The audioDAC digital output is complementary and connects to
+	the frigate_analog block through
+
+		audiodac_in		positive signal
+		audiodac_inb		negative signal
+
+	The audioDAC driver is simply a chain of buffers and a value-
+	holding latch, so it does not require an enable signal.  It
+	connects only do the analog0/analog1 outputs.  Both switches
+	should be enabled at the same time.
+
+		audiodac_out_to_analog1 = 2'b01
+		audiodac_outb_to_analog0 = 2'b01
+
+6. Guide to bias currents
+
+	A number of components in the analog section are driven by
+	bias currents generated by the sky130_ef_ip__biasgen3 block.
+	The control for this block is mainly a 24-bit enable vector.
+	The table mapping vector bits to components is given below.
+
+		ibias_ena = 1'b1	enables the bias generator
+		ibias_ref_select	see below
+
+		ibias_src_ena[0]	enable left lp op amp bias 100nA
+		ibias_src_ena[1]	left lp op amp +50nA trim 
+		ibias_src_ena[2]	enable right lp op amp bias 100nA
+		ibias_src_ena[3]	right lp op amp +50nA trim 
+		ibias_src_ena[4]	enable left hgbw op amp bias 100nA
+		ibias_src_ena[5]	left hgbw op amp +50nA trim 
+		ibias_src_ena[6]	enable right hgbw op amp bias 100nA
+		ibias_src_ena[7]	right hgbw op amp +50nA trim 
+		ibias_src_ena[8]	enable left instr amp bias 100nA
+		ibias_src_ena[9]	left instr amp +50nA trim 
+		ibias_src_ena[10]	enable right instr amp bias 100nA
+		ibias_src_ena[11]	right instr amp bias +50nA trim 
+		ibias_src_ena[12]	32kHz XO (LSXO) bias 50nA
+		ibias_src_ena[13]	4-16MHz XO (HSXO) bias 1uA
+		ibias_src_ena[14]	HSXO +50nA trim
+		ibias_src_ena[15]	Precision comparator bias 400nA
+		ibias_src_ena[16]	Precision comparator +50nA trim
+		ibias_src_ena[17]	Overvoltage detector bias 600nA
+		ibias_src_ena[18]	iDAC bias 1uA (unused)
+		ibias_src_ena[19]	Brownout detector bias 200nA
+		ibias_src_ena[20]	User1 bias 50nA
+		ibias_src_ena[21]	User2 bias 150nA
+		ibias_src_ena[22]	User2 bias +50nA trim
+		ibias_src_ena[23]	Test output current 500nA to gpio1_2
+
+		ibias_snk_ena[0]	HSXO -100nA trim
+		ibias_snk_ena[1]	Comparator -100nA trim
+		ibias_snk_ena[2]	User2 bias -100nA trim
+		ibias_snk_ena[3]	Test output current -100nA trim
+
+	The bias generator output is normally stabilized by the bandgap
+	reference voltage.  However, it also has a selection for an
+	adjustable bias using vdda1 as the adjustment, which is the
+	default.  Nominally the vdda1 value should be 3.3V (the normal
+	vdda1 voltage).
+		
+		ibias_ref_select = 1'b0	select vdda1 as reference voltage
+		vdda1 = 3.3V		reference voltage (see above)
+
+		ibias_ref_select = 1'b1	select bandgap as reference voltage

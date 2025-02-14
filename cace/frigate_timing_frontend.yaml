@@ -1,0 +1,229 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           frigate_timing_frontend
+description:    Efabless "Frigate" harness chip analog block with oscillators
+PDK:            sky130A
+
+cace_format:    5.2
+
+authorship:
+  designer:         Tim Edwards
+  company:          Efabless
+  creation_date:    August 16, 2024
+  license:          Apache 2.0
+
+paths:
+  root:             ..
+  schematic:        xschem
+  magic:            mag
+  layout:           gds
+  netlist:          netlist
+  documentation:    docs
+
+pins:
+  vdda3:
+    description: Positive analog power supply
+    type: power
+    direction: inout
+    Vmax: 3.63
+    Vmin: 2.97
+  vssa3:
+    description: Analog ground
+    type: ground
+    direction: inout
+  vccd0:
+    description: Positive digital power supply
+    type: power
+    direction: inout
+    Vmax: 1.98
+    Vmin: 1.62
+  vssd0:
+    description: Digital ground
+    type: ground
+    direction: inout
+  lsxo_ibias:
+    description: Bias current input for the LSXO
+    type: signal
+    direction: input
+  hsxo_ibias:
+    description: Bias current input for the HSXO
+    type: signal
+    direction: input
+  resetb_in_h:
+    description: Resetb input from pad in vddio (3.3V) domain
+    type: digital
+    direction: input
+  resetb_out_l:
+    description: Resetb level-shifted output in vccd (1.8V) domain
+    type: digital
+    direction: output
+  rc_osc_16M_ena:
+    description: 16MHz R-C oscillator enable
+    type: digital
+    direction: input
+  rc_osc_500k_ena:
+    description: 500kHz R-C oscillator enable
+    type: digital
+    direction: input
+  lsxo_ena:
+    description: Low-speed crystal oscillator enable
+    type: digital
+    direction: input
+  lsxo_standby:
+    description: Low-speed crystal oscillator standby (osc on, output off)
+    type: digital
+    direction: input
+  hsxo_ena:
+    description: High-speed crystal oscillator enable
+    type: digital
+    direction: input
+  hsxo_standby:
+    description: High-speed crystal oscillator standby (osc on, output off)
+    type: digital
+    direction: input
+  rc_osc_16M_dout:
+    description: 16MHz R-C oscillator clock output
+    type: digital
+    direction: output
+  rc_osc_500k_dout:
+    description: 500kHz R-C oscillator clock output
+    type: digital
+    direction: output
+  lsxo_xin:
+    description: Crystal input connection
+    type: signal
+    direction: inout
+  lsxo_xout:
+    description: Crystal output connection
+    type: signal
+    direction: inout
+  lsxo_dout:
+    description: Low-speed crystal oscillator clock output
+    type: digital
+    direction: output
+  hsxo_xin:
+    description: Crystal input connection
+    type: signal
+    direction: inout
+  hsxo_xout:
+    description: Crystal output connection
+    type: signal
+    direction: inout
+  hsxo_dout:
+    description: High-speed crystal oscillator clock output
+    type: digital
+    direction: output
+
+default_conditions:
+  vdda3:
+    description: Analog power supply voltage
+    display: Vdd
+    unit: V
+    typical: 3.3
+  vccd0:
+    description: Digital power supply voltage
+    display: Vdd
+    unit: V
+    typical: 1.8
+  rc_osc_500k_ena:
+    description:  500kHz R-C oscillator enable
+    typical: '0'
+  rc_osc_16M_ena:
+    description:  16MHz R-C oscillator enable
+    typical: '0'
+  lsxo_ena:
+    description:  Low-speed (32kHz) crystal oscillator enable
+    typical: '0'
+  hsxo_ena:
+    description:  High-speed (4-16MHz) crystal oscillator enable
+    typical: '0'
+  corner:
+    description: Process corner
+    display: Corner
+    typical: tt
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    typical: 27
+
+parameters:
+  magic_area:
+    spec:
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: 600
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
+    tool:
+      magic_area
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc:
+        gds_flatten: true
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      lvs_errors:
+        maximum:
+          value: 0
+    tool:
+      netgen_lvs:
+        script: run_project_lvs.tcl
+
+  klayout_drc_feol:
+    description: KLayout DRC feol
+    display: KLayout DRC feol
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true']
+
+  klayout_drc_beol:
+    description: KLayout DRC beol
+    display: KLayout DRC beol
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'beol=true']
+
+  klayout_drc_full:
+    description: KLayout DRC full
+    display: KLayout DRC full
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']

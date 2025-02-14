@@ -1,0 +1,13 @@
+magic
+tech sky130A
+timestamp 1717863568
+<< checkpaint >>
+rect 0 0 344 184
+<< via4 >>
+rect 12 12 332 172
+<< metal5 >>
+rect 0 172 344 184
+rect 0 12 12 172
+rect 332 12 344 172
+rect 0 0 344 12
+<< end >>

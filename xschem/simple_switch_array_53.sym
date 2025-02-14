@@ -1,0 +1,262 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -150 -520 -130 -520 {}
+L 4 -150 -500 -130 -500 {}
+L 4 -150 -480 -130 -480 {}
+L 4 -150 -460 -130 -460 {}
+L 4 -150 -440 -130 -440 {}
+L 4 -150 -420 -130 -420 {}
+L 4 -150 -400 -130 -400 {}
+L 4 -150 -380 -130 -380 {}
+L 4 -150 -360 -130 -360 {}
+L 4 -150 -340 -130 -340 {}
+L 4 -150 -320 -130 -320 {}
+L 4 -150 -300 -130 -300 {}
+L 4 -150 -280 -130 -280 {}
+L 4 -150 -260 -130 -260 {}
+L 4 -150 -240 -130 -240 {}
+L 4 -150 -220 -130 -220 {}
+L 4 -150 -200 -130 -200 {}
+L 4 -150 -180 -130 -180 {}
+L 4 -150 -160 -130 -160 {}
+L 4 -150 -140 -130 -140 {}
+L 4 -150 -120 -130 -120 {}
+L 4 -150 -80 -130 -80 {}
+L 4 -150 -60 -130 -60 {}
+L 4 -150 -40 -130 -40 {}
+L 4 -150 -20 -130 -20 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 20 -130 20 {}
+L 4 -150 40 -130 40 {}
+L 4 -150 60 -130 60 {}
+L 4 -150 80 -130 80 {}
+L 4 -150 100 -130 100 {}
+L 4 -150 120 -130 120 {}
+L 4 -150 140 -130 140 {}
+L 4 -150 160 -130 160 {}
+L 4 -150 180 -130 180 {}
+L 4 -150 200 -130 200 {}
+L 4 -150 220 -130 220 {}
+L 4 -150 240 -130 240 {}
+L 4 -150 260 -130 260 {}
+L 4 -150 280 -130 280 {}
+L 4 -150 300 -130 300 {}
+L 4 -150 320 -130 320 {}
+L 4 -150 340 -130 340 {}
+L 4 -150 360 -130 360 {}
+L 4 -150 380 -130 380 {}
+L 4 -150 400 -130 400 {}
+L 4 -150 420 -130 420 {}
+L 4 -150 440 -130 440 {}
+L 4 -150 460 -130 460 {}
+L 4 -150 480 -130 480 {}
+L 4 -150 500 -130 500 {}
+L 4 -150 520 -130 520 {}
+L 4 -130 540 260 540 {}
+L 4 -130 -540 260 -540 {}
+L 4 -150 -100 -130 -100 {}
+L 4 -130 -540 -130 540 {}
+L 4 260 -540 260 540 {}
+L 7 260 -520 280 -520 {}
+L 7 260 -500 280 -500 {}
+L 7 260 -480 280 -480 {}
+L 7 260 -460 280 -460 {}
+L 7 260 -420 280 -420 {}
+L 7 260 -400 280 -400 {}
+L 7 260 -380 280 -380 {}
+L 7 260 -360 280 -360 {}
+L 7 260 -340 280 -340 {}
+L 7 260 -320 280 -320 {}
+L 7 260 -300 280 -300 {}
+L 7 260 -260 280 -260 {}
+L 7 260 -240 280 -240 {}
+L 7 260 -220 280 -220 {}
+L 7 260 -200 280 -200 {}
+L 7 260 -180 280 -180 {}
+L 7 260 -160 280 -160 {}
+L 7 260 -140 280 -140 {}
+L 7 260 -120 280 -120 {}
+L 7 260 -100 280 -100 {}
+L 7 260 -80 280 -80 {}
+L 7 260 -60 280 -60 {}
+L 7 260 -40 280 -40 {}
+L 7 260 0 280 0 {}
+L 7 260 20 280 20 {}
+L 7 260 40 280 40 {}
+L 7 260 60 280 60 {}
+L 7 260 80 280 80 {}
+L 7 260 100 280 100 {}
+B 5 277.5 -522.5 282.5 -517.5 {name=vdda0 dir=inout}
+B 5 277.5 -502.5 282.5 -497.5 {name=vssa0 dir=inout}
+B 5 277.5 -482.5 282.5 -477.5 {name=vccd0 dir=inout}
+B 5 277.5 -462.5 282.5 -457.5 {name=vssd0 dir=inout}
+B 5 277.5 -422.5 282.5 -417.5 {name=vbgtc dir=inout}
+B 5 277.5 -402.5 282.5 -397.5 {name=vbgsc dir=inout}
+B 5 277.5 -382.5 282.5 -377.5 {name=left_vref dir=inout}
+B 5 277.5 -362.5 282.5 -357.5 {name=tempsense dir=inout}
+B 5 277.5 -342.5 282.5 -337.5 {name=right_vref dir=inout}
+B 5 277.5 -322.5 282.5 -317.5 {name=voutref dir=inout}
+B 5 277.5 -302.5 282.5 -297.5 {name=vinref dir=inout}
+B 5 -152.5 -522.5 -147.5 -517.5 {name=right_instramp_p_to_left_vref dir=in}
+B 5 -152.5 -502.5 -147.5 -497.5 {name=right_instramp_n_to_right_vref dir=in}
+B 5 -152.5 -482.5 -147.5 -477.5 {name=right_instramp_p_to_tempsense dir=in}
+B 5 -152.5 -462.5 -147.5 -457.5 {name=right_instramp_n_to_vinref dir=in}
+B 5 -152.5 -442.5 -147.5 -437.5 {name=right_instramp_p_to_voutref dir=in}
+B 5 277.5 -262.5 282.5 -257.5 {name=right_instramp_n dir=inout}
+B 5 277.5 -242.5 282.5 -237.5 {name=right_instramp_p dir=inout}
+B 5 -152.5 -422.5 -147.5 -417.5 {name=right_hgbw_opamp_n_to_vbgsc dir=in}
+B 5 277.5 -222.5 282.5 -217.5 {name=right_hgbw_opamp_n dir=inout}
+B 5 277.5 -202.5 282.5 -197.5 {name=right_hgbw_opamp_p dir=inout}
+B 5 -152.5 -402.5 -147.5 -397.5 {name=right_hgbw_opamp_n_to_right_vref dir=in}
+B 5 -152.5 -382.5 -147.5 -377.5 {name=right_hgbw_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -362.5 -147.5 -357.5 {name=right_hgbw_opamp_n_to_vinref dir=in}
+B 5 -152.5 -342.5 -147.5 -337.5 {name=right_hgbw_opamp_p_to_voutref dir=in}
+B 5 277.5 -182.5 282.5 -177.5 {name=right_lp_opamp_n dir=inout}
+B 5 277.5 -162.5 282.5 -157.5 {name=right_lp_opamp_p dir=inout}
+B 5 -152.5 -322.5 -147.5 -317.5 {name=right_lp_opamp_n_to_vbgtc dir=in}
+B 5 277.5 -142.5 282.5 -137.5 {name=left_instramp_n dir=inout}
+B 5 277.5 -122.5 282.5 -117.5 {name=left_instramp_p dir=inout}
+B 5 -152.5 -302.5 -147.5 -297.5 {name=right_lp_opamp_n_to_right_vref dir=in}
+B 5 -152.5 -282.5 -147.5 -277.5 {name=right_lp_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -262.5 -147.5 -257.5 {name=right_lp_opamp_p_to_voutref dir=in}
+B 5 -152.5 -242.5 -147.5 -237.5 {name=right_lp_opamp_n_to_vinref dir=in}
+B 5 277.5 -102.5 282.5 -97.5 {name=left_hgbw_opamp_n dir=inout}
+B 5 -152.5 -222.5 -147.5 -217.5 {name=left_lp_opamp_n_to_vbgsc dir=in}
+B 5 277.5 -82.5 282.5 -77.5 {name=left_hgbw_opamp_p dir=inout}
+B 5 277.5 -62.5 282.5 -57.5 {name=left_lp_opamp_n dir=inout}
+B 5 277.5 -42.5 282.5 -37.5 {name=left_lp_opamp_p dir=inout}
+B 5 -152.5 -202.5 -147.5 -197.5 {name=right_lp_opamp_p_to_tempsense dir=in}
+B 5 -152.5 -182.5 -147.5 -177.5 {name=left_lp_opamp_n_to_right_vref dir=in}
+B 5 -152.5 -162.5 -147.5 -157.5 {name=left_lp_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -142.5 -147.5 -137.5 {name=left_lp_opamp_p_to_voutref dir=in}
+B 5 -152.5 -122.5 -147.5 -117.5 {name=left_lp_opamp_n_to_vinref dir=in}
+B 5 277.5 -2.5 282.5 2.5 {name=ulpcomp_p dir=inout}
+B 5 277.5 17.5 282.5 22.5 {name=ulpcomp_n dir=inout}
+B 5 -152.5 -82.5 -147.5 -77.5 {name=left_hgbw_opamp_p_to_tempsense dir=in}
+B 5 277.5 37.5 282.5 42.5 {name=comp_p dir=inout}
+B 5 277.5 57.5 282.5 62.5 {name=comp_n dir=inout}
+B 5 -152.5 -62.5 -147.5 -57.5 {name=left_hgbw_opamp_n_to_right_vref dir=in}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=left_hgbw_opamp_p_to_left_vref dir=in}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=left_hgbw_opamp_p_to_voutref dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=left_hgbw_opamp_n_to_vinref dir=in}
+B 5 277.5 77.5 282.5 82.5 {name=adc0 dir=inout}
+B 5 277.5 97.5 282.5 102.5 {name=adc1 dir=inout}
+B 5 -152.5 17.5 -147.5 22.5 {name=left_instramp_n_to_right_vref dir=in}
+B 5 -152.5 37.5 -147.5 42.5 {name=left_instramp_p_to_tempsense dir=in}
+B 5 -152.5 57.5 -147.5 62.5 {name=left_instramp_p_to_left_vref dir=in}
+B 5 -152.5 77.5 -147.5 82.5 {name=left_instramp_p_to_voutref dir=in}
+B 5 -152.5 97.5 -147.5 102.5 {name=left_instramp_n_to_vinref dir=in}
+B 5 -152.5 117.5 -147.5 122.5 {name=ulpcomp_p_to_vbgtc dir=in}
+B 5 -152.5 137.5 -147.5 142.5 {name=ulpcomp_n_to_vbgsc dir=in}
+B 5 -152.5 157.5 -147.5 162.5 {name=ulpcomp_n_to_vinref dir=in}
+B 5 -152.5 177.5 -147.5 182.5 {name=ulpcomp_p_to_left_vref dir=in}
+B 5 -152.5 197.5 -147.5 202.5 {name=ulpcomp_n_to_right_vref dir=in}
+B 5 -152.5 217.5 -147.5 222.5 {name=ulpcomp_p_to_tempsense dir=in}
+B 5 -152.5 237.5 -147.5 242.5 {name=ulpcomp_p_to_voutref dir=in}
+B 5 -152.5 257.5 -147.5 262.5 {name=comp_p_to_vbgtc dir=in}
+B 5 -152.5 277.5 -147.5 282.5 {name=comp_n_to_vbgsc dir=in}
+B 5 -152.5 297.5 -147.5 302.5 {name=comp_n_to_vinref dir=in}
+B 5 -152.5 317.5 -147.5 322.5 {name=comp_p_to_left_vref dir=in}
+B 5 -152.5 337.5 -147.5 342.5 {name=comp_n_to_right_vref dir=in}
+B 5 -152.5 357.5 -147.5 362.5 {name=comp_p_to_tempsense dir=in}
+B 5 -152.5 377.5 -147.5 382.5 {name=comp_p_to_voutref dir=in}
+B 5 -152.5 397.5 -147.5 402.5 {name=adc0_to_vbgtc dir=in}
+B 5 -152.5 417.5 -147.5 422.5 {name=adc1_to_vbgsc dir=in}
+B 5 -152.5 437.5 -147.5 442.5 {name=adc1_to_vinref dir=in}
+B 5 -152.5 457.5 -147.5 462.5 {name=adc1_to_right_vref dir=in}
+B 5 -152.5 477.5 -147.5 482.5 {name=adc0_to_left_vref dir=in}
+B 5 -152.5 497.5 -147.5 502.5 {name=adc0_to_tempsense dir=in}
+B 5 -152.5 517.5 -147.5 522.5 {name=adc0_to_voutref dir=in}
+B 5 -152.5 -102.5 -147.5 -97.5 {name=left_hgbw_opamp_n_to_vbgtc dir=in}
+T {@symname} 3 494 0 0 0.3 0.3 {}
+T {@name} 265 -552 0 0 0.2 0.2 {}
+T {vdda0} 255 -524 0 1 0.2 0.2 {}
+T {vssa0} 255 -504 0 1 0.2 0.2 {}
+T {vccd0} 255 -484 0 1 0.2 0.2 {}
+T {vssd0} 255 -464 0 1 0.2 0.2 {}
+T {vbgtc} 255 -424 0 1 0.2 0.2 {}
+T {vbgsc} 255 -404 0 1 0.2 0.2 {}
+T {left_vref} 255 -384 0 1 0.2 0.2 {}
+T {tempsense} 255 -364 0 1 0.2 0.2 {}
+T {right_vref} 255 -344 0 1 0.2 0.2 {}
+T {voutref} 255 -324 0 1 0.2 0.2 {}
+T {vinref} 255 -304 0 1 0.2 0.2 {}
+T {right_instramp_p_to_left_vref} -125 -524 0 0 0.2 0.2 {}
+T {right_instramp_n_to_right_vref} -125 -504 0 0 0.2 0.2 {}
+T {right_instramp_p_to_tempsense} -125 -484 0 0 0.2 0.2 {}
+T {right_instramp_n_to_vinref} -125 -464 0 0 0.2 0.2 {}
+T {right_instramp_p_to_voutref} -125 -444 0 0 0.2 0.2 {}
+T {right_instramp_n} 255 -264 0 1 0.2 0.2 {}
+T {right_instramp_p} 255 -244 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_vbgsc} -125 -424 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n} 255 -224 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_p} 255 -204 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_right_vref} -125 -404 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_left_vref} -125 -384 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_n_to_vinref} -125 -364 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_p_to_voutref} -125 -344 0 0 0.2 0.2 {}
+T {right_lp_opamp_n} 255 -184 0 1 0.2 0.2 {}
+T {right_lp_opamp_p} 255 -164 0 1 0.2 0.2 {}
+T {right_lp_opamp_n_to_vbgtc} -125 -324 0 0 0.2 0.2 {}
+T {left_instramp_n} 255 -144 0 1 0.2 0.2 {}
+T {left_instramp_p} 255 -124 0 1 0.2 0.2 {}
+T {right_lp_opamp_n_to_right_vref} -125 -304 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_left_vref} -125 -284 0 0 0.2 0.2 {}
+T {right_lp_opamp_p_to_voutref} -125 -264 0 0 0.2 0.2 {}
+T {right_lp_opamp_n_to_vinref} -125 -244 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n} 255 -104 0 1 0.2 0.2 {}
+T {left_lp_opamp_n_to_vbgsc} -125 -224 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p} 255 -84 0 1 0.2 0.2 {}
+T {left_lp_opamp_n} 255 -64 0 1 0.2 0.2 {}
+T {left_lp_opamp_p} 255 -44 0 1 0.2 0.2 {}
+T {right_lp_opamp_p_to_tempsense} -125 -204 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_right_vref} -125 -184 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_left_vref} -125 -164 0 0 0.2 0.2 {}
+T {left_lp_opamp_p_to_voutref} -125 -144 0 0 0.2 0.2 {}
+T {left_lp_opamp_n_to_vinref} -125 -124 0 0 0.2 0.2 {}
+T {ulpcomp_p} 255 -4 0 1 0.2 0.2 {}
+T {ulpcomp_n} 255 16 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_tempsense} -125 -84 0 0 0.2 0.2 {}
+T {comp_p} 255 36 0 1 0.2 0.2 {}
+T {comp_n} 255 56 0 1 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_right_vref} -125 -64 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_left_vref} -125 -44 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_p_to_voutref} -125 -24 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_vinref} -125 -4 0 0 0.2 0.2 {}
+T {adc0} 255 76 0 1 0.2 0.2 {}
+T {adc1} 255 96 0 1 0.2 0.2 {}
+T {left_instramp_n_to_right_vref} -125 16 0 0 0.2 0.2 {}
+T {left_instramp_p_to_tempsense} -125 36 0 0 0.2 0.2 {}
+T {left_instramp_p_to_left_vref} -125 56 0 0 0.2 0.2 {}
+T {left_instramp_p_to_voutref} -125 76 0 0 0.2 0.2 {}
+T {left_instramp_n_to_vinref} -125 96 0 0 0.2 0.2 {}
+T {ulpcomp_p_to_vbgtc} -125 116 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_vbgsc} -125 136 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_vinref} -125 156 0 0 0.2 0.2 {}
+T {ulpcomp_p_to_left_vref} -125 176 0 0 0.2 0.2 {}
+T {ulpcomp_n_to_right_vref} -125 196 0 0 0.2 0.2 {}
+T {ulpcomp_p_to_tempsense} -125 216 0 0 0.2 0.2 {}
+T {ulpcomp_p_to_voutref} -125 236 0 0 0.2 0.2 {}
+T {comp_p_to_vbgtc} -125 256 0 0 0.2 0.2 {}
+T {comp_n_to_vbgsc} -125 276 0 0 0.2 0.2 {}
+T {comp_n_to_vinref} -125 296 0 0 0.2 0.2 {}
+T {comp_p_to_left_vref} -125 316 0 0 0.2 0.2 {}
+T {comp_n_to_right_vref} -125 336 0 0 0.2 0.2 {}
+T {comp_p_to_tempsense} -125 356 0 0 0.2 0.2 {}
+T {comp_p_to_voutref} -125 376 0 0 0.2 0.2 {}
+T {adc0_to_vbgtc} -125 396 0 0 0.2 0.2 {}
+T {adc1_to_vbgsc} -125 416 0 0 0.2 0.2 {}
+T {adc1_to_vinref} -125 436 0 0 0.2 0.2 {}
+T {adc1_to_right_vref} -125 456 0 0 0.2 0.2 {}
+T {adc0_to_left_vref} -125 476 0 0 0.2 0.2 {}
+T {adc0_to_tempsense} -125 496 0 0 0.2 0.2 {}
+T {adc0_to_voutref} -125 516 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_n_to_vbgtc} -125 -104 0 0 0.2 0.2 {}

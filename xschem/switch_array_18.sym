@@ -1,0 +1,118 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -150 130 -130 130 {}
+L 4 -150 10 -130 10 {}
+L 4 -150 70 -130 70 {}
+L 4 -150 -110 -130 -110 {}
+L 4 -150 -170 -130 -170 {}
+L 4 -150 -50 -130 -50 {}
+L 4 -150 150 -130 150 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 90 -130 90 {}
+L 4 -150 -90 -130 -90 {}
+L 4 -150 -150 -130 -150 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 170 -130 170 {}
+L 4 -150 50 -130 50 {}
+L 4 -150 110 -130 110 {}
+L 4 -150 -70 -130 -70 {}
+L 4 -150 -130 -130 -130 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -130 -200 250 -200 {}
+L 4 -130 180 250 180 {}
+L 4 -130 -200 -130 180 {}
+L 4 250 -200 250 180 {}
+L 7 250 -170 270 -170 {}
+L 7 250 -150 270 -150 {}
+L 7 250 -130 270 -130 {}
+L 7 250 -110 270 -110 {}
+L 7 250 30 270 30 {}
+L 7 250 -30 270 -30 {}
+L 7 250 -70 270 -70 {}
+L 7 250 130 270 130 {}
+L 7 250 150 270 150 {}
+L 7 250 170 270 170 {}
+L 7 250 90 270 90 {}
+L 7 250 70 270 70 {}
+L 7 250 110 270 110 {}
+L 7 250 10 270 10 {}
+L 7 250 -50 270 -50 {}
+L 7 250 -10 270 -10 {}
+B 5 267.5 -172.5 272.5 -167.5 {name=avdd dir=inout}
+B 5 267.5 -152.5 272.5 -147.5 {name=dvdd dir=inout}
+B 5 267.5 -132.5 272.5 -127.5 {name=dvss dir=inout}
+B 5 267.5 -112.5 272.5 -107.5 {name=avss dir=inout}
+B 5 267.5 27.5 272.5 32.5 {name=adc1 dir=inout}
+B 5 267.5 -32.5 272.5 -27.5 {name=comp_n dir=inout}
+B 5 267.5 -72.5 272.5 -67.5 {name=ulpcomp_n dir=inout}
+B 5 -152.5 127.5 -147.5 132.5 {name=right_instramp_to_ulpcomp_n[1:0] dir=in}
+B 5 267.5 127.5 272.5 132.5 {name=right_instramp_out dir=inout}
+B 5 -152.5 7.5 -147.5 12.5 {name=right_hgbw_opamp_to_ulpcomp_n[1:0] dir=in}
+B 5 -152.5 67.5 -147.5 72.5 {name=right_lp_opamp_to_ulpcomp_p[1:0] dir=in}
+B 5 -152.5 -112.5 -147.5 -107.5 {name=left_lp_opamp_to_ulpcomp_n[1:0] dir=in}
+B 5 -152.5 -172.5 -147.5 -167.5 {name=left_hgbw_opamp_to_ulpcomp_p[1:0] dir=in}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=left_instramp_to_ulpcomp_p[1:0] dir=in}
+B 5 267.5 147.5 272.5 152.5 {name=right_hgbw_opamp_out dir=inout}
+B 5 -152.5 147.5 -147.5 152.5 {name=right_instramp_to_comp_n[1:0] dir=in}
+B 5 -152.5 27.5 -147.5 32.5 {name=right_hgbw_opamp_to_comp_n[1:0] dir=in}
+B 5 -152.5 87.5 -147.5 92.5 {name=right_lp_opamp_to_comp_p[1:0] dir=in}
+B 5 -152.5 -92.5 -147.5 -87.5 {name=left_lp_opamp_to_comp_n[1:0] dir=in}
+B 5 -152.5 -152.5 -147.5 -147.5 {name=left_hgbw_opamp_to_comp_p[1:0] dir=in}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=left_instramp_to_comp_p[1:0] dir=in}
+B 5 267.5 167.5 272.5 172.5 {name=right_lp_opamp_out dir=inout}
+B 5 -152.5 167.5 -147.5 172.5 {name=right_instramp_to_adc1[1:0] dir=in}
+B 5 -152.5 47.5 -147.5 52.5 {name=right_hgbw_opamp_to_adc1[1:0] dir=in}
+B 5 -152.5 107.5 -147.5 112.5 {name=right_lp_opamp_to_adc0[1:0] dir=in}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=left_lp_opamp_to_adc1[1:0] dir=in}
+B 5 -152.5 -132.5 -147.5 -127.5 {name=left_hgbw_opamp_to_adc0[1:0] dir=in}
+B 5 267.5 87.5 272.5 92.5 {name=left_lp_opamp_out dir=inout}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=left_instramp_to_adc0[1:0] dir=in}
+B 5 267.5 67.5 272.5 72.5 {name=left_hgbw_opamp_out dir=inout}
+B 5 267.5 107.5 272.5 112.5 {name=left_instramp_out dir=inout}
+B 5 267.5 7.5 272.5 12.5 {name=adc0 dir=inout}
+B 5 267.5 -52.5 272.5 -47.5 {name=ulpcomp_p dir=inout}
+B 5 267.5 -12.5 272.5 -7.5 {name=comp_p dir=inout}
+T {@symname} -125.5 -196 0 0 0.3 0.3 {}
+T {@name} 255 -192 0 0 0.2 0.2 {}
+T {avdd} 245 -174 0 1 0.2 0.2 {}
+T {dvdd} 245 -154 0 1 0.2 0.2 {}
+T {dvss} 245 -134 0 1 0.2 0.2 {}
+T {avss} 245 -114 0 1 0.2 0.2 {}
+T {adc1} 245 26 0 1 0.2 0.2 {}
+T {comp_n} 245 -34 0 1 0.2 0.2 {}
+T {ulpcomp_n} 245 -74 0 1 0.2 0.2 {}
+T {right_instramp_to_ulpcomp_n[1:0]} -125 126 0 0 0.2 0.2 {}
+T {right_instramp_out} 245 126 0 1 0.2 0.2 {}
+T {right_hgbw_opamp_to_ulpcomp_n[1:0]} -125 6 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_ulpcomp_p[1:0]} -125 66 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_ulpcomp_n[1:0]} -125 -114 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_ulpcomp_p[1:0]} -125 -174 0 0 0.2 0.2 {}
+T {left_instramp_to_ulpcomp_p[1:0]} -125 -54 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_out} 245 146 0 1 0.2 0.2 {}
+T {right_instramp_to_comp_n[1:0]} -125 146 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_comp_n[1:0]} -125 26 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_comp_p[1:0]} -125 86 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_comp_n[1:0]} -125 -94 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_comp_p[1:0]} -125 -154 0 0 0.2 0.2 {}
+T {left_instramp_to_comp_p[1:0]} -125 -34 0 0 0.2 0.2 {}
+T {right_lp_opamp_out} 245 166 0 1 0.2 0.2 {}
+T {right_instramp_to_adc1[1:0]} -125 166 0 0 0.2 0.2 {}
+T {right_hgbw_opamp_to_adc1[1:0]} -125 46 0 0 0.2 0.2 {}
+T {right_lp_opamp_to_adc0[1:0]} -125 106 0 0 0.2 0.2 {}
+T {left_lp_opamp_to_adc1[1:0]} -125 -74 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_to_adc0[1:0]} -125 -134 0 0 0.2 0.2 {}
+T {left_lp_opamp_out} 245 86 0 1 0.2 0.2 {}
+T {left_instramp_to_adc0[1:0]} -125 -14 0 0 0.2 0.2 {}
+T {left_hgbw_opamp_out} 245 66 0 1 0.2 0.2 {}
+T {left_instramp_out} 245 106 0 1 0.2 0.2 {}
+T {adc0} 245 6 0 1 0.2 0.2 {}
+T {ulpcomp_p} 245 -54 0 1 0.2 0.2 {}
+T {comp_p} 245 -14 0 1 0.2 0.2 {}

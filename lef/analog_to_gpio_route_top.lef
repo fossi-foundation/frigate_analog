@@ -1,0 +1,27 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO analog_to_gpio_route_top
+  CLASS COVER ;
+  FOREIGN analog_to_gpio_route_top ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 7.005 BY 155.585 ;
+  OBS
+      LAYER met2 ;
+        RECT 3.150 153.415 4.720 155.585 ;
+      LAYER met3 ;
+        RECT 3.000 153.210 5.250 155.585 ;
+      LAYER met4 ;
+        RECT 3.000 153.210 5.250 155.585 ;
+        RECT 0.000 4.745 1.000 152.075 ;
+        RECT 0.000 0.745 1.600 4.745 ;
+        RECT 3.000 0.000 4.000 153.210 ;
+        RECT 6.000 4.745 7.000 152.100 ;
+        RECT 5.400 0.745 7.000 4.745 ;
+      LAYER met5 ;
+        RECT 0.000 0.745 7.005 4.745 ;
+  END
+END analog_to_gpio_route_top
+END LIBRARY
+

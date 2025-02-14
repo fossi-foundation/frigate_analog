@@ -1,0 +1,76 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -120 130 -120 {}
+L 4 -130 140 130 140 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 40 -130 40 {}
+L 4 -150 80 -130 80 {}
+L 4 -150 120 -130 120 {}
+L 4 130 -120 130 140 {}
+L 4 -130 -120 -130 140 {}
+L 4 30 -10 60 -10 {}
+L 4 30 10 50 10 {}
+L 4 30 30 60 30 {}
+L 4 30 50 50 50 {}
+L 4 30 70 60 70 {}
+L 4 30 90 50 90 {}
+L 4 30 110 60 110 {}
+L 4 30 130 50 130 {}
+L 4 20 120 30 130 {}
+L 4 20 80 30 90 {}
+L 4 20 40 30 50 {}
+L 4 20 -0 30 10 {}
+L 7 130 -110 150 -110 {}
+L 7 130 -90 150 -90 {}
+L 7 130 -70 150 -70 {}
+L 7 130 -50 150 -50 {}
+L 7 130 10 150 10 {}
+L 7 130 -10 150 -10 {}
+L 7 130 50 150 50 {}
+L 7 130 30 150 30 {}
+L 7 130 90 150 90 {}
+L 7 130 70 150 70 {}
+L 7 130 130 150 130 {}
+L 7 130 110 150 110 {}
+B 5 147.5 -112.5 152.5 -107.5 {name=avdd dir=inout}
+B 5 147.5 -92.5 152.5 -87.5 {name=dvdd dir=inout}
+B 5 147.5 -72.5 152.5 -67.5 {name=dvss dir=inout}
+B 5 147.5 -52.5 152.5 -47.5 {name=avss dir=inout}
+B 5 147.5 7.5 152.5 12.5 {name=channel0_out dir=inout}
+B 5 -152.5 -2.5 -147.5 2.5 {name=channel0_in_to_out[1:0] dir=in}
+B 5 147.5 -12.5 152.5 -7.5 {name=channel0_in dir=inout}
+B 5 -152.5 37.5 -147.5 42.5 {name=channel1_in_to_out[1:0] dir=in}
+B 5 -152.5 77.5 -147.5 82.5 {name=channel2_in_to_out[1:0] dir=in}
+B 5 -152.5 117.5 -147.5 122.5 {name=channel3_in_to_out[1:0] dir=in}
+B 5 147.5 47.5 152.5 52.5 {name=channel1_out dir=inout}
+B 5 147.5 27.5 152.5 32.5 {name=channel1_in dir=inout}
+B 5 147.5 87.5 152.5 92.5 {name=channel2_out dir=inout}
+B 5 147.5 67.5 152.5 72.5 {name=channel2_in dir=inout}
+B 5 147.5 127.5 152.5 132.5 {name=channel3_out dir=inout}
+B 5 147.5 107.5 152.5 112.5 {name=channel3_in dir=inout}
+T {@symname} -121 -106 0 0 0.3 0.3 {}
+T {@name} 135 -132 0 0 0.2 0.2 {}
+T {avdd} 125 -114 0 1 0.2 0.2 {}
+T {dvdd} 125 -94 0 1 0.2 0.2 {}
+T {dvss} 125 -74 0 1 0.2 0.2 {}
+T {avss} 125 -54 0 1 0.2 0.2 {}
+T {channel0_out} 125 6 0 1 0.2 0.2 {}
+T {channel0_in_to_out[1:0]} -125 -4 0 0 0.2 0.2 {}
+T {channel0_in} 125 -14 0 1 0.2 0.2 {}
+T {channel1_in_to_out[1:0]} -125 36 0 0 0.2 0.2 {}
+T {channel2_in_to_out[1:0]} -125 76 0 0 0.2 0.2 {}
+T {channel3_in_to_out[1:0]} -125 116 0 0 0.2 0.2 {}
+T {channel1_out} 125 46 0 1 0.2 0.2 {}
+T {channel1_in} 125 26 0 1 0.2 0.2 {}
+T {channel2_out} 125 86 0 1 0.2 0.2 {}
+T {channel2_in} 125 66 0 1 0.2 0.2 {}
+T {channel3_out} 125 126 0 1 0.2 0.2 {}
+T {channel3_in} 125 106 0 1 0.2 0.2 {}

@@ -1,0 +1,458 @@
+List of signals in the Frigate analog and timing frontend systems
+-----------------------------------------------------------------
+This list matches the pinouts of the verilog modules
+
+Timing frontend subsystem
+-------------------------
+Power supplies:
+	vdda3/vssa3		3.3V analog supply
+	vccd0/vssd0		1.8V digital supply
+
+Registered signals:
+	rc_osc_16M_ena		Enable to 16MHz RC oscillator (default *1*)
+				This is the default oscillator for the chip.
+	rc_osc_500k_ena		Enable to 500kHz RC oscillator (default 0)
+	lsxo_ena		Enable to 32.768kHz crystal oscillator (default 0)
+	lsxo_standby		1 = powered, no output (default 0)
+	hsxo_ena		Enable to 4-16MHz crystal oscillator (default 0)
+	hsxo_standby		1 = powered, no output (default 0)
+
+Active signals:
+	rc_osc_16M_dout		16MHz clock output from RC oscillator
+	rc_osc_500k_dout	500kHz clock output from RC oscillator
+	lsxo_dout		clock output from 32.768kHz crystal oscillator
+	hsxo_dout		clock output from 4-16MHz crystal oscillator
+	resetb_in_h		sense-inverted reset in 3.3V domain from the reset pin
+	resetb_out_l		sense-inverted reset converted to digital 1.8V (output)
+
+Analog connections:
+	lsxo_ibias		to current bias generator through analog channel
+	lsxo_xin		direct connection to pin
+	lsxo_xout		direct connection to pin
+	hsxo_ibias		to current bias generator through analog channel
+	hsxo_xin		direct connection to pin
+	hsxo_xout		direct connection to pin
+
+
+Analog subsystem
+-----------------
+	vddio/vssio		3.3V primary analog supply
+	vdda0/vssa0		3.3V analog supply, top side
+	vdda1/vssa1		3.3V user analog supply, right side
+	vdda2/vssa2		3.3V user analog supply, left side
+	vccd/vssd		1.8V primary digital supply
+	vccd1/vssd1		1.8V user digital supply, right side
+	vccd2/vssd2		1.8V user digital supply, left side
+
+Registered signals:
+	left_instramp_ena	instrumentation amplifier enable
+	left_instramp_G1[4:0]	instrumentation amp programmable gain
+	left_instramp_G2[4:0]	instrumentation amp programmable gain
+
+	left_hgbw_opamp_ena	high gain-bandwidth opamp enable
+	left_lp_opamp_ena	low-power opamp enable
+	left_rheostat1_b[7:0]	rheostat programmable tap
+	left_rheostat2_b[7:0]	rheostat programmable tap
+
+	right_instramp_ena	instrumentation amplifier enable
+	right_instramp_G1[4:0]	instrumentation amp programmable gain
+	right_instramp_G1[4:0]	instrumentation amp programmable gain
+
+	right_hgbw_opamp_ena	high gain-bandwidth opamp enable
+	right_lp_opamp_ena	low-power opamp enable
+	right_rheostat1_b[7:0]	rheostat programmable tap
+	right_rheostat2_b[7:0]	rheostat programmable tap
+
+	comparator_0_ena	comparator enable
+	comparator_0_trim[5:0]	comparator offset trim
+	comparator_0_hyst[1:0]	comparator hysteresis trim
+	comparator_1_ena	ULP comparator enable
+	comparator_1_clk	ULP comparator clock
+
+	bandgap_ena		bandgap enable
+	bandgap_trim[15:0]	bandgap trim
+	bandgap_sel		select bandgap source (default 0)
+	ldo_ena			LDO (for bandgap) enable
+	overvoltage_ena		overvoltage detector enable
+	overvoltage_trim[3:0]	overvoltage detector trip point set
+	ldo_ref_sel		select bandgap reference (default 0)
+
+	ibias_ena		biasgen master enable
+	ibias_src_enb[23:0]	biasgen source disables
+	ibias_snk_ena[3:0]	sink current test enables
+	ibias_ref_select	select internal or bandgap reference
+	
+	idac_value[11:0]	current DAC value
+	idac_ena		current DAC enable
+	tempsense_ena		temperature sensor enable
+	tesmpsense_sel		select temperature sensor output (default 0)
+	rdac0_ena		voltage DAC enable
+	rdac0_value[11:0]	voltage DAC value
+	rdac1_ena		voltage DAC enable
+	rdac1_value[11:0]	voltage DAC value
+	adc0_ena		ADC enable
+	adc1_ena		ADC enable
+
+	brownout_ena		Brownout enable
+	brownout_vtrip[2:0]	Brownout trip point
+	brownout_otrip[2:0]	Brownout trip point
+	brownout_isrc_sel	Brownout select current bias
+	brownout_oneshot	Brownout force short one-shot
+	brownout_rc_ena		Brownout force oscillator enabled
+	brownout_rc_dis		Brownout force oscillator disabled
+
+Registered signals, analog switch matrix:
+	ibias_test_to_gpio1_2[1:0]
+	vbg_test_to_gpio1_1[1:0]
+	idac_to_gpio1_3[1:0]
+	idac_to_gpio1_2[1:0]
+	adc_refh_to_gpio6_6[1:0]
+	dac_refh_to_gpio1_1[1:0]
+	adc_refl_to_gpio6_7[1:0]
+	dac_refl_to_gpio1_0[1:0]
+	right_lp_opamp_to_ulp_comp_p[1:0]
+	right_lp_opamp_to_comp_p[1:0]
+	right_lp_opamp_to_adc0[1:0]
+	right_lp_opamp_to_gpio4_7[1:0]
+	right_lp_opamp_to_gpio4_3[1:0]
+	right_lp_opamp_to_analog1[1:0]
+	right_lp_opamp_to_amuxbusB[1:0]
+	right_lp_opamp_to_gpio3_7[1:0]
+	right_lp_opamp_to_gpio3_3[1:0]
+	right_hgbw_opamp_to_ulp_comp_n[1:0]
+	right_hgbw_opamp_to_comp_n[1:0]
+	right_hgbw_opamp_to_adc1[1:0]
+	right_hgbw_opamp_to_gpio4_6[1:0]
+	right_hgbw_opamp_to_gpio4_2[1:0]
+	right_hgbw_opamp_to_analog0[1:0]
+	right_hgbw_opamp_to_amuxbusA[1:0]
+	right_hgbw_opamp_to_gpio3_6[1:0]
+	right_hgbw_opamp_to_gpio3_2[1:0]
+	left_hgbw_opamp_to_ulp_comp_p[1:0]
+	left_hgbw_opamp_to_comp_p[1:0]
+	left_hgbw_opamp_to_adc0[1:0]
+	left_hgbw_opamp_to_gpio4_5[1:0]
+	left_hgbw_opamp_to_gpio4_1[1:0]
+	left_hgbw_opamp_to_analog1[1:0]
+	left_hgbw_opamp_to_amuxbusB[1:0]
+	left_hgbw_opamp_to_gpio3_5[1:0]
+	left_hgbw_opamp_to_gpio3_1[1:0]
+	left_lp_opamp_to_ulp_comp_n[1:0]
+	left_lp_opamp_to_comp_n[1:0]
+	left_lp_opamp_to_adc1[1:0]
+	left_lp_opamp_to_gpio4_0[1:0]
+	left_lp_opamp_to_analog0[1:0]
+	left_lp_opamp_to_amuxbusA[1:0]
+	left_lp_opamp_to_gpio3_4[1:0]
+	right_lp_opamp_p_to_dac0
+	right_lp_opamp_p_to_analog0
+	right_lp_opamp_p_to_amuxbusA
+	right_lp_opamp_p_to_rheostat_out
+	right_lp_opamp_p_to_sio0
+	right_lp_opamp_p_to_tempsense
+	right_lp_opamp_p_to_left_vref
+	right_lp_opamp_p_to_voutref
+	right_lp_opamp_p_to_gpio2_5[1:0]
+	right_lp_opamp_n_to_dac1
+	right_lp_opamp_n_to_analog1
+	right_lp_opamp_n_to_amuxbusB
+	right_lp_opamp_n_to_rheostat_out
+	right_lp_opamp_n_to_rheostat_tap
+	right_lp_opamp_n_to_sio1
+	right_lp_opamp_n_to_vbgtc
+	right_lp_opamp_n_to_right_vref
+	right_lp_opamp_n_to_vinref
+	right_lp_opamp_n_to_gpio2_4[1:0]
+	right_hgbw_opamp_p_to_gpio5_0[1:0]
+	right_hgbw_opamp_p_to_dac0
+	right_hgbw_opamp_p_to_analog0
+	right_hgbw_opamp_p_to_amuxbusA
+	right_hgbw_opamp_p_to_rheostat_out
+	right_hgbw_opamp_p_to_sio0
+	right_hgbw_opamp_p_to_left_vref
+	right_hgbw_opamp_p_to_voutref
+	right_hgbw_opamp_p_to_gpio2_3[1:0]
+	right_hgbw_opamp_n_to_gpio5_1[1:0]
+	right_hgbw_opamp_n_to_dac1
+	right_hgbw_opamp_n_to_analog1
+	right_hgbw_opamp_n_to_amuxbusB
+	right_hgbw_opamp_n_to_rheostat_out
+	right_hgbw_opamp_n_to_rheostat_tap
+	right_hgbw_opamp_n_to_sio1
+	right_hgbw_opamp_n_to_vbgsc
+	right_hgbw_opamp_n_to_right_vref
+	right_hgbw_opamp_n_to_vinref
+	right_hgbw_opamp_n_to_gpio2_2[1:0]
+	left_hgbw_opamp_p_to_gpio5_2[1:0]
+	left_hgbw_opamp_p_to_dac0
+	left_hgbw_opamp_p_to_analog0
+	left_hgbw_opamp_p_to_amuxbusA
+	left_hgbw_opamp_p_to_rheostat_out
+	left_hgbw_opamp_p_to_sio0
+	left_hgbw_opamp_p_to_tempsense
+	left_hgbw_opamp_p_to_left_vref
+	left_hgbw_opamp_p_to_voutref
+	left_hgbw_opamp_p_to_gpio2_1[1:0]
+	left_hgbw_opamp_to_gpio5_3[1:0]
+	left_hgbw_opamp_n_to_dac1
+	left_hgbw_opamp_n_to_analog1
+	left_hgbw_opamp_n_to_amuxbusB
+	left_hgbw_opamp_n_to_rheostat_out
+	left_hgbw_opamp_n_to_rheostat_tap
+	left_hgbw_opamp_n_to_sio1
+	left_hgbw_opamp_n_to_vbgtc
+	left_hgbw_opamp_n_to_right_vref
+	left_hgbw_opamp_n_to_vinref
+	left_hgbw_opamp_n_to_gpio2_0[1:0]
+	left_lp_opamp_to_gpio5_4[1:0]
+	left_lp_opamp_p_to_dac0
+	left_lp_opamp_p_to_analog0
+	left_lp_opamp_p_to_amuxbusA
+	left_lp_opamp_p_to_rheostat_out
+	left_lp_opamp_p_to_sio0
+	left_lp_opamp_p_to_left_vref
+	left_lp_opamp_p_to_voutref
+	left_lp_opamp_n_to_gpio5_5[1:0]
+	left_lp_opamp_n_to_dac1
+	left_lp_opamp_n_to_analog1
+	left_lp_opamp_n_to_amuxbusB
+	left_lp_opamp_n_to_rheostat_out
+	left_lp_opamp_n_to_rheostat_tap
+	left_lp_opamp_n_to_sio1
+	left_lp_opamp_n_to_vbgsc
+	left_lp_opamp_n_to_right_vref
+	left_lp_opamp_n_to_vinref
+	left_instramp_to_ulpcomp_p[1:0]
+	left_instramp_to_comp_p[1:0]
+	left_instramp_to_adc0[1:0]
+	left_instramp_to_gpio4_4[1:0]
+	left_instramp_to_analog1[1:0]
+	left_instramp_to_amuxbusB[1:0]
+	right_instramp_to_ulpcomp_n[1:0]
+	right_instramp_to_comp_n[1:0]
+	right_instramp_to_adc1[1:0]
+	right_instramp_to_analog0[1:0]
+	right_instramp_to_amuxbusA[1:0]
+	right_instramp_to_gpio3_0[1:0]
+	left_instramp_n_to_gpio5_7[1:0]
+	left_instramp_n_to_analog1
+	left_instramp_n_to_amuxbusB
+	left_instramp_n_to_sio1
+	left_instramp_n_to_right_vref
+	left_instramp_n_to_vinref
+	left_instramp_p_to_gpio5_6[1:0]
+	left_instramp_p_to_analog0
+	left_instramp_p_to_amuxbusA
+	left_instramp_p_to_sio0
+	left_instramp_p_to_tempsense
+	left_instramp_p_to_left_vref
+	left_instramp_p_to_voutref
+	right_instramp_n_to_analog1
+	right_instramp_n_to_amuxbusB
+	right_instramp_n_to_sio1
+	right_instramp_n_to_right_vref
+	right_instramp_n_to_vinref
+	right_instramp_n_to_gpio2_6[1:0]
+	right_instramp_p_to_analog0
+	right_instramp_p_to_amuxbusA
+	right_instramp_p_to_sio0
+	right_instramp_p_to_tempsense
+	right_instramp_p_to_left_vref
+	right_instramp_p_to_voutref
+	right_instramp_p_to_gpio2_7[1:0]
+	ulpcomp_p_to_dac0
+	ulpcomp_p_to_analog1
+	ulpcomp_p_to_sio0
+	ulpcomp_p_to_vbgtc
+	ulpcomp_p_to_tempsense
+	ulpcomp_p_to_left_vref
+	ulpcomp_p_to_voutref
+	ulpcomp_p_to_gpio6_0[1:0]
+	ulpcomp_p_to_gpio1_7[1:0]
+	ulpcomp_n_to_dac1
+	ulpcomp_n_to_analog0
+	ulpcomp_n_to_sio1
+	ulpcomp_n_to_vbgsc
+	ulpcomp_n_to_right_vref
+	ulpcomp_n_to_vinref
+	ulpcomp_n_to_gpio6_1[1:0]
+	ulpcomp_n_to_gpio1_6[1:0]
+	comp_p_to_dac0
+	comp_p_to_analog1
+	comp_p_to_sio0
+	comp_p_to_vbgtc
+	comp_p_to_tempsense
+	comp_p_to_left_vref
+	comp_p_to_voutref
+	comp_p_to_gpio6_2[1:0]
+	comp_p_to_gpio1_5[1:0]
+	comp_n_to_dac1
+	comp_n_to_analog0
+	comp_n_to_sio1
+	comp_n_to_vbgsc
+	comp_n_to_right_vref
+	comp_n_to_vinref
+	comp_n_to_gpio6_1[1:0]
+	comp_n_to_gpio1_4[1:0]
+	adc0_to_dac0
+	adc0_to_analog1
+	adc0_to_vbgtc
+	adc0_to_tempsense
+	adc0_to_left_vref
+	adc0_to_voutref
+	adc0_to_gpio6_4[1:0]
+	adc0_to_gpio1_3[1:0]
+	adc1_to_dac1
+	adc1_to_analog0
+	adc1_to_vbgsc
+	adc1_to_right_vref
+	adc1_to_vinref
+	adc1_to_gpio6_5[1:0]
+	adc1_to_gpio1_2[1:0]
+	sio0_connect[1:0]
+	sio1_connect[1:0]
+	analog0_connect[1:0]
+	analog1_connect[1:0]
+	vbgtc_to_user
+	vbgsc_to_user
+	user_to_comp_n[1:0]
+	user_to_comp_p[1:0]
+	user_to_ulpcomp_n[1:0]
+	user_to_ulpcomp_p[1:0]
+	user_to_adc0[1:0]
+	user_to_adc1[1:0]
+	dac0_to_user
+	dac1_to_user
+	dac0_to_analog1
+	dac1_to_analog0
+	tempsense_to_user
+	right_vref_to_user
+	left_vref_to_user
+	vinref_to_user
+	voutref_to_user
+
+Active signals:
+	comparator_0_out	comparator output
+	comparator_1_out	ULP comparator output
+	overvoltage_out		overvoltage alarm
+
+	por			power-on-reset (active high)
+	porb			power-on-reset (active low)
+	porb_h			power-on-reset (active low, 3.3V domain)
+	vdda1_pwr_good		power-good detect, right side 3.3V domain
+	vccd1_pwr_good		power-good detect, right side 1.8V domain
+	vdda2_pwr_good		power-good detect, left side 3.3V domain
+	vccd2_pwr_good		power-good detect, left side 1.8V domain
+
+	audiodac_in		noise-shaped sigma-delta DAC value
+
+	adc0_dac_val		ADC active value to DAC
+	adc0_comp_out		ADC comparator output
+	adc0_value		ADC output value
+	adc1_dac_val		ADC active value to DAC
+	adc1_comp_out		ADC comparator output
+	adc1_value		ADC output value
+
+	brownout_vunder		Brownout alarm
+	brownout_timeout	Brownout timeout
+	brownout_filt		Brownout undervoltage (glitch filtered)
+	brownout_unfilt		Brownout undervoltage (unfiltered)
+
+Analog connections to user project:
+	user_gpio_4_7_analog	Direct connection to GPIO4_7 pad
+	user_gpio_4_6_analog	Direct connection to GPIO4_6 pad
+	user_gpio_4_5_analog	Direct connection to GPIO4_5 pad
+	user_gpio_4_4_analog	Direct connection to GPIO4_4 pad
+	user_gpio_4_3_analog	Direct connection to GPIO4_3 pad
+	user_gpio_4_2_analog	Direct connection to GPIO4_2 pad
+	user_gpio_4_1_analog	Direct connection to GPIO4_1 pad
+	user_gpio_4_0_analog	Direct connection to GPIO4_0 pad
+	user_gpio_3_7_analog	Direct connection to GPIO3_7 pad
+	user_gpio_3_6_analog	Direct connection to GPIO3_6 pad
+	user_gpio_3_5_analog	Direct connection to GPIO3_5 pad
+	user_gpio_3_4_analog	Direct connection to GPIO3_4 pad
+	user_gpio_3_3_analog	Direct connection to GPIO3_3 pad
+	user_gpio_3_2_analog	Direct connection to GPIO3_2 pad
+	user_gpio_3_1_analog	Direct connection to GPIO3_1 pad
+	user_gpio_3_0_analog	Direct connection to GPIO3_0 pad
+	user_voutref		SIO voltage reference 1
+	user_vinref		SIO voltage reference 2
+	user_left_vref 		GPIO OVT voltage reference 1
+	user_right_vref		GPIO OVT voltage reference 2
+	user_tempsense		temperature sensor output
+	user_dac0		DAC0 output
+	user_dac1		DAC1 output
+	user_vbgtc		Bandgap scaled output 1
+	user_vbgsc		Bandgap scaled output 2
+	user_adc0		ADC0 input
+	user_adc1		ADC1 input
+	user_comp_n		Comparator negative input
+	user_comp_p		Comparator positive input
+	user_ulpcomp_n		ULP comparator negative input
+	user_ulpcomp_p		ULP comparator positive input
+
+Analog connections to padframe pins:
+	gpio1_0			DAC refL
+	gpio1_1			vbg and DAC refH
+	gpio1_2			iDAC, ibias test, adc1
+	gpio1_3			iDAC, adc0
+	gpio1_4			comp_n
+	gpio1_5			comp_p
+	gpio1_6			ulpcomp_n
+	gpio1_7			ulpcomp_p
+	gpio2_0			left_lp_opamp_n
+	gpio2_1			left_lp_opamp_p
+	gpio2_2			right_lp_opamp_n
+	gpio2_3			right_lp_opamp_p
+	gpio2_4			right_hgbw_opamp_n
+	gpio2_5			right_hgbw_opamp_p
+	gpio2_6			right_instramp_n
+	gpio2_7			right_instramp_p
+	gpio3_0			right_instramp
+	gpio3_1			left_lp_opamp
+	gpio3_2			right_lp_opamp
+	gpio3_3			right_hgbw_opamp
+	gpio3_4			left_hgbw_opamp
+	gpio3_5			left_lp_opamp
+	gpio3_6			right_lp_opamp
+	gpio3_7			right_hgbw_opamp
+	analog0			(many connections)
+	analog1			(many connections)
+	gpio4_0			left_hgbw_opamp
+	gpio4_1			left_lp_opamp
+	gpio4_2			right_lp_opamp
+	gpio4_3			right_hgbw_opamp
+	gpio4_4			left_instramp
+	gpio4_5			left_lp_opamp
+	gpio4_6			right_lp_opamp
+	gpio4_7			right_hgbw_opamp
+	gpio5_0			right_lp_opamp_p
+	gpio5_1			right_lp_opamp_n
+	gpio5_2			left_lp_opamp_p
+	gpio5_3			left_lp_opamp_n
+	gpio5_4			left_hgbw_opamp_p
+	gpio5_5			left_hgbw_opamp_n
+	gpio5_6			left_instramp_p
+	gpio5_7			left_instramp_n
+	gpio6_0			ulpcomp_p
+	gpio6_1			ulpcomp_n
+	gpio6_2			comp_p
+	gpio6_3			comp_n
+	gpio6_4			adc0
+	gpio6_5			adc1
+	gpio6_6			ADC refH
+	gpio6_7			ADC refL
+	sio0			(many connections)
+	sio1			(many connections)
+
+Other analog connections to padframe
+	voutref			through analog channel to sio
+	vinref			through analog channel to sio
+	vbg			through analog channel to sio (vohref)
+	right_vref		center right gpio_ovt reference
+	left_vref		center left gpio_ovt reference
+
+Analog connections to timing subsystem
+	ibias_lsxo		through analog channel to bottom of chip
+	ibias_hsxo		through analog channel to bottom of chip
+
