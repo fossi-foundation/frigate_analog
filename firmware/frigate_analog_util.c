@@ -853,7 +853,7 @@ uint8_t brownout_get_ibias_select()
     return (uint8_t)((brownout_mask & BROWNOUT_IBIAS_SELECT) >> 7);
 }
 
-uint8_t brownout_oneshot_mode()
+void brownout_oneshot_mode()
 {
     uint32_t ovalue;
 
@@ -861,7 +861,7 @@ uint8_t brownout_oneshot_mode()
     brownout_mask = ovalue;
 }
 
-uint8_t brownout_osc_force_on_mode()
+void brownout_osc_force_on_mode()
 {
     uint32_t ovalue;
 
@@ -869,7 +869,7 @@ uint8_t brownout_osc_force_on_mode()
     brownout_mask = ovalue;
 }
 
-uint8_t brownout_osc_force_off_mode()
+void brownout_osc_force_off_mode()
 {
     uint32_t ovalue;
 
@@ -877,7 +877,7 @@ uint8_t brownout_osc_force_off_mode()
     brownout_mask = ovalue;
 }
 
-uint8_t brownout_normal_mode()
+void brownout_normal_mode()
 {
     uint32_t ovalue;
 
@@ -1790,7 +1790,7 @@ void disconnect_idac_source_from_gpio1_2()
 
 /* DAC and ADC high and low voltage references */
 
-void connect_ADC_refH_to_gpio6_6()
+void connect_adc_refH_to_gpio6_6()
 {
     uint32_t value;
 
@@ -1801,7 +1801,7 @@ void connect_ADC_refH_to_gpio6_6()
     switch_hilo_mask = value;
 }
 
-void disconnect_ADC_refH_from_gpio6_6()
+void disconnect_adc_refH_from_gpio6_6()
 {
     uint32_t value;
 
@@ -1812,7 +1812,7 @@ void disconnect_ADC_refH_from_gpio6_6()
     switch_hilo_mask = value;
 }
 
-void connect_DAC_refH_to_gpio1_1()
+void connect_dac_refH_to_gpio1_1()
 {
     uint32_t value;
 
@@ -1823,7 +1823,7 @@ void connect_DAC_refH_to_gpio1_1()
     switch_hilo_mask = value;
 }
 
-void disconnect_DAC_refH_from_gpio1_1()
+void disconnect_dac_refH_from_gpio1_1()
 {
     uint32_t value;
 
@@ -1834,7 +1834,7 @@ void disconnect_DAC_refH_from_gpio1_1()
     switch_hilo_mask = value;
 }
 
-void connect_ADC_refL_to_gpio6_7()
+void connect_adc_refL_to_gpio6_7()
 {
     uint32_t value;
 
@@ -1845,7 +1845,7 @@ void connect_ADC_refL_to_gpio6_7()
     switch_hilo_mask = value;
 }
 
-void disconnect_ADC_refL_from_gpio6_7()
+void disconnect_adc_refL_from_gpio6_7()
 {
     uint32_t value;
 
@@ -1856,7 +1856,7 @@ void disconnect_ADC_refL_from_gpio6_7()
     switch_hilo_mask = value;
 }
 
-void connect_DAC_refL_to_gpio1_0()
+void connect_dac_refL_to_gpio1_0()
 {
     uint32_t value;
 
@@ -1867,7 +1867,7 @@ void connect_DAC_refL_to_gpio1_0()
     switch_hilo_mask = value;
 }
 
-void disconnect_DAC_refL_from_gpio1_0()
+void disconnect_dac_refL_from_gpio1_0()
 {
     uint32_t value;
 
@@ -1880,7 +1880,7 @@ void disconnect_DAC_refL_from_gpio1_0()
 
 /* Right op amp 2 output */
 
-void connect_right_opamp_2_to_ULP_comp_inp()
+void connect_right_opamp_2_to_ulp_comp_inp()
 {
     uint32_t value;
 
@@ -1891,7 +1891,7 @@ void connect_right_opamp_2_to_ULP_comp_inp()
     switch_opamp_2_r_mask = value;
 }
 
-void disconnect_right_opamp_2_from_ULP_comp_inp()
+void disconnect_right_opamp_2_from_ulp_comp_inp()
 {
     uint32_t value;
 
@@ -1917,10 +1917,10 @@ void disconnect_right_opamp_2_from_prec_comp_inp()
 {
     uint32_t value;
 
-    value = switch_opamp_2_r_mask & ~SWITCH_AMP2R_ULPCOMP_P_MASK;
+    value = switch_opamp_2_r_mask & ~SWITCH_AMP2R_PRECCOMP_P_MASK;
     switch_opamp_2_r_mask = value;
 
-    value = switch_opamp_2_r_mask | SWITCH_AMP2R_ULPCOMP_P_GROUND;
+    value = switch_opamp_2_r_mask | SWITCH_AMP2R_PRECCOMP_P_GROUND;
     switch_opamp_2_r_mask = value;
 }
 
@@ -2080,7 +2080,7 @@ void disconnect_right_opamp_2_from_gpio3_3()
 
 /* Right op amp 1 output */
 
-void connect_right_opamp_1_to_ULP_comp_inn()
+void connect_right_opamp_1_to_ulp_comp_inn()
 {
     uint32_t value;
 
@@ -2091,7 +2091,7 @@ void connect_right_opamp_1_to_ULP_comp_inn()
     switch_opamp_1_r_mask = value;
 }
 
-void disconnect_right_opamp_1_from_ULP_comp_inn()
+void disconnect_right_opamp_1_from_ulp_comp_inn()
 {
     uint32_t value;
 
@@ -2117,10 +2117,10 @@ void disconnect_right_opamp_1_from_prec_comp_inn()
 {
     uint32_t value;
 
-    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ULPCOMP_N_MASK;
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_PRECCOMP_N_MASK;
     switch_opamp_1_r_mask = value;
 
-    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ULPCOMP_N_GROUND;
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_PRECCOMP_N_GROUND;
     switch_opamp_1_r_mask = value;
 }
 
@@ -2280,7 +2280,7 @@ void disconnect_right_opamp_1_from_gpio3_2()
 
 /* Left op amp 1 output */
 
-void connect_left_opamp_1_to_ULP_comp_inp()
+void connect_left_opamp_1_to_ulp_comp_inp()
 {
     uint32_t value;
 
@@ -2291,7 +2291,7 @@ void connect_left_opamp_1_to_ULP_comp_inp()
     switch_opamp_1_l_mask = value;
 }
 
-void disconnect_left_opamp_1_from_ULP_comp_inp()
+void disconnect_left_opamp_1_from_ulp_comp_inp()
 {
     uint32_t value;
 
@@ -2317,10 +2317,10 @@ void disconnect_left_opamp_1_from_prec_comp_inp()
 {
     uint32_t value;
 
-    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ULPCOMP_P_MASK;
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_PRECCOMP_P_MASK;
     switch_opamp_1_l_mask = value;
 
-    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ULPCOMP_P_GROUND;
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_PRECCOMP_P_GROUND;
     switch_opamp_1_l_mask = value;
 }
 
@@ -2480,7 +2480,7 @@ void disconnect_left_opamp_1_from_gpio3_1()
 
 /* Left op amp 2 output */
 
-void connect_left_opamp_2_to_ULP_comp_inn()
+void connect_left_opamp_2_to_ulp_comp_inn()
 {
     uint32_t value;
 
@@ -2491,7 +2491,7 @@ void connect_left_opamp_2_to_ULP_comp_inn()
     switch_opamp_2_l_mask = value;
 }
 
-void disconnect_left_opamp_2_from_ULP_comp_inn()
+void disconnect_left_opamp_2_from_ulp_comp_inn()
 {
     uint32_t value;
 
@@ -2517,10 +2517,10 @@ void disconnect_left_opamp_2_from_prec_comp_inn()
 {
     uint32_t value;
 
-    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ULPCOMP_N_MASK;
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_PRECCOMP_N_MASK;
     switch_opamp_2_l_mask = value;
 
-    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ULPCOMP_N_GROUND;
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_PRECCOMP_N_GROUND;
     switch_opamp_2_l_mask = value;
 }
 
@@ -4194,6 +4194,27 @@ void disconnect_right_instramp_from_amuxbusA()
     switch_instramp_r_mask = value;
 }
 
+void connect_right_instramp_to_gpio3_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_GPIO3_0_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_GPIO3_0_CONNECT;
+    switch_instramp_r_mask = value;
+}
+
+void disconnect_right_instramp_from_gpio3_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_GPIO3_0_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_GPIO3_0_GROUND;
+    switch_instramp_r_mask = value;
+}
 
 /* Left instrumentation amplifier negative input */
 
