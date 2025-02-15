@@ -400,29 +400,29 @@ void adc_1_enable()
 {
     uint32_t value;
 
-    value = adc1_enable_mask | ADC_ENABLE;
-    adc1_enable_mask = value;
+    value = adc_1_enable_mask | ADC_ENABLE;
+    adc_1_enable_mask = value;
 }
 
 void adc_1_disable()
 {
     uint32_t value;
 
-    value = adc1_enable_mask & ~ADC_ENABLE;
-    adc1_enable_mask = value;
+    value = adc_1_enable_mask & ~ADC_ENABLE;
+    adc_1_enable_mask = value;
 }
 
 void adc_1_convert()
 {
     uint32_t value;
 
-    value = adc1_convert_mask | ADC_START;
-    adc1_convert_mask = value;
+    value = adc_1_convert_mask | ADC_START;
+    adc_1_convert_mask = value;
 }
 
 uint16_t adc_1_get_value()
 {
-    return (uint16_t)(adc1_data_mask & ADC_VALUE_MASK);
+    return (uint16_t)(adc_1_data_mask & ADC_VALUE_MASK);
 }
 
 /*----------------------------------------------------------------------*/
@@ -433,29 +433,29 @@ void adc_2_enable()
 {
     uint32_t value;
 
-    value = adc2_enable_mask | ADC_ENABLE;
-    adc2_enable_mask = value;
+    value = adc_2_enable_mask | ADC_ENABLE;
+    adc_2_enable_mask = value;
 }
 
 void adc_2_disable()
 {
     uint32_t value;
 
-    value = adc2_enable_mask & ~ADC_ENABLE;
-    adc2_enable_mask = value;
+    value = adc_2_enable_mask & ~ADC_ENABLE;
+    adc_2_enable_mask = value;
 }
 
 void adc_2_convert()
 {
     uint32_t value;
 
-    value = adc2_convert_mask | ADC_START;
-    adc2_convert_mask = value;
+    value = adc_2_convert_mask | ADC_START;
+    adc_2_convert_mask = value;
 }
 
 uint16_t adc_2_get_value()
 {
-    return (uint16_t)(adc2_data_mask & ADC_VALUE_MASK);
+    return (uint16_t)(adc_2_data_mask & ADC_VALUE_MASK);
 }
 
 /*----------------------------------------------------------------------*/
@@ -2076,5 +2076,3876 @@ void disconnect_right_opamp_2_from_gpio3_3()
 
     value = switch_opamp_2_r_mask | SWITCH_AMP2R_GPIO3_3_GROUND;
     switch_opamp_2_r_mask = value;
+}
+
+/* Right op amp 1 output */
+
+void connect_right_opamp_1_to_ULP_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ULPCOMP_N_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ULPCOMP_N_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_ULP_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ULPCOMP_N_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ULPCOMP_N_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_PRECCOMP_N_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_PRECCOMP_N_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ULPCOMP_N_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ULPCOMP_N_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_adc_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ADC2_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ADC2_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_adc_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ADC2_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ADC2_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_gpio4_6()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO4_6_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO4_6_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_gpio4_6()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO4_6_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO4_6_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_gpio4_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO4_2_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO4_2_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_gpio4_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO4_2_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO4_2_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ANALOG0_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ANALOG0_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_ANALOG0_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_ANALOG0_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_AMUXBUSA_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_AMUXBUSA_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_AMUXBUSA_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_AMUXBUSA_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_gpio3_6()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO3_6_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO3_6_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_gpio3_6()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO3_6_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO3_6_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+void connect_right_opamp_1_to_gpio3_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO3_2_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO3_2_CONNECT;
+    switch_opamp_1_r_mask = value;
+}
+
+void disconnect_right_opamp_1_from_gpio3_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_mask & ~SWITCH_AMP1R_GPIO3_2_MASK;
+    switch_opamp_1_r_mask = value;
+
+    value = switch_opamp_1_r_mask | SWITCH_AMP1R_GPIO3_2_GROUND;
+    switch_opamp_1_r_mask = value;
+}
+
+/* Left op amp 1 output */
+
+void connect_left_opamp_1_to_ULP_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ULPCOMP_P_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ULPCOMP_P_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_ULP_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ULPCOMP_P_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ULPCOMP_P_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_PRECCOMP_P_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_PRECCOMP_P_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ULPCOMP_P_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ULPCOMP_P_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_adc_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ADC1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ADC1_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_adc_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ADC1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ADC1_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_gpio4_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO4_5_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO4_5_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_gpio4_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO4_5_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO4_5_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_gpio4_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO4_1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO4_1_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_gpio4_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO4_1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO4_1_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ANALOG1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ANALOG1_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_ANALOG1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_ANALOG1_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_AMUXBUSB_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_AMUXBUSB_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_AMUXBUSB_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_AMUXBUSB_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_gpio3_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO3_5_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO3_5_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_gpio3_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO3_5_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO3_5_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+void connect_left_opamp_1_to_gpio3_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO3_1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO3_1_CONNECT;
+    switch_opamp_1_l_mask = value;
+}
+
+void disconnect_left_opamp_1_from_gpio3_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_mask & ~SWITCH_AMP1L_GPIO3_1_MASK;
+    switch_opamp_1_l_mask = value;
+
+    value = switch_opamp_1_l_mask | SWITCH_AMP1L_GPIO3_1_GROUND;
+    switch_opamp_1_l_mask = value;
+}
+
+/* Left op amp 2 output */
+
+void connect_left_opamp_2_to_ULP_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ULPCOMP_N_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ULPCOMP_N_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_ULP_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ULPCOMP_N_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ULPCOMP_N_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+void connect_left_opamp_2_to_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_PRECCOMP_N_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_PRECCOMP_N_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ULPCOMP_N_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ULPCOMP_N_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+void connect_left_opamp_2_to_adc_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ADC2_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ADC2_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_adc_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ADC2_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ADC2_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+void connect_left_opamp_2_to_gpio4_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_GPIO4_0_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_GPIO4_0_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_gpio4_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_GPIO4_0_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_GPIO4_0_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+void connect_left_opamp_2_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ANALOG0_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ANALOG0_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_ANALOG0_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_ANALOG0_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+void connect_left_opamp_2_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_AMUXBUSA_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_AMUXBUSA_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_AMUXBUSA_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_AMUXBUSA_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+void connect_left_opamp_2_to_gpio3_4()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_GPIO3_4_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_GPIO3_4_CONNECT;
+    switch_opamp_2_l_mask = value;
+}
+
+void disconnect_left_opamp_2_from_gpio3_4()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_mask & ~SWITCH_AMP2L_GPIO3_4_MASK;
+    switch_opamp_2_l_mask = value;
+
+    value = switch_opamp_2_l_mask | SWITCH_AMP2L_GPIO3_4_GROUND;
+    switch_opamp_2_l_mask = value;
+}
+
+/* Right op amp 2 positive input */
+
+void connect_right_opamp_2_inp_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p__mask | SWITCH_AMP2R_P_DAC1;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_DAC1;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_ANALOG0;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_ANALOG0;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_AMUXBUSA;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_AMUXBUSA;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_left_instramp_2_inp_to_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_INSTRAMPL_P_RHEOSTAT2O;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_left_instramp_2_inp_from_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_INSTRAMPL_P_RHEOSTAT2O;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_SIO0;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_SIO0;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_TEMPSENSE;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_TEMPSENSE;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_LVREF;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_LVREF;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_VOUTREF;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_VOUTREF;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void connect_right_opamp_2_inp_to_gpio2_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_GPIO2_5_MASK;
+    switch_opamp_2_r_p_mask = value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_GPIO2_5_CONNECT;
+    switch_opamp_2_r_p_mask = value;
+}
+
+void disconnect_right_opamp_2_inp_from_gpio2_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_p_mask & ~SWITCH_AMP2R_P_GPIO2_5_MASK;
+    switch_opamp_2_r_p_mask = value;
+
+    value = switch_opamp_2_r_p_mask | SWITCH_AMP2R_P_GPIO2_5_GROUND;
+    switch_opamp_2_r_p_mask = value;
+}
+
+/* Right op amp 2 negative input */
+
+void connect_right_opamp_2_inn_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n__mask | SWITCH_AMP2R_N_DAC2;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_DAC2;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_ANALOG1;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_ANALOG1;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_AMUXBUSB;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_AMUXBUSB;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_left_instramp_2_inn_to_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_INSTRAMPL_N_RHEOSTAT2O;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_left_instramp_2_inn_from_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_INSTRAMPL_N_RHEOSTAT2O;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_rheostat_2_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_RHEOSTAT2T;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_rheostat_2_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_RHEOSTAT2T;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_SIO1;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_SIO1;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_VBGTC;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_VBGTC;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_RVREF;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_RVREF;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_VINREF;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_VINREF;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void connect_right_opamp_2_inn_to_gpio2_4()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_GPIO2_4_MASK;
+    switch_opamp_2_r_n_mask = value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_GPIO2_4_CONNECT;
+    switch_opamp_2_r_n_mask = value;
+}
+
+void disconnect_right_opamp_2_inn_from_gpio2_4()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_r_n_mask & ~SWITCH_AMP2R_N_GPIO2_4_MASK;
+    switch_opamp_2_r_n_mask = value;
+
+    value = switch_opamp_2_r_n_mask | SWITCH_AMP2R_N_GPIO2_4_GROUND;
+    switch_opamp_2_r_n_mask = value;
+}
+
+/* Right op amp 1 positive input */
+
+void connect_right_opamp_1_inp_to_gpio5_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_GPIO5_0_MASK;
+    switch_opamp_1_r_p_mask = value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_GPIO5_0_CONNECT;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_gpio5_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_GPIO5_0_MASK;
+    switch_opamp_1_r_p_mask = value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_GPIO5_0_GROUND;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_opamp_1_inp_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p__mask | SWITCH_AMP1R_P_DAC1;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_DAC1;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_opamp_1_inp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_ANALOG0;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_ANALOG0;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_opamp_1_inp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_AMUXBUSA;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_AMUXBUSA;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_instramp_1_inp_to_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_INSTRAMPR_P_RHEOSTAT1O;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_instramp_1_inp_from_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_INSTRAMPR_P_RHEOSTAT1O;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_opamp_1_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_SIO0;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_SIO0;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_opamp_1_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_LVREF;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_LVREF;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void connect_right_opamp_1_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask | SWITCH_AMP1R_P_VOUTREF;
+    switch_opamp_1_r_p_mask = value;
+}
+
+void disconnect_right_opamp_1_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_p_mask & ~SWITCH_AMP1R_P_VOUTREF;
+    switch_opamp_1_r_p_mask = value;
+}
+
+/* Right op amp 1 negative input */
+
+void connect_right_opamp_1_inn_to_gpio5_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_GPIO5_1_MASK;
+    switch_opamp_1_r_n_mask = value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_GPIO5_1_CONNECT;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_gpio5_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_GPIO5_1_MASK;
+    switch_opamp_1_r_n_mask = value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_GPIO5_1_GROUND;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n__mask | SWITCH_AMP1R_N_DAC2;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_DAC2;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_ANALOG1;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_ANALOG1;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_AMUXBUSB;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_AMUXBUSB;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_instramp_1_inn_to_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_INSTRAMPR_N_RHEOSTAT1O;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_instramp_1_inn_from_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_INSTRAMPR_N_RHEOSTAT1O;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_rheostat_1_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_RHEOSTAT1T;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_rheostat_1_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_RHEOSTAT1T;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_SIO1;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_SIO1;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_VBGSC;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_VBGSC;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_RVREF;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_RVREF;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_VINREF;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_VINREF;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void connect_right_opamp_1_inn_to_gpio2_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_GPIO2_2_MASK;
+    switch_opamp_1_r_n_mask = value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_GPIO2_2_CONNECT;
+    switch_opamp_1_r_n_mask = value;
+}
+
+void disconnect_right_opamp_1_inn_from_gpio2_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_r_n_mask & ~SWITCH_AMP1R_N_GPIO2_2_MASK;
+    switch_opamp_1_r_n_mask = value;
+
+    value = switch_opamp_1_r_n_mask | SWITCH_AMP1R_N_GPIO2_2_GROUND;
+    switch_opamp_1_r_n_mask = value;
+}
+
+/* Left op amp 1 positive input */
+
+void connect_left_opamp_1_inp_to_gpio5_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_GPIO5_2_MASK;
+    switch_opamp_1_l_p_mask = value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_GPIO5_2_CONNECT;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_gpio5_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_GPIO5_2_MASK;
+    switch_opamp_1_l_p_mask = value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_GPIO5_2_GROUND;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p__mask | SWITCH_AMP1L_P_DAC1;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_DAC1;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_ANALOG0;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_ANALOG0;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_AMUXBUSA;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_AMUXBUSA;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_instramp_1_inp_to_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_INSTRAMPL_P_RHEOSTAT1O;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_instramp_1_inp_from_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_INSTRAMPL_P_RHEOSTAT1O;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_SIO0;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_SIO0;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_TEMPSENSE;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_TEMPSENSE;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_LVREF;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_LVREF;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP1L_P_VOUTREF;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_VOUTREF;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void connect_left_opamp_1_inp_to_gpio2_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_GPIO2_1_MASK;
+    switch_opamp_1_l_p_mask = value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_GPIO2_1_CONNECT;
+    switch_opamp_1_l_p_mask = value;
+}
+
+void disconnect_left_opamp_1_inp_from_gpio2_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_p_mask & ~SWITCH_AMP1L_P_GPIO2_1_MASK;
+    switch_opamp_1_l_p_mask = value;
+
+    value = switch_opamp_1_l_p_mask | SWITCH_AMP1L_P_GPIO2_1_GROUND;
+    switch_opamp_1_l_p_mask = value;
+}
+
+/* Left op amp 1 negative input */
+
+void connect_left_opamp_1_inn_to_gpio5_3()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_GPIO5_3_MASK;
+    switch_opamp_1_l_n_mask = value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_GPIO5_3_CONNECT;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_gpio5_3()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_GPIO5_3_MASK;
+    switch_opamp_1_l_n_mask = value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_GPIO5_3_GROUND;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n__mask | SWITCH_AMP1L_N_DAC2;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_DAC2;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_ANALOG1;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_ANALOG1;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_AMUXBUSB;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_AMUXBUSB;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_instramp_1_inn_to_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_INSTRAMPL_N_RHEOSTAT1O;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_instramp_1_inn_from_rheostat_1_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_INSTRAMPL_N_RHEOSTAT1O;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_rheostat_1_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_RHEOSTAT1T;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_rheostat_1_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_RHEOSTAT1T;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_SIO1;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_SIO1;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_VBGTC;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_VBGTC;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_RVREF;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_RVREF;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_VINREF;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_VINREF;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void connect_left_opamp_1_inn_to_gpio2_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_GPIO2_0_MASK;
+    switch_opamp_1_l_n_mask = value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_GPIO2_0_CONNECT;
+    switch_opamp_1_l_n_mask = value;
+}
+
+void disconnect_left_opamp_1_inn_from_gpio2_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_1_l_n_mask & ~SWITCH_AMP1L_N_GPIO2_0_MASK;
+    switch_opamp_1_l_n_mask = value;
+
+    value = switch_opamp_1_l_n_mask | SWITCH_AMP1L_N_GPIO2_0_GROUND;
+    switch_opamp_1_l_n_mask = value;
+}
+
+/* Left op amp 2 positive input */
+
+void connect_left_opamp_2_inp_to_gpio5_4()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_GPIO5_4_MASK;
+    switch_opamp_2_l_p_mask = value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_GPIO5_4_CONNECT;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_gpio5_4()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_GPIO5_4_MASK;
+    switch_opamp_2_l_p_mask = value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_GPIO5_4_GROUND;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_left_opamp_2_inp_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p__mask | SWITCH_AMP2L_P_DAC1;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_DAC1;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_left_opamp_2_inp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_ANALOG0;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_ANALOG0;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_left_opamp_2_inp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_AMUXBUSA;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_AMUXBUSA;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_right_instramp_2_inp_to_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_INSTRAMPR_P_RHEOSTAT2O;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_right_instramp_2_inp_from_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_INSTRAMPR_P_RHEOSTAT2O;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_left_opamp_2_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_SIO0;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_SIO0;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_left_opamp_2_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_LVREF;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_LVREF;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void connect_left_opamp_2_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask | SWITCH_AMP2L_P_VOUTREF;
+    switch_opamp_2_l_p_mask = value;
+}
+
+void disconnect_left_opamp_2_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_p_mask & ~SWITCH_AMP2L_P_VOUTREF;
+    switch_opamp_2_l_p_mask = value;
+}
+
+/* Left op amp 2 negative input */
+
+void connect_left_opamp_2_inn_to_gpio5_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_GPIO5_5_MASK;
+    switch_opamp_2_l_n_mask = value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_GPIO5_5_CONNECT;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_gpio5_5()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_GPIO5_5_MASK;
+    switch_opamp_2_l_n_mask = value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_GPIO5_5_GROUND;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n__mask | SWITCH_AMP2L_N_DAC2;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_DAC2;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_ANALOG1;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_ANALOG1;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_AMUXBUSB;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_AMUXBUSB;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_right_instramp_2_inn_to_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_INSTRAMPR_N_RHEOSTAT2O;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_right_instramp_2_inn_from_rheostat_2_out()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_INSTRAMPR_N_RHEOSTAT2O;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_rheostat_2_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_RHEOSTAT2T;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_rheostat_2_tap()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_RHEOSTAT2T;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_SIO1;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_SIO1;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_VBGSC;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_VBGSC;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_RVREF;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_RVREF;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void connect_left_opamp_2_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask | SWITCH_AMP2L_N_VINREF;
+    switch_opamp_2_l_n_mask = value;
+}
+
+void disconnect_left_opamp_2_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_opamp_2_l_n_mask & ~SWITCH_AMP2L_N_VINREF;
+    switch_opamp_2_l_n_mask = value;
+}
+
+/* Left instrumentation amplifier output */
+
+void connect_left_instramp_to_ulp_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_ULPCOMPP_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_ULPCOMPP_CONNECT;
+    switch_instramp_l_mask = value;
+}
+
+void disconnect_left_instramp_from_ulp_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_ULPCOMPP_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_ULPCOMPP_GROUND;
+    switch_instramp_l_mask = value;
+}
+
+void connect_left_instramp_to_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_PRECCOMPP_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_PRECCOMPP_CONNECT;
+    switch_instramp_l_mask = value;
+}
+
+void disconnect_left_instramp_from_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_PRECCOMPP_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_PRECCOMPP_GROUND;
+    switch_instramp_l_mask = value;
+}
+
+void connect_left_instramp_to_adc_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_ADC1_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_ADC1_CONNECT;
+    switch_instramp_l_mask = value;
+}
+
+void disconnect_left_instramp_from_adc_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_ADC1_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_ADC1_GROUND;
+    switch_instramp_l_mask = value;
+}
+
+void connect_left_instramp_to_gpio4_4()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_GPIO4_4_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_GPIO4_4_CONNECT;
+    switch_instramp_l_mask = value;
+}
+
+void disconnect_left_instramp_from_gpio4_4()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_GPIO4_4_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_GPIO4_4_GROUND;
+    switch_instramp_l_mask = value;
+}
+
+void connect_left_instramp_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_ANALOG1_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_ANALOG1_CONNECT;
+    switch_instramp_l_mask = value;
+}
+
+void disconnect_left_instramp_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_ANALOG1_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_ANALOG1_GROUND;
+    switch_instramp_l_mask = value;
+}
+
+void connect_left_instramp_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_AMUXBUSB_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_AMUXBUSB_CONNECT;
+    switch_instramp_l_mask = value;
+}
+
+void disconnect_left_instramp_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_mask & ~SWITCH_INSTRAMPL_AMUXBUSB_MASK;
+    switch_instramp_l_mask = value;
+
+    value = switch_instramp_l_mask | SWITCH_INSTRAMPL_AMUXBUSB_GROUND;
+    switch_instramp_l_mask = value;
+}
+
+/* Right instrumentation amplifier output */
+
+void connect_right_instramp_to_ulp_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_ULPCOMPN_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_ULPCOMPN_CONNECT;
+    switch_instramp_r_mask = value;
+}
+
+void disconnect_right_instramp_from_ulp_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPL_ULPCOMPN_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPL_ULPCOMPN_GROUND;
+    switch_instramp_r_mask = value;
+}
+
+void connect_right_instramp_to_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_PRECCOMPN_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_PRECCOMPN_CONNECT;
+    switch_instramp_r_mask = value;
+}
+
+void disconnect_right_instramp_from_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_PRECCOMPN_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_PRECCOMPN_GROUND;
+    switch_instramp_r_mask = value;
+}
+
+void connect_right_instramp_to_adc_2()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_ADC2_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_ADC2_CONNECT;
+    switch_instramp_r_mask = value;
+}
+
+void disconnect_right_instramp_from_adc_2()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_ADC2_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_ADC2_GROUND;
+    switch_instramp_r_mask = value;
+}
+
+void connect_right_instramp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPL_ANALOG0_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_ANALOG0_CONNECT;
+    switch_instramp_r_mask = value;
+}
+
+void disconnect_right_instramp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_ANALOG0_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_ANALOG0_GROUND;
+    switch_instramp_r_mask = value;
+}
+
+void connect_right_instramp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_AMUXBUSA_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_AMUXBUSA_CONNECT;
+    switch_instramp_r_mask = value;
+}
+
+void disconnect_right_instramp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_mask & ~SWITCH_INSTRAMPR_AMUXBUSA_MASK;
+    switch_instramp_r_mask = value;
+
+    value = switch_instramp_r_mask | SWITCH_INSTRAMPR_AMUXBUSA_GROUND;
+    switch_instramp_r_mask = value;
+}
+
+
+/* Left instrumentation amplifier negative input */
+
+void connect_left_instramp_inn_to_gpio5_7()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_GPIO5_7_MASK;
+    switch_instramp_l_n_mask = value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_GPIO5_7_CONNECT;
+    switch_instramp_l_n_mask = value;
+}
+
+void disconnect_left_instramp_inn_from_gpio5_7()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_GPIO5_7_MASK;
+    switch_instramp_l_n_mask = value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_GPIO5_7_GROUND;
+    switch_instramp_l_n_mask = value;
+}
+
+void connect_left_instramp_inn_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_ANALOG1;
+    switch_instramp_l_n_mask = value;
+}
+
+void disconnect_left_instramp_inn_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_ANALOG1;
+    switch_instramp_l_n_mask = value;
+}
+
+void connect_left_instramp_inn_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_AMUXBUSB;
+    switch_instramp_l_n_mask = value;
+}
+
+void disconnect_left_instramp_inn_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_AMUXBUSB;
+    switch_instramp_l_n_mask = value;
+}
+
+void connect_left_instramp_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_SIO1;
+    switch_instramp_l_n_mask = value;
+}
+
+void disconnect_left_instramp_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_SIO1;
+    switch_instramp_l_n_mask = value;
+}
+
+void connect_left_instramp_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_RVREF;
+    switch_instramp_l_n_mask = value;
+}
+
+void disconnect_left_instramp_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_RVREF;
+    switch_instramp_l_n_mask = value;
+}
+
+void connect_left_instramp_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask | SWITCH_INSTRAMPL_N_VINREF;
+    switch_instramp_l_n_mask = value;
+}
+
+void disconnect_left_instramp_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_n_mask & ~SWITCH_INSTRAMPL_N_VINREF;
+    switch_instramp_l_n_mask = value;
+}
+
+
+/* Left instrumentation amplifier positive input */
+
+void connect_left_instramp_inp_to_gpio5_6()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_GPIO5_6_MASK;
+    switch_instramp_l_p_mask = value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_GPIO5_6_CONNECT;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_gpio5_6()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_GPIO5_6_MASK;
+    switch_instramp_l_p_mask = value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_GPIO5_6_GROUND;
+    switch_instramp_l_p_mask = value;
+}
+
+void connect_left_instramp_inp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_ANALOG0;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_ANALOG0;
+    switch_instramp_l_p_mask = value;
+}
+
+void connect_left_instramp_inp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_AMUXBUSA;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_AMUXBUSA;
+    switch_instramp_l_p_mask = value;
+}
+
+void connect_left_instramp_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_SIO0;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_SIO0;
+    switch_instramp_l_p_mask = value;
+}
+
+void connect_left_instramp_inp_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_TEMPSENSE;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_TEMPSENSE;
+    switch_instramp_l_p_mask = value;
+}
+
+void connect_left_instramp_inp_to__left_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_LVREF;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_LVREF;
+    switch_instramp_l_p_mask = value;
+}
+
+void connect_left_instramp_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask | SWITCH_INSTRAMPL_P_VOUTREF;
+    switch_instramp_l_p_mask = value;
+}
+
+void disconnect_left_instramp_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_instramp_l_p_mask & ~SWITCH_INSTRAMPL_P_VOUTREF;
+    switch_instramp_l_p_mask = value;
+}
+
+/* Right instrumentation amplifier negative input */
+
+void connect_right_instramp_inn_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_ANALOG1;
+    switch_instramp_r_n_mask = value;
+}
+
+void disconnect_right_instramp_inn_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_ANALOG1;
+    switch_instramp_r_n_mask = value;
+}
+
+void connect_right_instramp_inn_to_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_AMUXBUSB;
+    switch_instramp_r_n_mask = value;
+}
+
+void disconnect_right_instramp_inn_from_amuxbusB()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_AMUXBUSB;
+    switch_instramp_r_n_mask = value;
+}
+
+void connect_right_instramp_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_SIO1;
+    switch_instramp_r_n_mask = value;
+}
+
+void disconnect_right_instramp_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_SIO1;
+    switch_instramp_r_n_mask = value;
+}
+
+void connect_right_instramp_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_RVREF;
+    switch_instramp_r_n_mask = value;
+}
+
+void disconnect_right_instramp_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_RVREF;
+    switch_instramp_r_n_mask = value;
+}
+
+void connect_right_instramp_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_VINREF;
+    switch_instramp_r_n_mask = value;
+}
+
+void disconnect_right_instramp_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_VINREF;
+    switch_instramp_r_n_mask = value;
+}
+
+void connect_right_instramp_inn_to_gpio2_6()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_GPIO2_6_MASK;
+    switch_instramp_r_n_mask = value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_GPIO2_6_CONNECT;
+    switch_instramp_r_n_mask = value;
+}
+
+void disconnect_right_instramp_inn_from_gpio2_6()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_n_mask & ~SWITCH_INSTRAMPR_N_GPIO2_6_MASK;
+    switch_instramp_r_n_mask = value;
+
+    value = switch_instramp_r_n_mask | SWITCH_INSTRAMPR_N_GPIO2_6_GROUND;
+    switch_instramp_r_n_mask = value;
+}
+
+/* Right instrumentation amplifier positive input */
+
+void connect_right_instramp_inp_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_ANALOG0;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_ANALOG0;
+    switch_instramp_r_p_mask = value;
+}
+
+void connect_right_instramp_inp_to_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_AMUXBUSA;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_amuxbusA()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_AMUXBUSA;
+    switch_instramp_r_p_mask = value;
+}
+
+void connect_right_instramp_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_SIO0;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_SIO0;
+    switch_instramp_r_p_mask = value;
+}
+
+void connect_right_instramp_inp_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_TEMPSENSE;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_TEMPSENSE;
+    switch_instramp_r_p_mask = value;
+}
+
+void connect_right_instramp_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_LVREF;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_LVREF;
+    switch_instramp_r_p_mask = value;
+}
+
+void connect_right_instramp_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_VOUTREF;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_VOUTREF;
+    switch_instramp_r_p_mask = value;
+}
+
+void connect_right_instramp_inp_to_gpio2_7()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_GPIO2_7_MASK;
+    switch_instramp_r_p_mask = value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_GPIO2_7_CONNECT;
+    switch_instramp_r_p_mask = value;
+}
+
+void disconnect_right_instramp_inp_from_gpio2_7()
+{
+    uint32_t value;
+
+    value = switch_instramp_r_p_mask & ~SWITCH_INSTRAMPR_P_GPIO2_7_MASK;
+    switch_instramp_r_p_mask = value;
+
+    value = switch_instramp_r_p_mask | SWITCH_INSTRAMPR_P_GPIO2_7_GROUND;
+    switch_instramp_r_p_mask = value;
+}
+
+/* ULP comparator inp */
+
+void connect_ulp_comp_inp_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_DAC1;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_DAC1;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_ANALOG1;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_ANALOG1;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_SIO0;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_SIO0;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_VBGTC;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_VBGTC;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_TEMPSENSE;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_TEMPSENSE;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_LVREF;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_LVREF;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_VOUTREF;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_VOUTREF;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_gpio6_0()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_GPIO6_0_MASK;
+    switch_ulp_comp_p_mask = value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_GPIO6_0_CONNECT;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_gpio6_0()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_GPIO6_0_MASK;
+    switch_ulp_comp_p_mask = value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_GPIO6_0_GROUND;
+    switch_ulp_comp_p_mask = value;
+}
+
+void connect_ulp_comp_inp_to_gpio1_7()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_GPIO1_7_MASK;
+    switch_ulp_comp_p_mask = value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_GPIO1_7_CONNECT;
+    switch_ulp_comp_p_mask = value;
+}
+
+void disconnect_ulp_comp_inp_from_gpio1_7()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_p_mask & ~SWITCH_ULPCOMP_P_GPIO1_7_MASK;
+    switch_ulp_comp_p_mask = value;
+
+    value = switch_ulp_comp_p_mask | SWITCH_ULPCOMP_P_GPIO1_7_GROUND;
+    switch_ulp_comp_p_mask = value;
+}
+
+/* ULP comparator inn */
+
+void connect_ulp_comp_inn_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_DAC2;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_DAC2;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_ANALOG0;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_ANALOG0;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_SIO1;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_SIO1;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_VBGSC;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_VBGSC;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_RVREF;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_RVREF;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_VINREF;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_VINREF;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_gpio6_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_GPIO6_1_MASK;
+    switch_ulp_comp_n_mask = value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_GPIO6_1_CONNECT;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_gpio6_1()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_GPIO6_1_MASK;
+    switch_ulp_comp_n_mask = value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_GPIO6_1_GROUND;
+    switch_ulp_comp_n_mask = value;
+}
+
+void connect_ulp_comp_inn_to_gpio1_6()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_GPIO1_6_MASK;
+    switch_ulp_comp_n_mask = value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_GPIO1_6_CONNECT;
+    switch_ulp_comp_n_mask = value;
+}
+
+void disconnect_ulp_comp_inn_from_gpio1_6()
+{
+    uint32_t value;
+
+    value = switch_ulp_comp_n_mask & ~SWITCH_ULPCOMP_N_GPIO1_6_MASK;
+    switch_ulp_comp_n_mask = value;
+
+    value = switch_ulp_comp_n_mask | SWITCH_ULPCOMP_N_GPIO1_6_GROUND;
+    switch_ulp_comp_n_mask = value;
+}
+
+/* Precision comparator inp */
+
+void connect_prec_comp_inp_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_DAC1;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_DAC1;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_ANALOG1;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_ANALOG1;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_sio_0()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_SIO0;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_sio_0()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_SIO0;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_VBGTC;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_VBGTC;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_TEMPSENSE;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_TEMPSENSE;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_LVREF;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_LVREF;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_VOUTREF;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_VOUTREF;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_gpio6_2()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_GPIO6_2_MASK;
+    switch_prec_comp_p_mask = value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_GPIO6_2_CONNECT;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_gpio6_2()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_GPIO6_2_MASK;
+    switch_prec_comp_p_mask = value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_GPIO6_2_GROUND;
+    switch_prec_comp_p_mask = value;
+}
+
+void connect_prec_comp_inp_to_gpio1_5()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_GPIO1_5_MASK;
+    switch_prec_comp_p_mask = value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_GPIO1_5_CONNECT;
+    switch_prec_comp_p_mask = value;
+}
+
+void disconnect_prec_comp_inp_from_gpio1_5()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_p_mask & ~SWITCH_PRECCOMP_P_GPIO1_5_MASK;
+    switch_prec_comp_p_mask = value;
+
+    value = switch_prec_comp_p_mask | SWITCH_PRECCOMP_P_GPIO1_5_GROUND;
+    switch_prec_comp_p_mask = value;
+}
+
+/* Precision comparator inn */
+
+void connect_prec_comp_inn_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_DAC2;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_DAC2;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_ANALOG0;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_ANALOG0;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_sio_1()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_SIO1;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_sio_1()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_SIO1;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_VBGSC;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_VBGSC;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_RVREF;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_RVREF;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_VINREF;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_VINREF;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_gpio6_3()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_GPIO6_3_MASK;
+    switch_prec_comp_n_mask = value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_GPIO6_3_CONNECT;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_gpio6_3()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_GPIO6_3_MASK;
+    switch_prec_comp_n_mask = value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_GPIO6_3_GROUND;
+    switch_prec_comp_n_mask = value;
+}
+
+void connect_prec_comp_inn_to_gpio1_4()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_GPIO1_4_MASK;
+    switch_prec_comp_n_mask = value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_GPIO1_4_CONNECT;
+    switch_prec_comp_n_mask = value;
+}
+
+void disconnect_prec_comp_inn_from_gpio1_4()
+{
+    uint32_t value;
+
+    value = switch_prec_comp_n_mask & ~SWITCH_PRECCOMP_N_GPIO1_4_MASK;
+    switch_prec_comp_n_mask = value;
+
+    value = switch_prec_comp_n_mask | SWITCH_PRECCOMP_N_GPIO1_4_GROUND;
+    switch_prec_comp_n_mask = value;
+}
+
+
+/* ADC 1 */
+
+void connect_adc_1_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_DAC1;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_DAC1;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_ANALOG1;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_ANALOG1;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_VBGTC;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_VBGTC;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_TEMPSENSE;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_TEMPSENSE;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_LVREF;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_LVREF;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_VOUTREF;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_VOUTREF;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_gpio6_4()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_GPIO6_4_MASK;
+    switch_adc_1_mask = value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_GPIO6_4_CONNECT;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_gpio6_4()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_GPIO6_4_MASK;
+    switch_adc_1_mask = value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_GPIO6_4_GROUND;
+    switch_adc_1_mask = value;
+}
+
+void connect_adc_1_to_gpio1_3()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_GPIO1_3_MASK;
+    switch_adc_1_mask = value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_GPIO1_3_CONNECT;
+    switch_adc_1_mask = value;
+}
+
+void disconnect_adc_1_from_gpio1_3()
+{
+    uint32_t value;
+
+    value = switch_adc_1_mask & ~SWITCH_ADC1_GPIO1_3_MASK;
+    switch_adc_1_mask = value;
+
+    value = switch_adc_1_mask | SWITCH_ADC1_GPIO1_3_GROUND;
+    switch_adc_1_mask = value;
+}
+
+/* ADC 2 */
+
+void connect_adc_2_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_DAC2;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_DAC2;
+    switch_adc_2_mask = value;
+}
+
+void connect_adc_2_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_ANALOG0;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_ANALOG0;
+    switch_adc_2_mask = value;
+}
+
+void connect_adc_2_to_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_VBGSC;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_VBGSC;
+    switch_adc_2_mask = value;
+}
+
+void connect_adc_2_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_RVREF;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_RVREF;
+    switch_adc_2_mask = value;
+}
+
+void connect_adc_2_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_VINREF;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_VINREF;
+    switch_adc_2_mask = value;
+}
+
+void connect_adc_2_to_gpio6_5()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_GPIO6_5_MASK;
+    switch_adc_2_mask = value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_GPIO6_5_CONNECT;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_gpio6_5()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_GPIO6_5_MASK;
+    switch_adc_2_mask = value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_GPIO6_5_GROUND;
+    switch_adc_2_mask = value;
+}
+
+void connect_adc_2_to_gpio1_2()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_GPIO1_2_MASK;
+    switch_adc_2_mask = value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_GPIO1_2_CONNECT;
+    switch_adc_2_mask = value;
+}
+
+void disconnect_adc_2_from_gpio1_2()
+{
+    uint32_t value;
+
+    value = switch_adc_2_mask & ~SWITCH_ADC2_GPIO1_2_MASK;
+    switch_adc_2_mask = value;
+
+    value = switch_adc_2_mask | SWITCH_ADC2_GPIO1_2_GROUND;
+    switch_adc_2_mask = value;
+}
+
+/* SIO pins */
+
+void connect_sio_0_to_pin()
+{
+    uint32_t value;
+
+    value = switch_sio_mask & ~SWITCH_SIO0_MASK;
+    switch_sio_mask = value;
+
+    value = switch_sio_mask | SWITCH_SIO0_CONNECT;
+    switch_sio_mask = value;
+}
+
+void disconnect_sio_0_from_pin()
+{
+    uint32_t value;
+
+    value = switch_sio_mask & ~SWITCH_SIO0_MASK;
+    switch_sio_mask = value;
+
+    value = switch_sio_mask | SWITCH_SIO0_GROUND;
+    switch_sio_mask = value;
+}
+
+void connect_sio_1_to_pin()
+{
+    uint32_t value;
+
+    value = switch_sio_mask & ~SWITCH_SIO1_MASK;
+    switch_sio_mask = value;
+
+    value = switch_sio_mask | SWITCH_SIO1_CONNECT;
+    switch_sio_mask = value;
+}
+
+void disconnect_sio_1_from_pin()
+{
+    uint32_t value;
+
+    value = switch_sio_mask & ~SWITCH_SIO1_MASK;
+    switch_sio_mask = value;
+
+    value = switch_sio_mask | SWITCH_SIO1_GROUND;
+    switch_sio_mask = value;
+}
+
+/* Analog pins */
+
+void connect_analog_0_to_pin()
+{
+    uint32_t value;
+
+    value = switch_analog_mask & ~SWITCH_ANALOG0_MASK;
+    switch_analog_mask = value;
+
+    value = switch_analog_mask | SWITCH_ANALOG0_CONNECT;
+    switch_analog_mask = value;
+}
+
+void disconnect_analog_0_from_pin()
+{
+    uint32_t value;
+
+    value = switch_analog_mask & ~SWITCH_ANALOG0_MASK;
+    switch_analog_mask = value;
+
+    value = switch_analog_mask | SWITCH_ANALOG0_GROUND;
+    switch_analog_mask = value;
+}
+
+void connect_analog_1_to_pin()
+{
+    uint32_t value;
+
+    value = switch_analog_mask & ~SWITCH_ANALOG1_MASK;
+    switch_analog_mask = value;
+
+    value = switch_analog_mask | SWITCH_ANALOG1_CONNECT;
+    switch_analog_mask = value;
+}
+
+void disconnect_analog_1_from_pin()
+{
+    uint32_t value;
+
+    value = switch_analog_mask & ~SWITCH_ANALOG1_MASK;
+    switch_analog_mask = value;
+
+    value = switch_analog_mask | SWITCH_ANALOG1_GROUND;
+    switch_analog_mask = value;
+}
+
+/* User project */
+
+void connect_user_to_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_VBGTC;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_vbgtc()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_VBGTC;
+    switch_user_mask = value;
+}
+
+void connect_user_to_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_VBGSC;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_vbgsc()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_VBGSC;
+    switch_user_mask = value;
+}
+
+void connect_user_to_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_PRECCOMP_N_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_PRECCOMP_N_CONNECT;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_prec_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_PRECCOMP_N_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_PRECCOMP_N_GROUND;
+    switch_user_mask = value;
+}
+
+void connect_user_to_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_PRECCOMP_P_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_PRECCOMP_P_CONNECT;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_PRECCOMP_P_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_PRECCOMP_P_GROUND;
+    switch_user_mask = value;
+}
+
+void connect_user_to_ulp_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ULPCOMP_N_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ULPCOMP_N_CONNECT;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_ulp_comp_inn()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ULPCOMP_N_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ULPCOMP_N_GROUND;
+    switch_user_mask = value;
+}
+
+void connect_user_to_ulp_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ULPCOMP_P_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ULPCOMP_P_CONNECT;
+    switch_user_mask = value;
+}
+
+void disconnect_user_ulp_prec_comp_inp()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ULPCOMP_P_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ULPCOMP_P_GROUND;
+    switch_user_mask = value;
+}
+
+void connect_user_to_adc_1()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ADC1_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ADC1_CONNECT;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_adc_1()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ADC1_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ADC1_GROUND;
+    switch_user_mask = value;
+}
+
+void connect_user_to_adc_2()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ADC2_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ADC2_CONNECT;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_adc_2()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_ADC2_MASK;
+    switch_user_mask = value;
+
+    value = switch_user_mask | SWITCH_USER_ADC2_GROUND;
+    switch_user_mask = value;
+}
+
+void connect_user_to_dac_1()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_DAC1;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_dac_1()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_DAC1;
+    switch_user_mask = value;
+}
+
+void connect_user_to_dac_2()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_DAC2;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_dac_2()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_DAC2;
+    switch_user_mask = value;
+}
+
+void connect_user_to_tempsense()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_TEMPSENSE;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_tempsense()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_TEMPSENSE;
+    switch_user_mask = value;
+}
+
+void connect_user_to_right_vref()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_RVREF;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_right_vref()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_RVREF;
+    switch_user_mask = value;
+}
+
+void connect_user_to_left_vref()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_LVREF;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_left_vref()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_LVREF;
+    switch_user_mask = value;
+}
+
+void connect_user_to_vinref()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_VINREF;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_vinref()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_VINREF;
+    switch_user_mask = value;
+}
+
+void connect_user_to_voutref()
+{
+    uint32_t value;
+
+    value = switch_user_mask | SWITCH_USER_VOUTREF;
+    switch_user_mask = value;
+}
+
+void disconnect_user_from_voutref()
+{
+    uint32_t value;
+
+    value = switch_user_mask & ~SWITCH_USER_VREF;
+    switch_user_mask = value;
+}
+
+/* DAC */
+
+void connect_dac_1_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_dac_mask | SWITCH_DAC1_ANALOG1;
+    switch_dac_mask = value;
+}
+
+void disconnect_dac_1_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_dac_mask & ~SWITCH_DAC1_ANALOG1;
+    switch_dac_mask = value;
+}
+
+void connect_dac_2_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_dac_mask | SWITCH_DAC2_ANALOG0;
+    switch_dac_mask = value;
+}
+
+void disconnect_dac_2_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_dac_mask & ~SWITCH_DAC2_ANALOG0;
+    switch_dac_mask = value;
+}
+
+void connect_audiodac_p_to_analog_1()
+{
+    uint32_t value;
+
+    value = switch_dac_mask | SWITCH_AUDIODAC_P_ANALOG1;
+    switch_dac_mask = value;
+}
+
+void disconnect_audiodac_p_from_analog_1()
+{
+    uint32_t value;
+
+    value = switch_dac_mask & ~SWITCH_AUDIODAC_P_ANALOG1;
+    switch_dac_mask = value;
+}
+
+void connect_audiodac_n_to_analog_0()
+{
+    uint32_t value;
+
+    value = switch_dac_mask | SWITCH_AUDIODAC_N_ANALOG0;
+    switch_dac_mask = value;
+}
+
+void disconnect_audiodac_n_from_analog_0()
+{
+    uint32_t value;
+
+    value = switch_dac_mask & ~SWITCH_AUDIODAC_N_ANALOG0;
+    switch_dac_mask = value;
 }
 
