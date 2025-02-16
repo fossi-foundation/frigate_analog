@@ -1,0 +1,19 @@
+--------------------------------------------------------------------
+regulated_dac_app:
+--------------------------------------------------------------------
+
+An example application for use with the Frigate chip.
+
+This application configures frigate_analog to instantiate a DAC which
+is referenced from a supply-independent voltage reference of 2.56V,
+such that the DAC output is in steps of 10mV.
+
+This uses the CMOS voltage reference scaled output of 1.024V followed
+by an amplifier stage with a gain of 2.5 to set the 2.56V reference
+for the DAC.
+
+See the description of the circuit setup in the "frigate_analog"
+document.
+
+This is a work in progress and is currently waiting on aspects of the
+Frigate SoC definition to be completed.

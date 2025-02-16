@@ -5,6 +5,9 @@
 /* February 13, 2025				*/
 /*----------------------------------------------*/
 
+#ifndef _FRIGATE_ANALOG_DEFS_H
+#define _FRIGATE_ANALOG_DEFS_H
+
 /* Register definitions */
 
 /* Operational amplifiers */
@@ -754,3 +757,4 @@
 #define VINREF_SELECT_AMUXBUSA			2
 #define VINREF_SELECT_AMUXBUSB			3
 
+#endif /* _FRIGATE_ANALOG_DEFS_H */

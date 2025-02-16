@@ -5,6 +5,9 @@
 /* February 15, 2025					*/
 /*------------------------------------------------------*/
 
+#ifndef _FRIGATE_ANALOG_STUBS_H
+#define _FRIGATE_ANALOG_STUBS_H
+
 /* Right operatational amplifier 1		*/
 
 void right_opamp_1_enable();
@@ -845,3 +848,4 @@ void disconnect_audiodac_p_from_analog_1();
 void connect_audiodac_n_to_analog_0();
 void disconnect_audiodac_n_from_analog_0();
 
+#endif /* _FRIGATE_ANALOG_STUBS_H */
