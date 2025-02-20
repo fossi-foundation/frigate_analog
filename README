@@ -6,12 +6,12 @@ in general information on how to add dependent repositories.
 
 For repositories belonging to the same group (efabless) as the design, use:
 
-	 git submodule add ../panamax.git dependencies/panamax
+	 git submodule add ../panamax.git ip/panamax
 
 For repositories with a different ownership, use, e.g.,:
 
-	git submodule add ../../RTimothyEdwards/sky130_ef_ip__analog_switches \
-		dependencies/sky130_ef_ip__analog_switches
+	git submodule add ../../RTimothyEdwards/sky130_ef_ip__biasgen \
+		ip/sky130_ef_ip__biasgen
 
 Submodules should be updated recursively, since some dependencies have
 their own dependencies.  This creates redundant versions of some circuits,
