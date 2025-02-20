@@ -25,3 +25,7 @@ source [file dirname [info script]]/../ip/sky130_od_ip__tempsensor/xschem/xschem
 source [file dirname [info script]]/../ip/sky130_sw_ip__por/xschem/xschemrc
 source [file dirname [info script]]/../ip/sky130_td_ip__opamp_hp/xschem/xschemrc
 source [file dirname [info script]]/../ip/sky130_vbl_ip__overvoltage/xschem/xschemrc
+source [file dirname [info script]]/../ip/sky130_ef_ip__rc_osc_16M/xschem/xschemrc
+source [file dirname [info script]]/../ip/sky130_ef_ip__rc_osc_500k/xschem/xschemrc
+source [file dirname [info script]]/../ip/sky130_ht_ip__hsxo_cpz1/xschem/xschemrc
+source [file dirname [info script]]/../ip/sky130_be_ip__lsxo/xschem/xschemrc
