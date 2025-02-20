@@ -133,10 +133,10 @@ lab=#net1}
 N -560 600 -450 600 {
 lab=vssa3}
 C {xres_buf.sym} 450 -430 0 0 {name=x1}
-C {../dependencies/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sym} -70 170 0 0 {name=x2}
-C {../dependencies/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sym} 200 440 0 0 {name=x3}
-C {../dependencies/sky130_be_ip__lsxo/xschem/sky130_be_ip__lsxo.sym} -30 -210 0 0 {name=x4}
-C {../dependencies/sky130_ht_ip__hsxo_cpz1/xschem/sky130_ht_ip__hsxo_cpz1.sym} 590 0 0 0 {name=X5}
+C {../ip/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sym} -70 170 0 0 {name=x2}
+C {../ip/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sym} 200 440 0 0 {name=x3}
+C {../ip/sky130_be_ip__lsxo/xschem/sky130_be_ip__lsxo.sym} -30 -210 0 0 {name=x4}
+C {../ip/sky130_ht_ip__hsxo_cpz1/xschem/sky130_ht_ip__hsxo_cpz1.sym} 590 0 0 0 {name=X5}
 C {devices/ipin.sym} -600 -200 0 0 {name=p1 lab=resetb_in_h}
 C {devices/iopin.sym} -600 -290 0 1 {name=p2 lab=vssd0}
 C {devices/opin.sym} -620 -100 0 0 {name=p3 lab=rc_osc_16M_dout}

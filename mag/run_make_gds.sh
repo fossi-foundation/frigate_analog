@@ -24,8 +24,8 @@ load $project1
 # Replace the comparator with its abstract view. . . this is a temporary measure
 # until the error causing magic not to generate hierarchical GDS for this cell
 # is found and corrected.
-addpath ../dependencies/sky130_ak_ip__comparator/maglef
-cellname filepath sky130_ak_ip__comparator ../dependencies/sky130_ak_ip__comparator/maglef
+addpath ../ip/sky130_ak_ip__comparator/maglef
+cellname filepath sky130_ak_ip__comparator ../ip/sky130_ak_ip__comparator/maglef
 flush sky130_ak_ip__comparator
 select top cell
 gds write ../gds/${project1}.gds.gz

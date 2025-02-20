@@ -148,7 +148,7 @@ use frigate_timing_frontend  frigate_timing_frontend_0
 timestamp 1719949696
 transform 1 0 247240 0 1 41166
 box 1 -21 84200 25600
-use panamax  panamax_0 ../dependencies/panamax/mag
+use panamax  panamax_0 ../ip/panamax/mag
 timestamp 1719158962
 transform 1 0 151 0 1 204
 box -151 -204 717751 1037600

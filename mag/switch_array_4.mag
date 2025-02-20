@@ -196,7 +196,7 @@ use anablock_via_cut3  anablock_via_cut3_15
 timestamp 1719104139
 transform 1 0 262 0 1 -6026
 box 1426 5624 1624 5684
-use isolated_switch_xlarge  isolated_switch_xlarge_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use isolated_switch_xlarge  isolated_switch_xlarge_0 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 1 5906 0 1 -8042
 timestamp 1724442184
 transform 0 -1 1336 1 0 -656

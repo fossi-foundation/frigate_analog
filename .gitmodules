@@ -1,69 +1,69 @@
 [submodule "dependencies/panamax"]
-	path = dependencies/panamax
+	path = ip/panamax
 	url = ../panamax.git
 [submodule "dependencies/sky130_ajc_ip__brownout"]
-	path = dependencies/sky130_ajc_ip__brownout
+	path = ip/sky130_ajc_ip__brownout
 	url = ../sky130_ajc_ip__brownout.git
 [submodule "dependencies/sky130_ak_ip__cmos_vref"]
-	path = dependencies/sky130_ak_ip__cmos_vref
+	path = ip/sky130_ak_ip__cmos_vref
 	url = ../sky130_ak_ip__cmos_vref.git
 [submodule "dependencies/sky130_ak_ip__comparator"]
-	path = dependencies/sky130_ak_ip__comparator
+	path = ip/sky130_ak_ip__comparator
 	url = ../sky130_ak_ip__comparator.git
 [submodule "dependencies/sky130_am_ip__ldo_01v8"]
-	path = dependencies/sky130_am_ip__ldo_01v8
+	path = ip/sky130_am_ip__ldo_01v8
 	url = ../sky130_am_ip__ldo_01v8.git
 [submodule "dependencies/sky130_be_ip__lsxo"]
-	path = dependencies/sky130_be_ip__lsxo
+	path = ip/sky130_be_ip__lsxo
 	url = ../sky130_be_ip__lsxo.git
 [submodule "dependencies/sky130_cw_ip"]
-	path = dependencies/sky130_cw_ip
+	path = ip/sky130_cw_ip
 	url = ../sky130_cw_ip.git
 [submodule "dependencies/sky130_ht_ip__hsxo_cpz1"]
-	path = dependencies/sky130_ht_ip__hsxo_cpz1
+	path = ip/sky130_ht_ip__hsxo_cpz1
 	url = ../sky130_ht_ip__hsxo_cpz1.git
 [submodule "dependencies/sky130_icrg_ip__ulpcomp"]
-	path = dependencies/sky130_icrg_ip__ulpcomp
+	path = ip/sky130_icrg_ip__ulpcomp
 	url = ../sky130_icrg_ip__ulpcomp.git
 [submodule "dependencies/sky130_od_ip__tempsensor"]
-	path = dependencies/sky130_od_ip__tempsensor
+	path = ip/sky130_od_ip__tempsensor
 	url = ../sky130_od_ip__tempsensor.git
 [submodule "dependencies/sky130_pa_ip__instramp"]
-	path = dependencies/sky130_pa_ip__instramp
+	path = ip/sky130_pa_ip__instramp
 	url = ../sky130_pa_ip__instramp.git
 [submodule "dependencies/sky130_sw_ip__por"]
-	path = dependencies/sky130_sw_ip__por
+	path = ip/sky130_sw_ip__por
 	url = ../sky130_sw_ip__por.git
 [submodule "dependencies/sky130_td_ip__opamp_hp"]
-	path = dependencies/sky130_td_ip__opamp_hp
+	path = ip/sky130_td_ip__opamp_hp
 	url = ../sky130_td_ip__opamp_hp.git
 [submodule "dependencies/sky130_vbl_ip__overvoltage"]
-	path = dependencies/sky130_vbl_ip__overvoltage
+	path = ip/sky130_vbl_ip__overvoltage
 	url = ../sky130_vbl_ip__overvoltage.git
 [submodule "dependencies/sky130_ef_ip__biasgen"]
-	path = dependencies/sky130_ef_ip__biasgen
+	path = ip/sky130_ef_ip__biasgen
 	url = ../../RTimothyEdwards/sky130_ef_ip__biasgen
 [submodule "dependencies/sky130_ef_ip__ccomp3v"]
-	path = dependencies/sky130_ef_ip__ccomp3v
+	path = ip/sky130_ef_ip__ccomp3v
 	url = ../../RTimothyEdwards/sky130_ef_ip__ccomp3v
 [submodule "dependencies/sky130_ef_ip__cdac3v_12bit"]
-	path = dependencies/sky130_ef_ip__cdac3v_12bit
+	path = ip/sky130_ef_ip__cdac3v_12bit
 	url = ../../RTimothyEdwards/sky130_ef_ip__cdac3v_12bit
 [submodule "dependencies/sky130_ef_ip__rc_osc_16M"]
-	path = dependencies/sky130_ef_ip__rc_osc_16M
+	path = ip/sky130_ef_ip__rc_osc_16M
 	url = ../../RTimothyEdwards/sky130_ef_ip__rc_osc_16M
 [submodule "dependencies/sky130_ef_ip__rc_osc_500k"]
-	path = dependencies/sky130_ef_ip__rc_osc_500k
+	path = ip/sky130_ef_ip__rc_osc_500k
 	url = ../../RTimothyEdwards/sky130_ef_ip__rc_osc_500k
 [submodule "dependencies/sky130_ef_ip__rdac3v_8bit"]
-	path = dependencies/sky130_ef_ip__rdac3v_8bit
+	path = ip/sky130_ef_ip__rdac3v_8bit
 	url = ../../RTimothyEdwards/sky130_ef_ip__rdac3v_8bit
 [submodule "dependencies/sky130_ef_ip__rheostat_8bit"]
-	path = dependencies/sky130_ef_ip__rheostat_8bit
+	path = ip/sky130_ef_ip__rheostat_8bit
 	url = ../../RTimothyEdwards/sky130_ef_ip__rheostat_8bit
 [submodule "dependencies/sky130_ef_ip__analog_switches"]
-	path = dependencies/sky130_ef_ip__analog_switches
+	path = ip/sky130_ef_ip__analog_switches
 	url = ../../RTimothyEdwards/sky130_ef_ip__analog_switches
 [submodule "dependencies/sky130_iic_ip__audiodac_lite"]
-	path = dependencies/sky130_iic_ip__audiodac_lite
+	path = ip/sky130_iic_ip__audiodac_lite
 	url = ../sky130_iic_ip__audiodac_lite

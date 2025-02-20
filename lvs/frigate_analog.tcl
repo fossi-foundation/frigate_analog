@@ -23,7 +23,7 @@ readnet spice $eflib $circuit2
 readnet spice $lslib $circuit2
 readnet spice $iolib $circuit2
 # sky130_ajc_ip__brownout references the digital controller externally.
-readnet spice ../dependencies/sky130_ajc_ip__brownout/netlist/brownout_dig.spice $circuit2
+readnet spice ../ip/sky130_ajc_ip__brownout/netlist/brownout_dig.spice $circuit2
 readnet spice ../netlist/schematic/${cellname}.spice $circuit2
 
 lvs "$circuit1 ${cellname}" "$circuit2 ${cellname}" \

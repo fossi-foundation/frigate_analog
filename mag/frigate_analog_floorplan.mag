@@ -62,19 +62,19 @@ rect 529806 27492 554888 49078
 rect 566912 24508 614866 57008
 rect 618596 4758 627978 58620
 rect 0 0 627978 4758
-use bias_generator  bias_generator_0 ../dependencies/sky130_ef_ip__biasgen/mag
+use bias_generator  bias_generator_0 ../ip/sky130_ef_ip__biasgen/mag
 timestamp 1715390562
 transform 1 0 367174 0 1 15943
 box -1132 -6353 249191 3114
-use sky130_ak_ip__comparator  sky130_ak_ip__comparator_0 ../dependencies/sky130_ak_ip__comparator/mag
+use sky130_ak_ip__comparator  sky130_ak_ip__comparator_0 ../ip/sky130_ak_ip__comparator/mag
 timestamp 1715629873
 transform 0 1 331006 -1 0 55784
 box -1900 -33700 39700 13700
-use sky130_cw_ip__bandgap  sky130_cw_ip__bandgap_0 ../dependencies/sky130_cw_ip/mag
+use sky130_cw_ip__bandgap  sky130_cw_ip__bandgap_0 ../ip/sky130_cw_ip/mag
 timestamp 1715625863
 transform 1 0 427432 0 1 43290
 box -5734 12 42048 14837
-use sky130_ef_ip__rheostat_8bit  sky130_ef_ip__rheostat_8bit_0 ../dependencies/sky130_ef_ip__rheostat_8bit/mag
+use sky130_ef_ip__rheostat_8bit  sky130_ef_ip__rheostat_8bit_0 ../ip/sky130_ef_ip__rheostat_8bit/mag
 timestamp 1716082924
 transform 0 1 189524 1 0 79050
 box -200 -4 25939 16904
@@ -98,11 +98,11 @@ use sky130_fd_io__top_pwrdetv2  sky130_fd_io__top_pwrdetv2_1
 timestamp 1715205430
 transform 1 0 13096 0 1 9504
 box 282 0 10856 40000
-use sky130_od_ip__tempsensor_ext_vp  sky130_od_ip__tempsensor_ext_vp_0 ../dependencies/sky130_od_ip__tempsensor/mag
+use sky130_od_ip__tempsensor_ext_vp  sky130_od_ip__tempsensor_ext_vp_0 ../ip/sky130_od_ip__tempsensor/mag
 timestamp 1715712088
 transform 1 0 264424 0 1 13680
 box -584 -5030 6610 3202
-use sky130_td_ip__opamp_hp  sky130_td_ip__opamp_hp_0 ../dependencies/sky130_td_ip__opamp_hp/mag
+use sky130_td_ip__opamp_hp  sky130_td_ip__opamp_hp_0 ../ip/sky130_td_ip__opamp_hp/mag
 timestamp 1714591961
 transform 1 0 437254 0 1 86299
 box -7724 -6929 51340 16206
@@ -118,7 +118,7 @@ use sky130_td_ip__opamp_hp  sky130_td_ip__opamp_hp_3
 timestamp 1714591961
 transform -1 0 162492 0 1 86237
 box -7724 -6929 51340 16206
-use sky130_vbl_ip__overvoltage  sky130_vbl_ip__overvoltage_0 ../dependencies/sky130_vbl_ip__overvoltage/mag
+use sky130_vbl_ip__overvoltage  sky130_vbl_ip__overvoltage_0 ../ip/sky130_vbl_ip__overvoltage/mag
 timestamp 1714660490
 transform 1 0 490888 0 1 40022
 box -18218 -4002 24405 17489

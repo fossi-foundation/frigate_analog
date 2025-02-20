@@ -377,15 +377,15 @@ use cv3_via_3cut  cv3_via_3cut_133
 timestamp 1719452912
 transform 1 0 168923 0 1 -105170
 box 10601 106968 10663 107172
-use sky130_ef_ip__ccomp3v_cl  sky130_ef_ip__ccomp3v_cl_1 ../dependencies/sky130_ef_ip__ccomp3v/mag
+use sky130_ef_ip__ccomp3v_cl  sky130_ef_ip__ccomp3v_cl_1 ../ip/sky130_ef_ip__ccomp3v/mag
 timestamp 1721179627
 transform 0 1 177765 -1 0 31215
 box -322 -2743 13304 10357
-use sky130_ef_ip__cdac3v_12bit  sky130_ef_ip__cdac3v_12bit_0 ../dependencies/sky130_ef_ip__cdac3v_12bit/mag
+use sky130_ef_ip__cdac3v_12bit  sky130_ef_ip__cdac3v_12bit_0 ../ip/sky130_ef_ip__cdac3v_12bit/mag
 timestamp 1722438219
 transform 1 0 81345 0 -1 23288
 box 52849 -36868 89580 14592
-use sky130_ef_ip__samplehold  sky130_ef_ip__samplehold_0 ../dependencies/sky130_ef_ip__samplehold/mag
+use sky130_ef_ip__samplehold  sky130_ef_ip__samplehold_0 ../ip/sky130_ef_ip__samplehold/mag
 timestamp 1718244471
 transform 1 0 173691 0 -1 48046
 box 537 303 14883 11558

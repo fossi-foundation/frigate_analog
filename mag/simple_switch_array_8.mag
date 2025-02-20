@@ -365,7 +365,7 @@ rect 32701 1879 36962 2009
 rect 37217 1879 40433 2009
 rect -7 1861 40433 1879
 rect 23380 1853 40433 1861
-use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_0 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 3 4516 0 0 -4248
 timestamp 1724439637
 transform 1 0 0 0 -1 4529

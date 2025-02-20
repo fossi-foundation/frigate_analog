@@ -953,7 +953,7 @@ use cv3_via2_36cut  cv3_via2_36cut_17
 timestamp 1719173892
 transform 1 0 -527772 0 1 -81162
 box 555256 92202 556228 92502
-use isolated_switch_large  isolated_switch_large_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use isolated_switch_large  isolated_switch_large_0 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 2 5866 0 5 -4826
 timestamp 1719093964
 transform 0 -1 1336 1 0 -656

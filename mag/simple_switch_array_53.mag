@@ -2919,7 +2919,7 @@ use cv3_via2_6cut  cv3_via2_6cut_82
 timestamp 1719259570
 transform 1 0 115156 0 1 4618
 box 3030 432 3561 574
-use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_0 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 0 -3542 0 29 -4626
 timestamp 1724439637
 transform 0 -1 3580 -1 0 7619

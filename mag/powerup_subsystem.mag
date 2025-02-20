@@ -989,23 +989,23 @@ use cv3_via_30cut  cv3_via_30cut_14
 timestamp 1719247715
 transform 1 0 391520 0 1 -44919
 box 14334 104924 14594 105610
-use isolated_switch_xlarge  isolated_switch_xlarge_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use isolated_switch_xlarge  isolated_switch_xlarge_0 ../ip/sky130_ef_ip__analog_switches/mag
 timestamp 1719257891
 transform 0 -1 458356 -1 0 28707
 box 660 -6310 5486 1338
-use simple_analog_mux_sel1v8  simple_analog_mux_sel1v8_1 ../dependencies/sky130_ef_ip__analog_switches/mag
+use simple_analog_mux_sel1v8  simple_analog_mux_sel1v8_1 ../ip/sky130_ef_ip__analog_switches/mag
 timestamp 1719277428
 transform -1 0 421022 0 -1 49627
 box -46 -2540 3538 3648
-use sky130_ak_ip__cmos_vref  sky130_ak_ip__cmos_vref_0 ../dependencies/sky130_ak_ip__cmos_vref/mag
+use sky130_ak_ip__cmos_vref  sky130_ak_ip__cmos_vref_0 ../ip/sky130_ak_ip__cmos_vref/mag
 timestamp 1721067183
 transform 0 -1 395482 1 0 37455
 box 8587 -19903 21921 206
-use sky130_am_ip__ldo_01v8  sky130_am_ip__ldo_01v8_0 ../dependencies/sky130_am_ip__ldo_01v8/mag
+use sky130_am_ip__ldo_01v8  sky130_am_ip__ldo_01v8_0 ../ip/sky130_am_ip__ldo_01v8/mag
 timestamp 1721052427
 transform 0 1 378665 -1 0 48529
 box 4253 -10775 28439 6899
-use sky130_cw_ip__bandgap  sky130_cw_ip__bandgap_0 ../dependencies/sky130_cw_ip/mag
+use sky130_cw_ip__bandgap  sky130_cw_ip__bandgap_0 ../ip/sky130_cw_ip/mag
 timestamp 1715625863
 transform -1 0 474518 0 1 44954
 box -5734 12 42048 14837
@@ -1014,7 +1014,7 @@ array 0 1 3268 0 4 2588
 timestamp 1721093827
 transform 0 1 417124 -1 0 57339
 box -1349 -1081 1371 1081
-use sky130_sw_ip__bgrref_por  sky130_sw_ip__bgrref_por_0 ../dependencies/sky130_sw_ip__bgrref_por/mag
+use sky130_sw_ip__bgrref_por  sky130_sw_ip__bgrref_por_0 ../ip/sky130_sw_ip__bgrref_por/mag
 timestamp 1721154165
 transform 1 0 390789 0 1 321922
 box 2359 -300396 39662 -277894

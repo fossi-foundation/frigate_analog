@@ -544,12 +544,12 @@ use cv3_via2_8cut  cv3_via2_8cut_35
 timestamp 1719106786
 transform 0 -1 58963 1 0 -2879
 box 6850 62208 6998 62544
-use isolated_switch_large  isolated_switch_large_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use isolated_switch_large  isolated_switch_large_0 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 0 4826 0 5 -4977
 timestamp 1724442075
 transform 0 -1 1366 -1 0 14607
 box 660 -3110 5544 1338
-use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_1 ../dependencies/sky130_ef_ip__analog_switches/mag
+use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_1 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 0 -3542 0 8 -4632
 timestamp 1724439637
 transform 0 -1 -8220 -1 0 8019

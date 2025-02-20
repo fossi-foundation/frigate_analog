@@ -2212,7 +2212,7 @@ use cv3_via2_36cut  cv3_via2_36cut_63
 timestamp 1719173892
 transform 1 0 -548960 0 1 -76779
 box 555256 92202 556228 92502
-use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+use simplest_analog_switch_ena1v8  simplest_analog_switch_ena1v8_0 ../ip/sky130_ef_ip__analog_switches/mag
 array 0 9 -4516 0 1 4633
 timestamp 1724439637
 transform -1 0 3470 0 1 1481

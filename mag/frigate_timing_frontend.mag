@@ -666,15 +666,15 @@ rect 81405 320 81429 323
 rect 81405 3 84200 320
 rect 80660 0 84200 3
 rect 80661 -21 81429 0
-use sky130_be_ip__lsxo  sky130_be_ip__lsxo_0 ../dependencies/sky130_be_ip__lsxo/mag
+use sky130_be_ip__lsxo  sky130_be_ip__lsxo_0 ../ip/sky130_be_ip__lsxo/mag
 timestamp 1714591373
 transform 1 0 -202 0 1 24278
 box 1476 -23704 25570 -812
-use sky130_ef_ip__rc_osc_16M  sky130_ef_ip__rc_osc_16M_0 ../dependencies/sky130_ef_ip__rc_osc_16M/mag
+use sky130_ef_ip__rc_osc_16M  sky130_ef_ip__rc_osc_16M_0 ../ip/sky130_ef_ip__rc_osc_16M/mag
 timestamp 1721245376
 transform 0 -1 36464 1 0 2774
 box 0 700 10977 10024
-use sky130_ef_ip__rc_osc_500k  sky130_ef_ip__rc_osc_500k_0 ../dependencies/sky130_ef_ip__rc_osc_500k/mag
+use sky130_ef_ip__rc_osc_500k  sky130_ef_ip__rc_osc_500k_0 ../ip/sky130_ef_ip__rc_osc_500k/mag
 timestamp 1721241604
 transform 0 -1 47544 1 0 2698
 box 0 0 12242 10724
@@ -688,7 +688,7 @@ array 0 0 2676 0 6 -2576
 timestamp 1721093827
 transform 0 -1 31359 1 0 20739
 box -1349 -1081 1371 1081
-use sky130_ht_ip__hsxo_cpz1  sky130_ht_ip__hsxo_cpz1_0 ../dependencies/sky130_ht_ip__hsxo_cpz1/mag
+use sky130_ht_ip__hsxo_cpz1  sky130_ht_ip__hsxo_cpz1_0 ../ip/sky130_ht_ip__hsxo_cpz1/mag
 timestamp 1718126100
 transform -1 0 80215 0 -1 18009
 box -3162 -7320 32492 17749
