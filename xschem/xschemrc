@@ -29,3 +29,4 @@ source [file dirname [info script]]/../ip/sky130_ef_ip__rc_osc_16M/xschem/xschem
 source [file dirname [info script]]/../ip/sky130_ef_ip__rc_osc_500k/xschem/xschemrc
 source [file dirname [info script]]/../ip/sky130_ht_ip__hsxo_cpz1/xschem/xschemrc
 source [file dirname [info script]]/../ip/sky130_be_ip__lsxo/xschem/xschemrc
+source [file dirname [info script]]/../ip/sky130_ef_ip__adc3v_12bit/xschem/xschemrc

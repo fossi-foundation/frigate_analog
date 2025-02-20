@@ -67,3 +67,6 @@
 [submodule "ip/sky130_ef_ip__rheostat_8bit"]
 	path = ip/sky130_ef_ip__rheostat_8bit
 	url = ../../RTimothyEdwards/sky130_ef_ip__rheostat_8bit.git
+[submodule "ip/sky130_ef_ip__adc3v_12bit"]
+	path = ip/sky130_ef_ip__adc3v_12bit
+	url = ../sky130_ef_ip__adc3v_12bit
