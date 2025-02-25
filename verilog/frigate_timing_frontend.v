@@ -7,6 +7,7 @@
  * HSXO 4-16MHz
  * 16MHz R-C oscillator
  * 500kHz R-C oscillator
+ * Level shifter for xres4v2 RESETB signal
  *
  *-----------------------------------------------------
  */
@@ -52,7 +53,7 @@ module frigate_timing_frontend (
 
 /* Currently a black-box placeholder */
 
-    sky130_ef_ip__xtal_osc_32k LSXO(
+    sky130_ef_ip__xtal_osc_32k LSXO (
     `ifdef USE_POWER_PINS
         .avdd(vdda3),
         .avss(vssa3),
@@ -67,7 +68,7 @@ module frigate_timing_frontend (
         .dout(lsxo_dout)
     );
 
-    sky130_ef_ip__xtal_osc_16M HSXO(
+    sky130_ef_ip__xtal_osc_16M HSXO (
     `ifdef USE_POWER_PINS
         .avdd(vdda3),
         .avss(vssa3),
@@ -82,7 +83,7 @@ module frigate_timing_frontend (
         .dout(hsxo_dout)
     );
 
-    sky130_ef_ip__rc_osc_500k RC_OSC_500k(
+    sky130_ef_ip__rc_osc_500k RC_OSC_500k (
     `ifdef USE_POWER_PINS
         .avdd(vdda3),
         .avss(vssa3),
@@ -93,7 +94,7 @@ module frigate_timing_frontend (
         .dout(rc_osc_500k_dout)
     );
 
-    sky130_ef_ip__rc_osc_16M RC_OSC_16M(
+    sky130_ef_ip__rc_osc_16M RC_OSC_16M (
     `ifdef USE_POWER_PINS
         .avdd(vdda3),
         .avss(vssa3),
@@ -103,4 +104,17 @@ module frigate_timing_frontend (
         .ena(rc_osc_16M_ena),
         .dout(rc_osc_16M_dout)
     );
+
+    /* Note:  This module is defined in this directory */
+    xres_buf xres_level_shifter (
+    `ifdef USE_POWER_PINS
+        .VPWR(vdda3),	// FIXME:  This really should be vddio.
+        .VGND(vssd0),	// NOTE:  Cannot be isolated from digital ground
+        .LVPWR(vccd0),
+        .LVGND(vssd0),
+    `endif
+	.A(resetb_in_h),
+	.X(resetb_out_l)
+    );
+
 endmodule	// frigate_timing_frontend
