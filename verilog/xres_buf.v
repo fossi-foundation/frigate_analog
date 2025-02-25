@@ -72,7 +72,7 @@ module xres_buf (
 `endif
     );
 
-    sky130_fd_sc_hvl__decap4 x4[1:0] (
+    sky130_fd_sc_hvl__decap_4 x4[1:0] (
 `ifdef USE_POWER_PINS
 	.VPWR(VPWR),
 	.VPB(VPWR),
