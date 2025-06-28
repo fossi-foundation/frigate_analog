@@ -21,7 +21,7 @@
 	url = ../sky130_cw_ip.git
 [submodule "ip/sky130_ef_ip__analog_switches"]
 	path = ip/sky130_ef_ip__analog_switches
-	url = ../sky130_ef_ip__analog_switches.git
+	url = ../../RTimothyEdwards/sky130_ef_ip__analog_switches.git
 [submodule "ip/sky130_ef_ip__ccomp3v"]
 	path = ip/sky130_ef_ip__ccomp3v
 	url = ../sky130_ef_ip__ccomp3v.git
